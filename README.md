@@ -29,6 +29,7 @@ As camadas `bronze` e `silver` são materializadas por pipelines de ingestão em
 | Fonte | Conteúdo | Período |
 |---|---|---|
 | INSS, dados abertos | Microdados de CAT | out/2018 a mai/2026 |
+| Previdência Social | AEAT, anuário oficial: acidentes com e sem CAT e indicadores | 2022 a 2024 |
 | INSS, dados abertos | Benefícios acidentários concedidos | dez/2018 a jul/2026 |
 | PDET, Ministério do Trabalho | Novo CAGED, fluxo de emprego formal | 2020 em diante |
 | PDET, Ministério do Trabalho | RAIS, estoque de vínculos por município e CNAE | 2018 a 2025 |
@@ -46,6 +47,10 @@ O teste de valores aceitos em `tipo_acidente` existe porque a fonte mudou de lay
 ## Achados que a modelagem tornou visíveis
 
 O campo de unidade federativa do acidente está com os rótulos deslocados na origem. Não se trata de imprecisão de preenchimento: as contagens do campo reproduzem exatamente a distribuição da UF do empregador, porém associadas a estados errados, atribuindo ao Maranhão em 2023 os 208.088 acidentes que pertencem a São Paulo. Por isso todos os recortes geográficos usam a UF do empregador.
+
+A contagem oficial mostra que 12,4% dos acidentes de 2023 foram reconhecidos **sem CAT registrada**, isto é, chegaram à Previdência pelo nexo técnico, sem que o empregador comunicasse o evento. Esse é o limite superior do que uma série construída apenas com CAT consegue enxergar, e o observatório passa a medi-lo em vez de apenas mencioná-lo.
+
+O confronto com o anuário também expõe um efeito que a série própria não revelava sozinha: em 2023 o observatório reproduz 87,5% das CAT oficiais, mas em 2024 apenas 68,2%, porque o acidente continua sendo comunicado nos anos seguintes. Ano recente é subestimado duas vezes, pela subnotificação e pela defasagem, e o modelo separa as duas causas em colunas distintas justamente para que não sejam confundidas.
 
 Acidentes de trajeto são 2,6 vezes mais letais que os típicos, com 882 óbitos por 100 mil acidentes contra 333, apesar de os típicos serem mais de três vezes mais numerosos.
 
@@ -71,6 +76,10 @@ SR_SCHEMA_PREFIX=val_ dbt build --profiles-dir profiles
 A cópia paralela exige que o usuário do dbt tenha permissão de criação nos bancos prefixados. No ambiente de produção descrito aqui ele só tem permissão em `gold`, `dm_sst` e `ops`, de modo que uma execução com prefixo falha no primeiro modelo, com erro de acesso negado, e não escreve nada. A restrição é deliberada: o mesmo usuário que roda o agendamento não deveria poder criar esquema arbitrário no warehouse.
 
 Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines. O script de execução usa a linguagem `dbt` nativa do Windmill, cujo conteúdo é um descritor e cujo projeto vive como módulos do próprio script. Esses módulos não são editados à mão: o script `f/sst/dbt_sync_repo` baixa este repositório e os substitui por completo. A regra é que o repositório manda, porque duas cópias editáveis do mesmo projeto divergem sem avisar.
+
+## Uma armadilha do datamart
+
+Os modelos de `dm_sst` são `SELECT *` sobre o gold, e o executor de dbt pula o nó cujo SQL não mudou. Quando um modelo do gold ganha coluna, o texto do datamart continua idêntico, o nó é pulado e a view antiga permanece com a lista de colunas congelada no momento da criação: a consulta ao datamart passa a falhar dizendo que a coluna não existe, enquanto o gold já a tem. A correção é derrubar a view do datamart e reconstruir, ou rodar com atualização completa. Vale conferir sempre que uma coluna nova não aparecer no consumo.
 
 ## Estrutura
 
