@@ -68,6 +68,8 @@ A variável `SR_SCHEMA_PREFIX` constrói uma cópia paralela do warehouse, útil
 SR_SCHEMA_PREFIX=val_ dbt build --profiles-dir profiles
 ```
 
+A cópia paralela exige que o usuário do dbt tenha permissão de criação nos bancos prefixados. No ambiente de produção descrito aqui ele só tem permissão em `gold`, `dm_sst` e `ops`, de modo que uma execução com prefixo falha no primeiro modelo, com erro de acesso negado, e não escreve nada. A restrição é deliberada: o mesmo usuário que roda o agendamento não deveria poder criar esquema arbitrário no warehouse.
+
 Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines. O script de execução usa a linguagem `dbt` nativa do Windmill, cujo conteúdo é um descritor e cujo projeto vive como módulos do próprio script. Esses módulos não são editados à mão: o script `f/sst/dbt_sync_repo` baixa este repositório e os substitui por completo. A regra é que o repositório manda, porque duas cópias editáveis do mesmo projeto divergem sem avisar.
 
 ## Estrutura
