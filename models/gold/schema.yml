@@ -147,7 +147,9 @@ models:
       - name: cnae_codigo
         tests: [not_null]
       - name: incidencia_por_mil
-        tests: [not_null]
+        description: >
+          Nulo e valor legitimo: o anuario grafa "-" para a classe CNAE sem
+          ocorrencia no periodo, e 1.738 das linhas estao nessa situacao.
 
   - name: gold__comparacao_taxa_oficial
     description: >
