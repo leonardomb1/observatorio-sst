@@ -17,6 +17,20 @@ sources:
     description: "Dados brutos por fonte, fieis a origem"
     schema: bronze
     tables:
+      - name: cat
+        description: "Microdados de CAT, quatro geracoes de layout normalizadas"
+      - name: inss_beneficios
+        description: "Concessoes do INSS, somente especies com rotulo de acidente"
+      - name: caged_saldo
+        description: "Novo CAGED agregado: fluxo de emprego, nao estoque"
+      - name: rais_estoque
+        description: "RAIS agregada: estoque de vinculos, denominador de taxas"
+      - name: ilo_sst_taxas
+        description: "Indicador ODS 8.8.1 da OIT, por pais e ano"
+      - name: osha_ita
+        description: "Form 300A da OSHA por estabelecimento nos Estados Unidos"
+      - name: cat_rotulos
+        description: "Rotulos longos reconstruidos da geracao 2021 a mai/2023"
       - name: cid10
       - name: cbo
       - name: cnae_classes
