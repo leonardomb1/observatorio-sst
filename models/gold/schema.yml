@@ -161,3 +161,8 @@ models:
         tests: [not_null, unique]
       - name: razao_taxa
         tests: [not_null]
+      - name: cobertura_cat_pct
+        description: >
+          Quanto do total oficial de CAT a serie do observatorio reproduz. Cai
+          nos anos recentes porque a comunicacao do acidente continua chegando
+          depois, e serve para nao atribuir a subnotificacao o que e defasagem.
