@@ -30,7 +30,8 @@ As camadas `bronze` e `silver` são materializadas por pipelines de ingestão em
 |---|---|---|
 | INSS, dados abertos | Microdados de CAT | out/2018 a mai/2026 |
 | INSS, dados abertos | Benefícios acidentários concedidos | dez/2018 a jul/2026 |
-| PDET, Ministério do Trabalho | Novo CAGED, emprego formal | 2020 em diante |
+| PDET, Ministério do Trabalho | Novo CAGED, fluxo de emprego formal | 2020 em diante |
+| PDET, Ministério do Trabalho | RAIS, estoque de vínculos por município e CNAE | 2018 a 2025 |
 | OIT, ILOSTAT | Indicador ODS 8.8.1, taxas por país | 2000 em diante |
 | OSHA, Estados Unidos | Form 300A por estabelecimento | 2016 a 2025 |
 | DATASUS, IBGE, CBO | Dicionários CID-10, municípios, CNAE, ocupações | vigentes |
@@ -48,7 +49,9 @@ O campo de unidade federativa do acidente está com os rótulos deslocados na or
 
 Acidentes de trajeto são 2,6 vezes mais letais que os típicos, com 882 óbitos por 100 mil acidentes contra 333, apesar de os típicos serem mais de três vezes mais numerosos.
 
-A base da OIT não possui taxa de acidentes fatais do Brasil desde 2011, enquanto países como Alemanha e Estados Unidos reportam anualmente.
+A base da OIT não possui taxa de acidentes fatais do Brasil desde 2011, enquanto países como Alemanha e Estados Unidos reportam anualmente. Com o estoque de vínculos da RAIS como denominador, o observatório recalcula a série a partir dos microdados nacionais: 4,46 óbitos por 100 mil vínculos formais em 2023.
+
+Dividir pelo emprego formal também desfaz a leitura ingênua do mapa. São Paulo lidera qualquer contagem absoluta por concentrar o emprego, mas a maior taxa de acidentes de 2023 é de Santa Catarina, com 1.587,8 por 100 mil vínculos contra 1.359,5 de São Paulo. Em óbitos, a ordem muda outra vez, e quem lidera é Mato Grosso, com 8,94 contra 3,95.
 
 ## Como executar
 
@@ -59,13 +62,13 @@ export SR_HOST=starrocks-fe SR_PORT=9030 SR_USER=... SR_PASSWORD=...
 dbt build --profiles-dir profiles
 ```
 
-A variável `SR_SCHEMA_PREFIX` constrói uma cópia paralela do warehouse, útil para validar mudanças sem tocar no que os painéis e o assistente estão lendo:
+A variável `SR_SCHEMA_PREFIX` constrói uma cópia paralela do warehouse, útil para validar mudanças sem tocar no que os painéis e o assistente estão lendo. O prefixo é aplicado na macro `generate_schema_name`, e não no perfil, porque no perfil ele alcançaria apenas o esquema padrão e deixaria de fora justamente os esquemas por camada:
 
 ```bash
 SR_SCHEMA_PREFIX=val_ dbt build --profiles-dir profiles
 ```
 
-Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines. O script de execução usa a linguagem `dbt` nativa do Windmill, cujo conteúdo é um descritor e cujo projeto vive como módulos do próprio script. Atenção: nesse caminho o executor resolve os esquemas por conta própria, então `SR_SCHEMA_PREFIX` não é respeitado e a execução escreve direto nos esquemas de destino. Para ensaiar mudanças fora de produção, rodar o dbt localmente com o prefixo, ou apontar o perfil para outro alvo.
+Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines. O script de execução usa a linguagem `dbt` nativa do Windmill, cujo conteúdo é um descritor e cujo projeto vive como módulos do próprio script. Esses módulos não são editados à mão: o script `f/sst/dbt_sync_repo` baixa este repositório e os substitui por completo. A regra é que o repositório manda, porque duas cópias editáveis do mesmo projeto divergem sem avisar.
 
 ## Estrutura
 
