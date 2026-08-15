@@ -5,8 +5,16 @@
 -- passo que o oficial soma tambem os reconhecidos sem CAT; e o denominador do
 -- observatorio e o estoque de vinculos da RAIS em 31 de dezembro, ao passo que
 -- o anuario usa a media anual de vinculos, base menor. A coluna razao mostra
--- quantas vezes a taxa oficial supera a calculada, e pct_sem_cat mostra quanto
--- da diferenca a subnotificacao explica.
+-- quantas vezes a taxa oficial supera a calculada.
+--
+-- A razao tem duas causas, e confundi-las levaria a atribuir a subnotificacao o
+-- que e defasagem da propria serie. A coluna pct_sem_cat mede a primeira causa.
+-- A coluna cobertura_cat_pct mede a segunda: quanto do total oficial de CAT o
+-- observatorio de fato reproduz. Em 2023 essa cobertura passa de 87%, ao passo
+-- que no ano mais recente cai para perto de 68%, porque o acidente ocorrido em
+-- um ano continua sendo comunicado nos anos seguintes e os arquivos mensais so
+-- o registram quando a CAT e emitida. Ano recente e portanto subestimado duas
+-- vezes, e a leitura correta e a do par de colunas, nunca a da razao isolada.
 WITH proprio AS (
     SELECT ano, acidentes, obitos, vinculos_ativos,
            acidentes_por_100mil_vinculos, obitos_por_100mil_vinculos
@@ -29,6 +37,7 @@ SELECT
     r.total AS acidentes_totais_oficial,
     r.sem_cat AS acidentes_sem_cat_oficial,
     r.pct_sem_cat,
+    ROUND(p.acidentes * 100.0 / nullif(r.com_cat, 0), 1) AS cobertura_cat_pct,
     p.acidentes_por_100mil_vinculos AS taxa_observatorio,
     o.incidencia_por_100mil AS taxa_oficial,
     ROUND(o.incidencia_por_100mil / nullif(p.acidentes_por_100mil_vinculos, 0), 2)
