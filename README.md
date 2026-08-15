@@ -65,7 +65,7 @@ A variável `SR_SCHEMA_PREFIX` constrói uma cópia paralela do warehouse, útil
 SR_SCHEMA_PREFIX=val_ dbt build --profiles-dir profiles
 ```
 
-Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines.
+Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines. O script de execução usa a linguagem `dbt` nativa do Windmill, cujo conteúdo é um descritor e cujo projeto vive como módulos do próprio script. Atenção: nesse caminho o executor resolve os esquemas por conta própria, então `SR_SCHEMA_PREFIX` não é respeitado e a execução escreve direto nos esquemas de destino. Para ensaiar mudanças fora de produção, rodar o dbt localmente com o prefixo, ou apontar o perfil para outro alvo.
 
 ## Estrutura
 
