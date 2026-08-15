@@ -1,0 +1,73 @@
+version: 2
+
+models:
+  - name: gold__acidentes_mensal_uf
+    description: >
+      Acidentes e obitos por ano, mes e unidade federativa do empregador.
+      Usa a UF do empregador porque o campo de UF do acidente vem com rotulos
+      trocados na origem, o que foi verificado comparando as distribuicoes.
+    columns:
+      - name: ano
+        tests:
+          - not_null
+      - name: acidentes
+        tests:
+          - not_null
+      - name: uf
+        description: "Nome do estado por extenso, como publicado na CAT"
+
+  - name: gold__acidentes_por_tipo_mensal
+    description: "Acidentes por tipo, base do indicador de letalidade relativa"
+    columns:
+      - name: tipo_acidente
+        description: >
+          A fonte mudou de layout quatro vezes desde 2018. Este teste falha se
+          aparecer categoria nova, em vez de ela entrar silenciosamente nos paineis.
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["Típico", "Trajeto", "Doença"]
+
+  - name: gold__letalidade_por_tipo
+    description: "Obitos por 100 mil acidentes, por tipo de acidente"
+    columns:
+      - name: tipo_acidente
+        tests: [not_null, unique]
+      - name: obitos_por_100mil_acidentes
+        tests: [not_null]
+
+  - name: gold__beneficios_mensal
+    description: >
+      Concessoes de beneficios de origem acidentaria por competencia e especie.
+      Exclui a especie 36, auxilio-acidente previdenciario, que apesar do rotulo
+      nao decorre de acidente do trabalho: incluir a especie 36 superestimaria
+      as concessoes de 2023 em 12,5%.
+    columns:
+      - name: periodo
+        tests: [not_null]
+      - name: especie_codigo
+        tests:
+          - accepted_values:
+              arguments:
+                values: ["91", "92", "93", "94", "95"]
+
+  - name: gold__acidentes_por_municipio
+    description: "Acidentes por municipio do empregador, com nome resolvido pelo IBGE"
+    columns:
+      - name: municipio_codigo
+        tests: [not_null]
+
+  - name: gold__taxa_fatal_paises
+    description: "Indicador ODS 8.8.1 da OIT, taxa de acidentes fatais por 100 mil"
+    columns:
+      - name: pais_iso3
+        tests: [not_null]
+      - name: ano
+        tests: [not_null]
+
+  - name: gold__osha_eua_taxas_ano
+    description: "TRIR e DART dos Estados Unidos, a partir do Form 300A da OSHA"
+    columns:
+      - name: ano
+        tests: [not_null, unique]

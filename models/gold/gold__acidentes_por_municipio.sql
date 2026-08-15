@@ -1,0 +1,1 @@
+SELECT ano, municipio_empregador_codigo AS municipio_codigo,        max(municipio_empregador_nome) AS municipio, max(municipio_uf) AS uf,        max(municipio_regiao) AS regiao, COUNT(*) AS acidentes, SUM(obito) AS obitos FROM {{ source('silver', 'acidentes') }} WHERE ano IS NOT NULL AND municipio_empregador_nome IS NOT NULL GROUP BY 1,2

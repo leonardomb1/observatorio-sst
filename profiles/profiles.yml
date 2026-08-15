@@ -1,0 +1,12 @@
+# Modelo de perfil. Nenhuma credencial e versionada: o host, o usuario e a senha
+# vem do ambiente, preenchidos pelo Windmill a partir de variaveis em f/infra.
+observatorio:
+  target: prod
+  outputs:
+    prod:
+      type: starrocks
+      host: "{{ env_var('SR_HOST', 'starrocks-fe') }}"
+      port: "{{ env_var('SR_PORT', '9030') | int }}"
+      schema: gold
+      username: "{{ env_var('SR_USER') }}"
+      password: "{{ env_var('SR_PASSWORD') }}"

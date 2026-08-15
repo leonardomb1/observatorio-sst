@@ -1,0 +1,1 @@
+SELECT ano, mes, tipo_acidente, COUNT(*) AS acidentes, SUM(obito) AS obitos FROM {{ source('silver', 'acidentes') }} WHERE ano IS NOT NULL AND tipo_acidente IS NOT NULL AND tipo_acidente <> '' GROUP BY ano, mes, tipo_acidente

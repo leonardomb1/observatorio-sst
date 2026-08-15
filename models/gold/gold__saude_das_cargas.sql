@@ -1,0 +1,1 @@
+SELECT script_path AS carga, schedule_path AS agendamento, erro_nome AS erro,        LEFT(erro_mensagem, 200) AS mensagem, registrado_em FROM {{ source('bronze', 'sst_falhas') }} ORDER BY registrado_em DESC

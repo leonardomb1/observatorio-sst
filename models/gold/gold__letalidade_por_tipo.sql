@@ -1,0 +1,1 @@
+SELECT tipo_acidente, COUNT(*) AS acidentes, SUM(obito) AS obitos,        ROUND(SUM(obito)*100000.0/COUNT(*)) AS obitos_por_100mil_acidentes FROM {{ source('silver', 'acidentes') }} WHERE tipo_acidente IS NOT NULL GROUP BY 1

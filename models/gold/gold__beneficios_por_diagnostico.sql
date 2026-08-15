@@ -1,0 +1,1 @@
+SELECT b.cid10_codigo, coalesce(max(c.descricao), b.cid10_codigo) AS diagnostico,        COUNT(*) AS concessoes FROM {{ source('silver', 'beneficios_acidentarios') }} b LEFT JOIN {{ source('bronze', 'cid10') }} c ON c.codigo = b.cid10_codigo AND c.nivel='subcategoria' WHERE b.acidente_trabalho AND b.cid10_codigo IS NOT NULL AND b.cid10_codigo <> '' GROUP BY 1

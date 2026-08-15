@@ -1,0 +1,1 @@
+SELECT ano, mes, ROUND(AVG(dias_ate_emissao),2) AS dias_medio_ate_emissao, COUNT(*) AS registros FROM {{ source('silver', 'acidentes') }} WHERE ano IS NOT NULL AND dias_ate_emissao BETWEEN 0 AND 365 GROUP BY 1,2

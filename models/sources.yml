@@ -1,0 +1,27 @@
+version: 2
+
+sources:
+  - name: silver
+    description: >
+      Camada conformada: tipos corretos, dicionarios resolvidos e defeitos de
+      origem tratados. Materializada fora do dbt porque concentra logica de
+      tratamento das quatro geracoes de layout da CAT.
+    schema: silver
+    tables:
+      - name: acidentes
+        description: "Uma linha por CAT, com rotulos completos e campos derivados"
+      - name: beneficios_acidentarios
+        description: "Concessoes do INSS; usar sempre o filtro acidente_trabalho"
+
+  - name: bronze
+    description: "Dados brutos por fonte, fieis a origem"
+    schema: bronze
+    tables:
+      - name: cid10
+      - name: cbo
+      - name: cnae_classes
+      - name: ibge_municipios
+      - name: mte_noticias
+      - name: nr_norma
+      - name: nr_texto
+      - name: sst_falhas
