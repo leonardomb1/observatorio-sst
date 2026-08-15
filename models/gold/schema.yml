@@ -126,3 +126,36 @@ models:
         tests: [not_null]
       - name: acidentes_por_100mil_vinculos
         tests: [not_null]
+
+  - name: gold__aeat_subnotificacao
+    description: >
+      Acidentes com e sem CAT registrada pela contagem oficial do anuario, por
+      CNAE e por recorte geografico. Mede a subnotificacao que os microdados da
+      CAT, por definicao, nao conseguem revelar.
+    columns:
+      - name: ano
+        tests: [not_null]
+      - name: pct_sem_cat
+        description: "Proporcao de acidentes reconhecidos sem CAT, em pontos percentuais"
+
+  - name: gold__aeat_indicadores_cnae
+    description: >
+      Indicadores oficiais do anuario por classe CNAE. A incidencia oficial vem
+      por 1.000 vinculos e a coluna convertida para 100 mil existe para impedir
+      comparacao entre escalas diferentes.
+    columns:
+      - name: cnae_codigo
+        tests: [not_null]
+      - name: incidencia_por_mil
+        tests: [not_null]
+
+  - name: gold__comparacao_taxa_oficial
+    description: >
+      Confronto entre a taxa calculada pelo observatorio e a oficial. A razao
+      entre elas e a subnotificacao medida no mesmo ano formam o argumento
+      central sobre o alcance de uma serie construida so com CAT.
+    columns:
+      - name: ano
+        tests: [not_null, unique]
+      - name: razao_taxa
+        tests: [not_null]

@@ -25,6 +25,10 @@ sources:
         description: "Novo CAGED agregado: fluxo de emprego, nao estoque"
       - name: rais_estoque
         description: "RAIS agregada: estoque de vinculos, denominador de taxas"
+      - name: aeat_registro
+        description: "AEAT: acidentes por situacao do registro; unica fonte oficial do sem CAT"
+      - name: aeat_indicadores
+        description: "AEAT: incidencia, mortalidade e letalidade oficiais por CNAE"
       - name: ilo_sst_taxas
         description: "Indicador ODS 8.8.1 da OIT, por pais e ano"
       - name: osha_ita
