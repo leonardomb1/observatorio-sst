@@ -71,3 +71,58 @@ models:
     columns:
       - name: ano
         tests: [not_null, unique]
+
+  - name: gold__vinculos_rais_municipio
+    description: >
+      Estoque de vinculos formais da RAIS por ano e municipio, denominador de
+      todas as taxas de incidencia. A unidade federativa vem do dicionario do
+      IBGE, e nao do codigo numerico da propria RAIS.
+    columns:
+      - name: municipio_codigo
+        tests: [not_null]
+      - name: vinculos_ativos
+        tests: [not_null]
+      - name: ano
+        tests: [not_null]
+
+  - name: gold__taxa_incidencia_municipio
+    description: >
+      Acidentes e obitos por 100 mil vinculos formais, por municipio. Municipio
+      com emprego e sem acidente aparece com taxa zero, e nao ausente. A coluna
+      base_suficiente marca denominador abaixo de 5 mil vinculos, faixa em que
+      a taxa oscila demais para leitura isolada.
+    columns:
+      - name: municipio_codigo
+        tests: [not_null]
+      - name: acidentes_por_100mil_vinculos
+        tests: [not_null]
+
+  - name: gold__taxa_incidencia_uf
+    description: "Taxa de incidencia por unidade federativa, somada dos municipios"
+    columns:
+      - name: uf
+        tests: [not_null]
+      - name: acidentes_por_100mil_vinculos
+        tests: [not_null]
+
+  - name: gold__taxa_incidencia_brasil
+    description: >
+      Serie anual do pais por 100 mil vinculos, unica metrica do observatorio
+      comparavel com o indicador 8.8.1 da OIT, que nao publica taxa fatal do
+      Brasil desde 2011. Cobre apenas o emprego formal.
+    columns:
+      - name: ano
+        tests: [not_null, unique]
+      - name: obitos_por_100mil_vinculos
+        tests: [not_null]
+
+  - name: gold__taxa_incidencia_cnae
+    description: >
+      Taxa de incidencia por classe CNAE. A subclasse da RAIS e truncada em
+      quatro digitos e o codigo da CAT recebe zero a esquerda, sem o que as
+      atividades agropecuarias sairiam da juncao silenciosamente.
+    columns:
+      - name: cnae_codigo
+        tests: [not_null]
+      - name: acidentes_por_100mil_vinculos
+        tests: [not_null]
