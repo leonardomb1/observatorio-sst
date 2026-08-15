@@ -26,3 +26,21 @@
         {{ node.name | replace('gold__', '') | replace('dm_sst__', '') | replace('ops__', '') }}
     {%- endif -%}
 {%- endmacro %}
+
+{#
+  O lower() do StarRocks so rebaixa ASCII: em "EXTRAÇÃO DE PEDRA" as letras
+  acentuadas sobrevivem em caixa alta e o rotulo sai como "ExtraÇÃo". Como a
+  CAT publica as descricoes de CNAE inteiramente em maiusculas, a correcao
+  precisa vir daqui. A lista cobre as vogais acentuadas e o cedilha, que e o
+  conjunto que de fato ocorre nas descricoes.
+#}
+{% macro minusculas(coluna) -%}
+    {%- set pares = [('Á','á'), ('À','à'), ('Â','â'), ('Ã','ã'), ('É','é'),
+                     ('Ê','ê'), ('Í','í'), ('Ó','ó'), ('Ô','ô'), ('Õ','õ'),
+                     ('Ú','ú'), ('Ü','ü'), ('Ç','ç')] -%}
+    {%- set ns = namespace(expr = 'lower(' ~ coluna ~ ')') -%}
+    {%- for de, para in pares -%}
+        {%- set ns.expr = "replace(" ~ ns.expr ~ ", '" ~ de ~ "', '" ~ para ~ "')" -%}
+    {%- endfor -%}
+    {{ ns.expr }}
+{%- endmacro %}

@@ -1,1 +1,1 @@
-SELECT ano, cnae_codigo,        concat(upper(left(max(cnae_descricao),1)), lower(substr(max(cnae_descricao),2))) AS cnae_descricao,        COUNT(*) AS acidentes, SUM(obito) AS obitos FROM {{ source('silver', 'acidentes') }} WHERE ano IS NOT NULL GROUP BY ano, cnae_codigo
+SELECT ano, cnae_codigo,        concat(upper(left(max(cnae_descricao),1)), {{ minusculas('substr(max(cnae_descricao),2)') }}) AS cnae_descricao,        COUNT(*) AS acidentes, SUM(obito) AS obitos FROM {{ source('silver', 'acidentes') }} WHERE ano IS NOT NULL GROUP BY ano, cnae_codigo
