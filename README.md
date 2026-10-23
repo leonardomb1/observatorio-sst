@@ -50,13 +50,13 @@ O campo de unidade federativa do acidente está com os rótulos deslocados na or
 
 A contagem oficial mostra que 12,4% dos acidentes de 2023 foram reconhecidos **sem CAT registrada**, isto é, chegaram à Previdência pelo nexo técnico, sem que o empregador comunicasse o evento. Esse é o limite superior do que uma série construída apenas com CAT consegue enxergar, e o observatório passa a medi-lo em vez de apenas mencioná-lo.
 
-O confronto com o anuário também expõe um efeito que a série própria não revelava sozinha: em 2023 o observatório reproduz 87,5% das CAT oficiais, mas em 2024 apenas 68,2%, porque o acidente continua sendo comunicado nos anos seguintes. Ano recente é subestimado duas vezes, pela subnotificação e pela defasagem, e o modelo separa as duas causas em colunas distintas justamente para que não sejam confundidas.
+O confronto com o anuário também expõe um efeito que a série própria não revelava sozinha: em 2023 o observatório reproduz 87,5% das CAT oficiais, mas em 2024 apenas 60,4%. Parte da distância é estrutural: os arquivos mensais trazem só CAT emitidas no próprio ano do acidente, e as emitidas depois nunca chegam à série. O resto é lacuna de publicação, já que de setembro a dezembro de 2024 a fonte publicou uma fração do volume esperado, e por isso o ano sai marcado como parcial em `status_ano`. O modelo separa subnotificação e cobertura em colunas distintas justamente para que não sejam confundidas.
 
-Acidentes de trajeto são 2,6 vezes mais letais que os típicos, com 882 óbitos por 100 mil acidentes contra 333, apesar de os típicos serem mais de três vezes mais numerosos.
+Acidentes de trajeto são 2,7 vezes mais letais que os típicos, com 918 óbitos por 100 mil acidentes contra 340 nos anos consolidados, apesar de os típicos serem mais de três vezes mais numerosos.
 
 A base da OIT não possui taxa de acidentes fatais do Brasil desde 2011, enquanto países como Alemanha e Estados Unidos reportam anualmente. Com o estoque de vínculos da RAIS como denominador, o observatório recalcula a série a partir dos microdados nacionais: 4,46 óbitos por 100 mil vínculos formais em 2023.
 
-Dividir pelo emprego formal também desfaz a leitura ingênua do mapa. São Paulo lidera qualquer contagem absoluta por concentrar o emprego, mas a maior taxa de acidentes de 2023 é de Santa Catarina, com 1.587,8 por 100 mil vínculos contra 1.359,5 de São Paulo. Em óbitos, a ordem muda outra vez, e quem lidera é Mato Grosso, com 8,94 contra 3,95.
+Dividir pelo emprego formal também desfaz a leitura ingênua do mapa. São Paulo lidera qualquer contagem absoluta por concentrar o emprego, mas a maior taxa de acidentes de 2023 é de Santa Catarina, com 1.587,5 por 100 mil vínculos contra 1.359,2 de São Paulo. Em óbitos, a ordem muda outra vez, e quem lidera é Mato Grosso, com 8,94 contra 3,95.
 
 ## Como executar
 

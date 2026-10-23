@@ -12,11 +12,11 @@
 -- A razao tem duas causas, e confundi-las levaria a atribuir a subnotificacao o
 -- que e defasagem da propria serie. A coluna pct_sem_cat mede a primeira causa.
 -- A coluna cobertura_cat_pct mede a segunda: quanto do total oficial de CAT o
--- observatorio de fato reproduz. Em 2023 essa cobertura passa de 87%, ao passo
--- que no ano mais recente cai para perto de 68%, porque o acidente ocorrido em
--- um ano continua sendo comunicado nos anos seguintes e os arquivos mensais so
--- o registram quando a CAT e emitida. Ano recente e portanto subestimado duas
--- vezes, e a leitura correta e a do par de colunas, nunca a da razao isolada.
+-- observatorio de fato reproduz. Em 2023 essa cobertura passa de 87%; em 2024
+-- cai para perto de 60%, porque os arquivos trazem so CAT emitidas no ano do
+-- acidente e porque a fonte publicou uma fracao do volume de setembro a
+-- dezembro de 2024, ano marcado como parcial. A leitura correta e a do par de
+-- colunas com ano_status, nunca a da razao isolada.
 WITH proprio AS (
     SELECT ano, ano_status, ano_completo, acidentes, obitos, vinculos_ativos,
            acidentes_por_100mil_vinculos, obitos_por_100mil_vinculos
