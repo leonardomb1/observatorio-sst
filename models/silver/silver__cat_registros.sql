@@ -149,4 +149,16 @@ registros AS (
        AND ev.uf_empregador = l.uf_emp
        AND (l.obito_limpo OR l.agente_texto LIKE ev.agente_padrao)
 )
-SELECT * FROM registros
+-- Alguns arquivos mensais sao cumulativos (202207 a 202210, 202404, 202506,
+-- 202606) e repetem CAT publicadas nos meses seguintes. Fica a copia do arquivo
+-- cujo mes e o da emissao e, no empate, a do arquivo mais recente. O dense_rank
+-- remove so a repeticao entre arquivos: linhas iguais dentro do mesmo arquivo
+-- permanecem, porque podem ser CAT distintas.
+SELECT
+    r.*,
+    dense_rank() OVER (
+        PARTITION BY r.cat_chave
+        ORDER BY CASE WHEN date_format(r.data_emissao_cat_origem, '%Y%m') = r.periodo THEN 0 ELSE 1 END,
+                 r.periodo DESC
+    ) > 1 AS is_duplicata
+FROM registros r

@@ -1,3 +1,4 @@
+-- Uma linha por CAT: a copia repetida por arquivo cumulativo fica so no silver.cat_registros.
 SELECT
     periodo, data_acidente, ano, mes, data_emissao_cat, emissao_confiavel,
     dias_ate_emissao, idade, uf_acidente, uf_empregador,
@@ -10,3 +11,4 @@ SELECT
     origem_cadastramento, emitente_cat, data_nascimento, cnpj_empregador,
     covid, evento_catastrofico, geracao, arquivo_origem, cat_chave
 FROM {{ ref('silver__cat_registros') }}
+WHERE NOT is_duplicata

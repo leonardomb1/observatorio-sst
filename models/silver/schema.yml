@@ -24,9 +24,13 @@ models:
         description: "Rotulo comparavel entre todas as geracoes"
       - name: cat_chave
         tests: [not_null]
+      - name: is_duplicata
+        description: "Verdadeiro na copia de uma CAT que outro arquivo tambem traz"
 
   - name: silver__acidentes
-    description: "Uma linha por CAT, com rotulos completos e campos derivados"
+    description: >
+      Uma linha por CAT, deduplicada entre arquivos, com rotulos completos e
+      campos derivados.
     columns:
       - name: periodo
         tests: [not_null]
