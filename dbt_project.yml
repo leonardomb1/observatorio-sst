@@ -37,7 +37,7 @@ seeds:
     cat_rotulo_familia:
       +column_types: {campo: "varchar(30)", prefixo: "varchar(40)", familia: "varchar(200)", rotulo_completo: "varchar(200)"}
     cid_covid:
-      +column_types: {cid: "varchar(8)", descricao: "varchar(200)"}
+      +column_types: {cid: "varchar(8)", inicio: "date", descricao: "varchar(200)"}
     eventos_catastroficos:
       +column_types: {evento_id: "varchar(40)", descricao: "varchar(200)", data_acidente: "date", uf_empregador: "varchar(40)", agente_padrao: "varchar(40)"}
     cobertura_excecoes:

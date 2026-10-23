@@ -103,7 +103,7 @@ registros AS (
         trim(l.emitente_cat) AS emitente_cat,
         l.dt_nascimento AS data_nascimento,
         nullif(replace(replace(trim(l.cnpj_cei_empregador),'.',''),'/',''),'') AS cnpj_empregador,
-        cv.cid IS NOT NULL AS covid,
+        coalesce(l.dt_acidente >= cv3.inicio OR l.dt_acidente >= cv4.inicio, false) AS covid,
         ev.evento_id AS evento_catastrofico,
         l.emissao_copia_acidente,
         l.emissao_dia_unico,
@@ -142,8 +142,12 @@ registros AS (
         ON rp.campo = 'parte_corpo' AND rp.prefixo = l.parte_prefixo
     LEFT JOIN {{ ref('cat_rotulo_familia') }} rn
         ON rn.campo = 'natureza_lesao' AND rn.prefixo = l.natureza_prefixo
-    LEFT JOIN {{ ref('cid_covid') }} cv
-        ON cv.cid = left(l.cid_limpo, 4)
+    -- U07 casa pelos tres primeiros caracteres, porque a partir de 202506 parte
+    -- dos codigos chega truncada; B342 so conta a partir do inicio da pandemia
+    LEFT JOIN {{ ref('cid_covid') }} cv3
+        ON cv3.cid = left(l.cid_limpo, 3)
+    LEFT JOIN {{ ref('cid_covid') }} cv4
+        ON cv4.cid = left(l.cid_limpo, 4)
     LEFT JOIN {{ ref('eventos_catastroficos') }} ev
         ON ev.data_acidente = l.dt_acidente
        AND ev.uf_empregador = l.uf_emp

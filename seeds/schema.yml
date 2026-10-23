@@ -9,7 +9,7 @@ seeds:
       corresponde a mais de um texto completo, a familia foi escrita a mao e o
       rotulo detalhado fica vazio, porque o subtipo nao pode ser recuperado.
   - name: cid_covid
-    description: "Codigos CID-10 tratados como COVID-19 na marca covid da CAT"
+    description: "Prefixos CID-10 tratados como COVID-19 na marca covid da CAT, com a data do acidente a partir da qual contam"
   - name: eventos_catastroficos
     description: >
       Eventos com muitas vitimas no mesmo dia, marcados para que possam ser
