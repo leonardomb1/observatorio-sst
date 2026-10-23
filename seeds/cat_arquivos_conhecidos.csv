@@ -1,0 +1,35 @@
+periodo,defeito,nota
+201801,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201802,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201803,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201804,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201805,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201806,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201807,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201808,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+201809,fora_da_serie,A CAT aberta comeca em out/2018; o arquivo 201810 traz so o quarto trimestre
+202201,trimestral,Arquivo trimestral de jan a mar com emissao de mar a jun; fevereiro sem emissao publicada
+202202,lacuna_fonte,Mes sem emissao publicada nos arquivos trimestrais de 2022
+202204,trimestral,Arquivo trimestral com emissao apenas em junho; abril e maio sem emissao publicada
+202205,lacuna_fonte,Mes sem emissao publicada nos arquivos trimestrais de 2022
+202210,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202211,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202306,emissao_copia_acidente,Sem coluna de emissao: tres colunas Data Acidente; emissao anulada
+202307,emissao_copia_acidente,Sem coluna de emissao: tres colunas Data Acidente; emissao anulada
+202308,emissao_copia_acidente,Sem coluna de emissao: tres colunas Data Acidente; emissao anulada
+202309,emissao_copia_acidente,Sem coluna de emissao: tres colunas Data Acidente; emissao anulada
+202310,emissao_copia_acidente,Sem coluna de emissao: tres colunas Data Acidente; emissao anulada
+202409,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202410,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202411,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202412,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202501,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202502,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202503,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202504,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202505,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado
+202507,cid_corrompido,"CID de largura fixa com sufixo NULL truncado (S610NU, S61NUL); sufixo removido"
+202511,emissao_dia_unico,"205 linhas, todas emitidas no dia 01; emissao anulada"
+202512,emissao_dia_unico,"126 linhas, todas emitidas no dia 01; emissao anulada"
+202605,lacuna_fonte,Arquivo da origem com volume abaixo da metade do esperado; objeto no S3 responde 403 desde a carga
+202608,cid_ausente,CID vazio em todas as linhas

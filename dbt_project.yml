@@ -5,15 +5,58 @@ profile: observatorio
 
 model-paths: ["models"]
 macro-paths: ["macros"]
+seed-paths: ["seeds"]
 target-path: "target"
 clean-targets: ["target", "dbt_packages"]
 
+# Propriedades das tabelas espelham as do bronze: no cluster de dados
+# compartilhados o padrao de tres replicas nao se aplica.
 models:
   observatorio:
     +materialized: view
+    +properties:
+      replication_num: "1"
+      storage_volume: "s3_default"
+      compression: "LZ4"
+    silver:
+      +schema: silver
     gold:
       +schema: gold
     dm_sst:
       +schema: dm_sst
     ops:
       +schema: ops
+
+seeds:
+  observatorio:
+    +schema: silver
+    +properties:
+      replication_num: "1"
+      storage_volume: "s3_default"
+      compression: "LZ4"
+    cat_rotulo_familia:
+      +column_types: {campo: "varchar(30)", prefixo: "varchar(40)", familia: "varchar(200)", rotulo_completo: "varchar(200)"}
+    cid_covid:
+      +column_types: {cid: "varchar(8)", inicio: "date", descricao: "varchar(200)"}
+    eventos_catastroficos:
+      +column_types: {evento_id: "varchar(40)", descricao: "varchar(200)", data_acidente: "date", uf_empregador: "varchar(40)", agente_padrao: "varchar(40)"}
+    cobertura_excecoes:
+      +column_types: {ano: "int", mes: "int", motivo: "varchar(200)"}
+    cat_arquivos_conhecidos:
+      +column_types: {periodo: "varchar(10)", defeito: "varchar(40)", nota: "varchar(300)"}
+
+vars:
+  # razao entre CAT do mes e o esperado: abaixo de cobertura_lacuna o mes e
+  # lacuna e torna o ano parcial; abaixo de cobertura_baixa so fica marcado
+  cobertura_lacuna: 0.5
+  cobertura_baixa: 0.8
+  # divisoes CNAE retiradas do numerador e do denominador nas taxas
+  # sem_adm_publica (padrao: so a 84) e sem_divisoes_84_88 (variante que tira
+  # tambem educacao, saude e servicos sociais)
+  divisoes_adm_publica: ['84']
+  divisoes_84_88: ['84', '85', '86', '87', '88']
+  # estoque minimo de vinculos para a taxa ser lida isoladamente
+  base_minima_vinculos:
+    municipio: 5000
+    uf: 0
+    cnae: 50000

@@ -1,0 +1,39 @@
+version: 2
+
+models:
+  - name: silver__cat_registros
+    description: >
+      Uma linha por linha do bronze da CAT, com limpeza, marcas de defeito por
+      arquivo, familia de rotulo, marcas de COVID e de evento catastrofico e a
+      chave de identidade usada na deduplicacao entre arquivos.
+    columns:
+      - name: periodo
+        tests: [not_null]
+      - name: geracao
+        description: "Geracao de layout do arquivo: A ate 2020, B 2021 a mai/2023, D jun a out/2023, C depois"
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["A", "B", "C", "D"]
+      - name: data_emissao_cat
+        description: "Nula quando o arquivo nao traz emissao confiavel; a original fica em data_emissao_cat_origem"
+      - name: agente_causador
+        description: "Rotulo detalhado; nulo quando a origem cortou o texto e o prefixo e ambiguo"
+      - name: agente_causador_familia
+        description: "Rotulo comparavel entre todas as geracoes"
+      - name: cat_chave
+        tests: [not_null]
+      - name: is_duplicata
+        description: "Verdadeiro na copia de uma CAT que outro arquivo tambem traz"
+
+  - name: silver__acidentes
+    description: >
+      Uma linha por CAT, deduplicada entre arquivos, com rotulos completos e
+      campos derivados.
+    columns:
+      - name: periodo
+        tests: [not_null]
+
+  - name: silver__beneficios_acidentarios
+    description: "Concessoes do INSS; usar sempre o filtro acidente_trabalho"

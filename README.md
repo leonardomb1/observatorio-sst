@@ -22,7 +22,7 @@ Quatro camadas, cada uma com uma promessa distinta. Se não for possível enunci
 
 Duas regras sustentam a divisão. Reuso desce, não anda de lado: se dois datamarts precisarem da mesma coisa, ela desce para o gold, nunca é copiada entre marts. E datamart é por tópico, nunca por público: exposição é política de acesso, não modelagem.
 
-As camadas `bronze` e `silver` são materializadas por pipelines de ingestão em Python, orquestrados no Windmill, e entram aqui como *sources*. Este repositório governa `gold`, `dm_sst` e `ops`.
+A camada `bronze` é materializada por pipelines de ingestão em Python, orquestrados no Windmill, e entra aqui como *source*. Este repositório governa `silver`, `gold`, `dm_sst` e `ops`.
 
 ## Fontes integradas
 
@@ -50,13 +50,13 @@ O campo de unidade federativa do acidente está com os rótulos deslocados na or
 
 A contagem oficial mostra que 12,4% dos acidentes de 2023 foram reconhecidos **sem CAT registrada**, isto é, chegaram à Previdência pelo nexo técnico, sem que o empregador comunicasse o evento. Esse é o limite superior do que uma série construída apenas com CAT consegue enxergar, e o observatório passa a medi-lo em vez de apenas mencioná-lo.
 
-O confronto com o anuário também expõe um efeito que a série própria não revelava sozinha: em 2023 o observatório reproduz 87,5% das CAT oficiais, mas em 2024 apenas 68,2%, porque o acidente continua sendo comunicado nos anos seguintes. Ano recente é subestimado duas vezes, pela subnotificação e pela defasagem, e o modelo separa as duas causas em colunas distintas justamente para que não sejam confundidas.
+O confronto com o anuário também expõe um efeito que a série própria não revelava sozinha: em 2023 o observatório reproduz 87,5% das CAT oficiais, mas em 2024 apenas 60,4%. Parte da distância é estrutural: os arquivos mensais trazem só CAT emitidas no próprio ano do acidente, e as emitidas depois nunca chegam à série. O resto é lacuna de publicação, já que de setembro a dezembro de 2024 a fonte publicou uma fração do volume esperado, e por isso o ano sai marcado como parcial em `status_ano`. O modelo separa subnotificação e cobertura em colunas distintas justamente para que não sejam confundidas.
 
-Acidentes de trajeto são 2,6 vezes mais letais que os típicos, com 882 óbitos por 100 mil acidentes contra 333, apesar de os típicos serem mais de três vezes mais numerosos.
+Acidentes de trajeto são 2,7 vezes mais letais que os típicos, com 918 óbitos por 100 mil acidentes contra 340 nos anos consolidados, apesar de os típicos serem mais de três vezes mais numerosos.
 
 A base da OIT não possui taxa de acidentes fatais do Brasil desde 2011, enquanto países como Alemanha e Estados Unidos reportam anualmente. Com o estoque de vínculos da RAIS como denominador, o observatório recalcula a série a partir dos microdados nacionais: 4,46 óbitos por 100 mil vínculos formais em 2023.
 
-Dividir pelo emprego formal também desfaz a leitura ingênua do mapa. São Paulo lidera qualquer contagem absoluta por concentrar o emprego, mas a maior taxa de acidentes de 2023 é de Santa Catarina, com 1.587,8 por 100 mil vínculos contra 1.359,5 de São Paulo. Em óbitos, a ordem muda outra vez, e quem lidera é Mato Grosso, com 8,94 contra 3,95.
+Dividir pelo emprego formal também desfaz a leitura ingênua do mapa. São Paulo lidera qualquer contagem absoluta por concentrar o emprego, mas a maior taxa de acidentes de 2023 é de Santa Catarina, com 1.587,5 por 100 mil vínculos contra 1.359,2 de São Paulo. Em óbitos, a ordem muda outra vez, e quem lidera é Mato Grosso, com 8,94 contra 3,95.
 
 ## Como executar
 
@@ -77,19 +77,23 @@ A cópia paralela exige que o usuário do dbt tenha permissão de criação nos 
 
 Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines. O script de execução usa a linguagem `dbt` nativa do Windmill, cujo conteúdo é um descritor e cujo projeto vive como módulos do próprio script. Esses módulos não são editados à mão: o script `f/sst/dbt_sync_repo` baixa este repositório e os substitui por completo. A regra é que o repositório manda, porque duas cópias editáveis do mesmo projeto divergem sem avisar.
 
-## Uma armadilha do datamart
+## O contrato do datamart
 
-Os modelos de `dm_sst` são `SELECT *` sobre o gold, e o executor de dbt pula o nó cujo SQL não mudou. Quando um modelo do gold ganha coluna, o texto do datamart continua idêntico, o nó é pulado e a view antiga permanece com a lista de colunas congelada no momento da criação: a consulta ao datamart passa a falhar dizendo que a coluna não existe, enquanto o gold já a tem. A correção é derrubar a view do datamart e reconstruir, ou rodar com atualização completa. Vale conferir sempre que uma coluna nova não aparecer no consumo.
+Os modelos de `dm_sst` listam as colunas explicitamente, nunca `SELECT *`. O StarRocks expande o asterisco no momento em que a view é criada, e o executor de dbt pula o nó cujo SQL não mudou; com asterisco, uma coluna nova no gold não chegava ao datamart. Com a lista explícita, acrescentar coluna ao consumo exige editar o modelo do datamart, o que recria a view e deixa o contrato revisável no git.
+
+Todo modelo derivado da CAT carrega `ano_status` (`consolidado`, `provisorio` ou `parcial`, definido em `gold.status_ano`) e `ano_completo`, o mesmo critério em booleano. Ano parcial ou provisório não deve ser comparado com ano consolidado.
 
 ## Estrutura
 
 ```
 models/gold/      métricas certificadas, com os testes em schema.yml
-models/dm_sst/    distribuição do tópico, views finas sobre o gold
+models/dm_sst/    distribuição do tópico, views finas sobre o gold, com colunas explícitas
 models/ops/       metadado operacional
-models/sources.yml  declaração das camadas bronze e silver
+models/silver/    camada conformada sobre o bronze
+models/sources.yml  declaração da camada bronze
 tests/            testes singulares, que devem retornar zero linhas
-macros/           nomes de esquema literais e prefixo de validação
+macros/           nomes de esquema literais, prefixo de validação e listas de divisões CNAE
+seeds/            listas curadas: rótulos, COVID, eventos, exceções de cobertura e defeitos de arquivo
 ```
 
 ## Licença

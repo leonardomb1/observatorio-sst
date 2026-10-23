@@ -1,1 +1,8 @@
-SELECT ano, sexo, COUNT(*) AS acidentes, SUM(obito) AS obitos FROM {{ source('silver', 'acidentes') }} WHERE ano IS NOT NULL AND sexo IS NOT NULL GROUP BY 1,2
+SELECT a.*, s.ano_status, coalesce(s.ano_completo, false) AS ano_completo
+FROM (
+    SELECT ano, sexo, COUNT(*) AS acidentes, SUM(obito) AS obitos
+    FROM {{ ref('silver__acidentes') }}
+    WHERE ano IS NOT NULL AND sexo IS NOT NULL
+    GROUP BY 1, 2
+) a
+LEFT JOIN {{ ref('gold__status_ano') }} s ON s.ano = a.ano

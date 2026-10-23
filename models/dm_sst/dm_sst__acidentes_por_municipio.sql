@@ -1,1 +1,20 @@
-SELECT * FROM {{ ref('gold__acidentes_por_municipio') }}
+SELECT
+    ano,
+    municipio_codigo,
+    municipio,
+    uf,
+    regiao,
+    acidentes,
+    obitos,
+    acidentes_sem_adm_publica,
+    obitos_sem_adm_publica,
+    acidentes_sem_divisoes_84_88,
+    obitos_sem_divisoes_84_88,
+    acidentes_sem_cnae,
+    acidentes_evento,
+    obitos_evento,
+    acidentes_covid,
+    obitos_covid,
+    ano_status,
+    ano_completo
+FROM {{ ref('gold__acidentes_por_municipio') }}
