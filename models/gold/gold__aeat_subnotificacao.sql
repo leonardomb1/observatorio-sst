@@ -15,7 +15,7 @@ WITH ordenado AS (
                               ORDER BY anuario DESC) AS recencia
     FROM {{ source('bronze', 'aeat_registro') }}
 )
-SELECT ano, escopo, escopo_tipo, cnae_codigo, anuario,
+SELECT CAST(ano AS INT) AS ano, escopo, escopo_tipo, cnae_codigo, anuario,
        total, com_cat, sem_cat, tipico, trajeto, doenca,
        ROUND(sem_cat * 100.0 / nullif(total, 0), 1) AS pct_sem_cat
 FROM ordenado

@@ -59,7 +59,9 @@ models:
                 values: ["Típico", "Trajeto", "Doença"]
 
   - name: gold__letalidade_por_tipo
-    description: "Obitos por 100 mil acidentes, por tipo de acidente"
+    description: >
+      Obitos por 100 mil acidentes, por tipo de acidente, somando apenas os
+      anos consolidados listados em anos_incluidos.
     columns:
       - name: tipo_acidente
         tests: [not_null, unique]

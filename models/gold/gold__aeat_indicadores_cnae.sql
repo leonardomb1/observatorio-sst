@@ -13,7 +13,7 @@ WITH ordenado AS (
                                  ORDER BY anuario DESC) AS recencia
     FROM {{ source('bronze', 'aeat_indicadores') }}
 )
-SELECT ano, escopo, escopo_tipo, cnae_codigo, anuario,
+SELECT CAST(ano AS INT) AS ano, escopo, escopo_tipo, cnae_codigo, anuario,
        incidencia_por_mil,
        ROUND(incidencia_por_mil * 100, 1) AS incidencia_por_100mil,
        incidencia_doencas_por_mil,

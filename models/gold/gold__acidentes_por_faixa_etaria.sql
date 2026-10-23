@@ -1,1 +1,13 @@
-SELECT ano,        CASE WHEN idade < 18 THEN 'Até 17' WHEN idade < 25 THEN '18 a 24'             WHEN idade < 35 THEN '25 a 34' WHEN idade < 45 THEN '35 a 44'             WHEN idade < 55 THEN '45 a 54' WHEN idade < 65 THEN '55 a 64'             ELSE '65 ou mais' END AS faixa_etaria,        MIN(idade) AS ordem, COUNT(*) AS acidentes, SUM(obito) AS obitos FROM {{ ref('silver__acidentes') }} WHERE ano IS NOT NULL AND idade BETWEEN 14 AND 90 GROUP BY 1,2
+SELECT a.*, s.ano_status
+FROM (
+    SELECT ano,
+           CASE WHEN idade < 18 THEN 'Até 17' WHEN idade < 25 THEN '18 a 24'
+                WHEN idade < 35 THEN '25 a 34' WHEN idade < 45 THEN '35 a 44'
+                WHEN idade < 55 THEN '45 a 54' WHEN idade < 65 THEN '55 a 64'
+                ELSE '65 ou mais' END AS faixa_etaria,
+           MIN(idade) AS ordem, COUNT(*) AS acidentes, SUM(obito) AS obitos
+    FROM {{ ref('silver__acidentes') }}
+    WHERE ano IS NOT NULL AND idade BETWEEN 14 AND 90
+    GROUP BY 1, 2
+) a
+LEFT JOIN {{ ref('gold__status_ano') }} s ON s.ano = a.ano
