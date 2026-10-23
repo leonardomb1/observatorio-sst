@@ -12,6 +12,7 @@
 -- numerador em grau desconhecido, tema tratado nas limitacoes metodologicas.
 SELECT
     ano,
+    ano_status,
     ano_completo,
     SUM(vinculos_ativos) AS vinculos_ativos,
     SUM(estabelecimentos) AS estabelecimentos,
@@ -22,4 +23,4 @@ SELECT
     ROUND(SUM(obitos) * 100000.0 / SUM(vinculos_ativos), 2)
         AS obitos_por_100mil_vinculos
 FROM {{ ref('gold__taxa_incidencia_municipio') }}
-GROUP BY ano, ano_completo
+GROUP BY ano, ano_status, ano_completo

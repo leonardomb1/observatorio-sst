@@ -5,7 +5,9 @@
 -- passo que o oficial soma tambem os reconhecidos sem CAT; e o denominador do
 -- observatorio e o estoque de vinculos da RAIS em 31 de dezembro, ao passo que
 -- o anuario usa a media anual de vinculos, base menor. A coluna razao mostra
--- quantas vezes a taxa oficial supera a calculada.
+-- quantas vezes a taxa oficial supera a calculada. Nenhum ano e filtrado:
+-- ano_status diz se o numerador do ano e comparavel, e o ano mais recente do
+-- anuario e parcial na serie da CAT.
 --
 -- A razao tem duas causas, e confundi-las levaria a atribuir a subnotificacao o
 -- que e defasagem da propria serie. A coluna pct_sem_cat mede a primeira causa.
@@ -16,23 +18,23 @@
 -- o registram quando a CAT e emitida. Ano recente e portanto subestimado duas
 -- vezes, e a leitura correta e a do par de colunas, nunca a da razao isolada.
 WITH proprio AS (
-    SELECT ano, acidentes, obitos, vinculos_ativos,
+    SELECT ano, ano_status, acidentes, obitos, vinculos_ativos,
            acidentes_por_100mil_vinculos, obitos_por_100mil_vinculos
     FROM {{ ref('gold__taxa_incidencia_brasil') }}
-    WHERE ano_completo = true
 ),
 oficial AS (
-    SELECT ano, incidencia_por_100mil, mortalidade_por_100mil, letalidade_por_mil_acidentes
+    SELECT CAST(ano AS INT) AS ano, incidencia_por_100mil, mortalidade_por_100mil, letalidade_por_mil_acidentes
     FROM {{ ref('gold__aeat_indicadores_cnae') }}
     WHERE cnae_codigo = 'TOTAL' AND escopo_tipo = 'pais'
 ),
 registro AS (
-    SELECT ano, total, com_cat, sem_cat, pct_sem_cat
+    SELECT CAST(ano AS INT) AS ano, total, com_cat, sem_cat, pct_sem_cat
     FROM {{ ref('gold__aeat_subnotificacao') }}
     WHERE cnae_codigo = 'TOTAL' AND escopo_tipo = 'pais'
 )
 SELECT
     p.ano,
+    p.ano_status,
     p.acidentes AS acidentes_com_cat_observatorio,
     r.total AS acidentes_totais_oficial,
     r.sem_cat AS acidentes_sem_cat_oficial,

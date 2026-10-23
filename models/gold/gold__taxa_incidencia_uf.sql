@@ -7,6 +7,7 @@
 -- de municipio nao existe no dicionario do IBGE, menos de 0,1% do total.
 SELECT
     ano,
+    ano_status,
     ano_completo,
     uf,
     uf_sigla,
@@ -20,4 +21,4 @@ SELECT
     ROUND(SUM(obitos) * 100000.0 / SUM(vinculos_ativos), 2)
         AS obitos_por_100mil_vinculos
 FROM {{ ref('gold__taxa_incidencia_municipio') }}
-GROUP BY ano, uf, uf_sigla, regiao, ano_completo
+GROUP BY ano, uf, uf_sigla, regiao, ano_status, ano_completo

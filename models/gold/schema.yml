@@ -1,6 +1,35 @@
 version: 2
 
 models:
+  - name: gold__cobertura_cat_mensal
+    description: >
+      Cobertura da serie de CAT por ano do acidente e mes de emissao, frente ao
+      esperado pelo padrao sazonal e pelo nivel do proprio ano.
+    columns:
+      - name: status_mes
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["ok", "baixo", "lacuna", "ausente", "atipico", "nao_publicado"]
+
+  - name: gold__status_ano
+    description: >
+      Situacao de cada ano da serie de CAT: consolidado, provisorio ou parcial.
+      Todo modelo de CAT do gold carrega ano_status a partir daqui.
+    columns:
+      - name: ano
+        tests: [not_null, unique]
+      - name: ano_status
+        tests:
+          - not_null
+          - accepted_values:
+              arguments:
+                values: ["consolidado", "provisorio", "parcial"]
+      - name: ano_completo
+        description: "Igual a ano_status = consolidado; mantido para o Grafana"
+        tests: [not_null]
+
   - name: gold__acidentes_mensal_uf
     description: >
       Acidentes e obitos por ano, mes e unidade federativa do empregador.

@@ -44,3 +44,9 @@ seeds:
       +column_types: {ano: "int", mes: "int", motivo: "varchar(200)"}
     cat_arquivos_conhecidos:
       +column_types: {periodo: "varchar(10)", defeito: "varchar(40)", nota: "varchar(300)"}
+
+vars:
+  # razao entre CAT do mes e o esperado: abaixo de cobertura_lacuna o mes e
+  # lacuna e torna o ano parcial; abaixo de cobertura_baixa so fica marcado
+  cobertura_lacuna: 0.5
+  cobertura_baixa: 0.8

@@ -7,13 +7,8 @@
 -- como numero em algum ponto do caminho; sem o lpad, justamente o setor de
 -- maior letalidade cairia da juncao sem produzir erro. Com a correcao, a
 -- juncao cobre 99,9% dos acidentes.
-WITH limites AS (
-    SELECT min(ano) AS primeiro, max(ano) AS ultimo
-    FROM {{ ref('silver__acidentes') }}
-    WHERE ano IS NOT NULL
-),
-vinculos AS (
-    SELECT ano,
+WITH vinculos AS (
+    SELECT CAST(ano AS INT) AS ano,
            left(cnae_subclasse, 4) AS cnae_codigo,
            SUM(vinculos_ativos) AS vinculos_ativos,
            SUM(estabelecimentos) AS estabelecimentos
@@ -44,10 +39,11 @@ SELECT
     ROUND(COALESCE(a.obitos, 0) * 100000.0 / v.vinculos_ativos, 2)
         AS obitos_por_100mil_vinculos,
     CASE WHEN v.vinculos_ativos >= 5000 THEN true ELSE false END AS base_suficiente,
-    CASE WHEN v.ano > l.primeiro AND v.ano < l.ultimo THEN true ELSE false END
-        AS ano_completo
+    s.ano_status,
+    coalesce(s.ano_completo, false) AS ano_completo
 FROM vinculos v
-CROSS JOIN limites l
+LEFT JOIN {{ ref('gold__status_ano') }} s
+    ON s.ano = v.ano
 LEFT JOIN acidentes a
     ON a.ano = v.ano AND a.cnae_codigo = v.cnae_codigo
 WHERE v.vinculos_ativos > 0

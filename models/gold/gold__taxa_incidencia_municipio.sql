@@ -10,17 +10,10 @@
 -- que um unico acidente move a taxa em centenas de pontos; eles permanecem na
 -- tabela em vez de sumirem sem aviso, e cabe a quem consome decidir o corte.
 --
--- A coluna ano_completo resolve uma armadilha propria desta serie: a CAT so
--- passa a ser publicada em outubro de 2018, entao o ano de 2018 reune poucos
--- meses de registro e sua taxa aparece como uma queda de risco que nunca
--- houve. O primeiro e o ultimo ano da serie ficam marcados como incompletos,
--- pelo mesmo criterio ja usado no teste de volume anual.
-WITH limites AS (
-    SELECT min(ano) AS primeiro, max(ano) AS ultimo
-    FROM {{ ref('silver__acidentes') }}
-    WHERE ano IS NOT NULL
-),
-vinculos AS (
+-- A coluna ano_status vem de gold.status_ano: so o ano consolidado pode ser
+-- comparado com outro. ano_completo e o mesmo criterio em booleano, mantido
+-- para os paineis que ja o filtram.
+WITH vinculos AS (
     SELECT ano, municipio_codigo, municipio, uf_sigla, uf, regiao,
            vinculos_ativos, estabelecimentos
     FROM {{ ref('gold__vinculos_rais_municipio') }}
@@ -46,9 +39,10 @@ SELECT
     ROUND(COALESCE(a.obitos, 0) * 100000.0 / v.vinculos_ativos, 2)
         AS obitos_por_100mil_vinculos,
     CASE WHEN v.vinculos_ativos >= 5000 THEN true ELSE false END AS base_suficiente,
-    CASE WHEN v.ano > l.primeiro AND v.ano < l.ultimo THEN true ELSE false END
-        AS ano_completo
+    s.ano_status,
+    coalesce(s.ano_completo, false) AS ano_completo
 FROM vinculos v
-CROSS JOIN limites l
+LEFT JOIN {{ ref('gold__status_ano') }} s
+    ON s.ano = v.ano
 LEFT JOIN acidentes a
     ON a.ano = v.ano AND a.municipio_codigo = v.municipio_codigo

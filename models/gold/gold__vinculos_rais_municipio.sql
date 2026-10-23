@@ -5,7 +5,7 @@
 -- linhas; o residuo sao codigos de municipio ignorado, que nao tem populacao
 -- ocupada a atribuir e por isso ficam de fora do denominador.
 SELECT
-    r.ano,
+    CAST(r.ano AS INT) AS ano,
     r.municipio_codigo,
     max(m.nome) AS municipio,
     max(m.uf_sigla) AS uf_sigla,
@@ -16,4 +16,4 @@ SELECT
 FROM {{ source('bronze', 'rais_estoque') }} r
 JOIN {{ source('bronze', 'ibge_municipios') }} m
     ON r.municipio_codigo = m.codigo
-GROUP BY r.ano, r.municipio_codigo
+GROUP BY CAST(r.ano AS INT), r.municipio_codigo
