@@ -77,20 +77,23 @@ A cópia paralela exige que o usuário do dbt tenha permissão de criação nos 
 
 Em produção a execução é agendada no Windmill, após as cargas mensais, com o mesmo tratador de falhas dos demais pipelines. O script de execução usa a linguagem `dbt` nativa do Windmill, cujo conteúdo é um descritor e cujo projeto vive como módulos do próprio script. Esses módulos não são editados à mão: o script `f/sst/dbt_sync_repo` baixa este repositório e os substitui por completo. A regra é que o repositório manda, porque duas cópias editáveis do mesmo projeto divergem sem avisar.
 
-## Uma armadilha do datamart
+## O contrato do datamart
 
-Os modelos de `dm_sst` são `SELECT *` sobre o gold, e o executor de dbt pula o nó cujo SQL não mudou. Quando um modelo do gold ganha coluna, o texto do datamart continua idêntico, o nó é pulado e a view antiga permanece com a lista de colunas congelada no momento da criação: a consulta ao datamart passa a falhar dizendo que a coluna não existe, enquanto o gold já a tem. A correção é derrubar a view do datamart e reconstruir, ou rodar com atualização completa. Vale conferir sempre que uma coluna nova não aparecer no consumo.
+Os modelos de `dm_sst` listam as colunas explicitamente, nunca `SELECT *`. O StarRocks expande o asterisco no momento em que a view é criada, e o executor de dbt pula o nó cujo SQL não mudou; com asterisco, uma coluna nova no gold não chegava ao datamart. Com a lista explícita, acrescentar coluna ao consumo exige editar o modelo do datamart, o que recria a view e deixa o contrato revisável no git.
+
+Todo modelo derivado da CAT carrega `ano_status` (`consolidado`, `provisorio` ou `parcial`, definido em `gold.status_ano`) e `ano_completo`, o mesmo critério em booleano. Ano parcial ou provisório não deve ser comparado com ano consolidado.
 
 ## Estrutura
 
 ```
 models/gold/      métricas certificadas, com os testes em schema.yml
-models/dm_sst/    distribuição do tópico, views finas sobre o gold
+models/dm_sst/    distribuição do tópico, views finas sobre o gold, com colunas explícitas
 models/ops/       metadado operacional
 models/silver/    camada conformada sobre o bronze
 models/sources.yml  declaração da camada bronze
 tests/            testes singulares, que devem retornar zero linhas
-macros/           nomes de esquema literais e prefixo de validação
+macros/           nomes de esquema literais, prefixo de validação e listas de divisões CNAE
+seeds/            listas curadas: rótulos, COVID, eventos, exceções de cobertura e defeitos de arquivo
 ```
 
 ## Licença
