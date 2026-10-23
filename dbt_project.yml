@@ -50,3 +50,13 @@ vars:
   # lacuna e torna o ano parcial; abaixo de cobertura_baixa so fica marcado
   cobertura_lacuna: 0.5
   cobertura_baixa: 0.8
+  # divisoes CNAE retiradas do numerador e do denominador nas taxas
+  # sem_adm_publica (padrao: so a 84) e sem_divisoes_84_88 (variante que tira
+  # tambem educacao, saude e servicos sociais)
+  divisoes_adm_publica: ['84']
+  divisoes_84_88: ['84', '85', '86', '87', '88']
+  # estoque minimo de vinculos para a taxa ser lida isoladamente
+  base_minima_vinculos:
+    municipio: 5000
+    uf: 0
+    cnae: 50000

@@ -118,8 +118,11 @@ models:
     description: >
       Acidentes e obitos por 100 mil vinculos formais, por municipio. Municipio
       com emprego e sem acidente aparece com taxa zero, e nao ausente. A coluna
-      base_suficiente marca denominador abaixo de 5 mil vinculos, faixa em que
-      a taxa oscila demais para leitura isolada.
+      base_suficiente marca denominador abaixo de base_minima vinculos, faixa
+      em que a taxa oscila demais para leitura isolada. Cada taxa nomeia o
+      denominador: sem sufixo, todos os vinculos; sem_adm_publica, sem a
+      divisao CNAE 84 dos dois lados (padrao do app); sem_divisoes_84_88, sem
+      administracao publica, educacao, saude e servicos sociais.
     columns:
       - name: municipio_codigo
         tests: [not_null]
@@ -127,7 +130,9 @@ models:
         tests: [not_null]
 
   - name: gold__taxa_incidencia_uf
-    description: "Taxa de incidencia por unidade federativa, somada dos municipios"
+    description: >
+      Taxa de incidencia por unidade federativa, somada dos municipios, com a
+      contagem de CAT que ficaram fora da taxa por falta de municipio casado.
     columns:
       - name: uf
         tests: [not_null]

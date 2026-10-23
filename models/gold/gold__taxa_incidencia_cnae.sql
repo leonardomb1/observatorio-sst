@@ -14,14 +14,16 @@ WITH vinculos AS (
            SUM(estabelecimentos) AS estabelecimentos
     FROM {{ source('bronze', 'rais_estoque') }}
     WHERE length(cnae_subclasse) = 7
-    GROUP BY ano, left(cnae_subclasse, 4)
+    GROUP BY CAST(ano AS INT), left(cnae_subclasse, 4)
 ),
 acidentes AS (
     SELECT ano,
            lpad(cnae_codigo, 4, '0') AS cnae_codigo,
            max(cnae_descricao) AS cnae_descricao,
            SUM(acidentes) AS acidentes,
-           SUM(obitos) AS obitos
+           SUM(obitos) AS obitos,
+           SUM(acidentes_evento) AS acidentes_evento,
+           SUM(obitos_evento) AS obitos_evento
     FROM {{ ref('gold__acidentes_por_cnae') }}
     WHERE cnae_codigo IS NOT NULL
     GROUP BY ano, lpad(cnae_codigo, 4, '0')
@@ -38,7 +40,10 @@ SELECT
         AS acidentes_por_100mil_vinculos,
     ROUND(COALESCE(a.obitos, 0) * 100000.0 / v.vinculos_ativos, 2)
         AS obitos_por_100mil_vinculos,
-    CASE WHEN v.vinculos_ativos >= 5000 THEN true ELSE false END AS base_suficiente,
+    COALESCE(a.acidentes_evento, 0) AS acidentes_evento,
+    COALESCE(a.obitos_evento, 0) AS obitos_evento,
+    {{ var('base_minima_vinculos')['cnae'] }} AS base_minima,
+    v.vinculos_ativos >= {{ var('base_minima_vinculos')['cnae'] }} AS base_suficiente,
     s.ano_status,
     coalesce(s.ano_completo, false) AS ano_completo
 FROM vinculos v

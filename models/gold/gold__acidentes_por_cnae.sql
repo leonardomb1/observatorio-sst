@@ -1,1 +1,13 @@
-SELECT ano, cnae_codigo,        concat(upper(left(max(cnae_descricao),1)), {{ minusculas('substr(max(cnae_descricao),2)') }}) AS cnae_descricao,        COUNT(*) AS acidentes, SUM(obito) AS obitos FROM {{ ref('silver__acidentes') }} WHERE ano IS NOT NULL GROUP BY ano, cnae_codigo
+SELECT
+    ano,
+    cnae_codigo,
+    concat(upper(left(max(cnae_descricao),1)), {{ minusculas('substr(max(cnae_descricao),2)') }}) AS cnae_descricao,
+    COUNT(*) AS acidentes,
+    SUM(obito) AS obitos,
+    SUM(CASE WHEN evento_catastrofico IS NOT NULL THEN 1 ELSE 0 END) AS acidentes_evento,
+    SUM(CASE WHEN evento_catastrofico IS NOT NULL AND obito THEN 1 ELSE 0 END) AS obitos_evento,
+    SUM(CASE WHEN covid THEN 1 ELSE 0 END) AS acidentes_covid,
+    SUM(CASE WHEN covid AND obito THEN 1 ELSE 0 END) AS obitos_covid
+FROM {{ ref('silver__acidentes') }}
+WHERE ano IS NOT NULL
+GROUP BY ano, cnae_codigo
