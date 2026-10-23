@@ -5,12 +5,15 @@ profile: observatorio
 
 model-paths: ["models"]
 macro-paths: ["macros"]
+seed-paths: ["seeds"]
 target-path: "target"
 clean-targets: ["target", "dbt_packages"]
 
 models:
   observatorio:
     +materialized: view
+    silver:
+      +schema: silver
     gold:
       +schema: gold
     dm_sst:

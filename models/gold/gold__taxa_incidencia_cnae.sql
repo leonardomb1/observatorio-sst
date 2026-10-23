@@ -9,7 +9,7 @@
 -- juncao cobre 99,9% dos acidentes.
 WITH limites AS (
     SELECT min(ano) AS primeiro, max(ano) AS ultimo
-    FROM {{ source('silver', 'acidentes') }}
+    FROM {{ ref('silver__acidentes') }}
     WHERE ano IS NOT NULL
 ),
 vinculos AS (

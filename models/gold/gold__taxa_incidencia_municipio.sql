@@ -17,7 +17,7 @@
 -- pelo mesmo criterio ja usado no teste de volume anual.
 WITH limites AS (
     SELECT min(ano) AS primeiro, max(ano) AS ultimo
-    FROM {{ source('silver', 'acidentes') }}
+    FROM {{ ref('silver__acidentes') }}
     WHERE ano IS NOT NULL
 ),
 vinculos AS (

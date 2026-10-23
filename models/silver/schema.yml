@@ -1,0 +1,7 @@
+version: 2
+
+models:
+  - name: silver__acidentes
+    description: "Uma linha por CAT, com rotulos completos e campos derivados"
+  - name: silver__beneficios_acidentarios
+    description: "Concessoes do INSS; usar sempre o filtro acidente_trabalho"

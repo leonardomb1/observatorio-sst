@@ -22,7 +22,7 @@ Quatro camadas, cada uma com uma promessa distinta. Se não for possível enunci
 
 Duas regras sustentam a divisão. Reuso desce, não anda de lado: se dois datamarts precisarem da mesma coisa, ela desce para o gold, nunca é copiada entre marts. E datamart é por tópico, nunca por público: exposição é política de acesso, não modelagem.
 
-As camadas `bronze` e `silver` são materializadas por pipelines de ingestão em Python, orquestrados no Windmill, e entram aqui como *sources*. Este repositório governa `gold`, `dm_sst` e `ops`.
+A camada `bronze` é materializada por pipelines de ingestão em Python, orquestrados no Windmill, e entra aqui como *source*. Este repositório governa `silver`, `gold`, `dm_sst` e `ops`.
 
 ## Fontes integradas
 
@@ -87,7 +87,8 @@ Os modelos de `dm_sst` são `SELECT *` sobre o gold, e o executor de dbt pula o 
 models/gold/      métricas certificadas, com os testes em schema.yml
 models/dm_sst/    distribuição do tópico, views finas sobre o gold
 models/ops/       metadado operacional
-models/sources.yml  declaração das camadas bronze e silver
+models/silver/    camada conformada sobre o bronze
+models/sources.yml  declaração da camada bronze
 tests/            testes singulares, que devem retornar zero linhas
 macros/           nomes de esquema literais e prefixo de validação
 ```

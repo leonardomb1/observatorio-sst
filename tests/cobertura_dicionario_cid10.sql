@@ -5,7 +5,7 @@ with base as (
     select
         count(*) as total,
         sum(case when cid10_descricao is not null then 1 else 0 end) as resolvidos
-    from {{ source('silver', 'acidentes') }}
+    from {{ ref('silver__acidentes') }}
     where cid10_codigo is not null and cid10_codigo <> ''
 )
 select total, resolvidos, round(100.0 * resolvidos / total, 1) as cobertura_pct
