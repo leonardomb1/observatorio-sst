@@ -7,7 +7,7 @@ WITH sem AS (
     WHERE ano IS NOT NULL
     GROUP BY ano
 )
-SELECT a.*, x.acidentes_sem_capitulo_ano, s.ano_status
+SELECT a.*, x.acidentes_sem_capitulo_ano, s.ano_status, coalesce(s.ano_completo, false) AS ano_completo
 FROM (
     SELECT ano, cid10_capitulo, COUNT(*) AS acidentes, SUM(obito) AS obitos,
            SUM(CASE WHEN covid THEN 1 ELSE 0 END) AS acidentes_covid

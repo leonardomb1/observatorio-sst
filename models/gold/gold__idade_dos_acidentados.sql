@@ -1,4 +1,4 @@
-SELECT a.*, s.ano_status
+SELECT a.*, s.ano_status, coalesce(s.ano_completo, false) AS ano_completo
 FROM (
     SELECT ano, ROUND(AVG(idade),2) AS idade_media_geral,
            ROUND(AVG(CASE WHEN obito THEN idade END),2) AS idade_media_obitos

@@ -1,7 +1,7 @@
 -- Acidentes por municipio do empregador. As colunas sem_* aplicam ao
 -- numerador o mesmo corte de divisoes CNAE do denominador; a CAT sem CNAE
 -- informado fica no numerador, porque sua divisao e desconhecida.
-SELECT a.*, s.ano_status
+SELECT a.*, s.ano_status, coalesce(s.ano_completo, false) AS ano_completo
 FROM (
     SELECT
         ano,

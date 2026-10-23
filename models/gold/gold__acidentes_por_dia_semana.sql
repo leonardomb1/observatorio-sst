@@ -1,4 +1,4 @@
-SELECT a.*, s.ano_status
+SELECT a.*, s.ano_status, coalesce(s.ano_completo, false) AS ano_completo
 FROM (
     SELECT ano,
            CASE pmod(dayofweek(data_acidente)+5,7) WHEN 0 THEN 'Segunda' WHEN 1 THEN 'Terça'

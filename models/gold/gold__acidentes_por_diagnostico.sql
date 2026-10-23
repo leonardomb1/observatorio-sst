@@ -1,4 +1,4 @@
-SELECT a.*, s.ano_status
+SELECT a.*, s.ano_status, coalesce(s.ano_completo, false) AS ano_completo
 FROM (
     SELECT ano, cid10_codigo, max(cid10_descricao) AS cid10_descricao,
            max(cid10_so_categoria) AS cid10_so_categoria,

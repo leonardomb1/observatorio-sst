@@ -1,4 +1,4 @@
-SELECT a.*, s.ano_status
+SELECT a.*, s.ano_status, coalesce(s.ano_completo, false) AS ano_completo
 FROM (
     SELECT ano,
            CASE WHEN idade < 18 THEN 'Até 17' WHEN idade < 25 THEN '18 a 24'

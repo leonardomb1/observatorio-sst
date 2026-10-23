@@ -27,6 +27,7 @@ SELECT
     CASE WHEN m.pct_emissao_confiavel >= 50 THEN m.pct_apos_1_dia END AS pct_apos_1_dia,
     m.registros,
     m.pct_emissao_confiavel,
-    s.ano_status
+    s.ano_status,
+    coalesce(s.ano_completo, false) AS ano_completo
 FROM mensal m
 LEFT JOIN {{ ref('gold__status_ano') }} s ON s.ano = m.ano
