@@ -1,0 +1,25 @@
+version: 2
+
+seeds:
+  - name: cat_rotulo_familia
+    description: >
+      Familia comparavel e rotulo detalhado para cada prefixo de 20 caracteres
+      dos campos agente_causador, parte_corpo e natureza_lesao. Gerado uma vez a
+      partir do texto completo da geracao B (2021 a mai/2023). Onde o prefixo
+      corresponde a mais de um texto completo, a familia foi escrita a mao e o
+      rotulo detalhado fica vazio, porque o subtipo nao pode ser recuperado.
+  - name: cid_covid
+    description: "Codigos CID-10 tratados como COVID-19 na marca covid da CAT"
+  - name: eventos_catastroficos
+    description: >
+      Eventos com muitas vitimas no mesmo dia, marcados para que possam ser
+      separados das series. A CAT entra no evento quando bate data do acidente,
+      UF do empregador e (obito ou agente causador com o padrao informado).
+  - name: cobertura_excecoes
+    description: >
+      Meses com queda real de volume, e nao lacuna de publicacao. O mes listado
+      recebe status atipico e nao torna o ano parcial.
+  - name: cat_arquivos_conhecidos
+    description: >
+      Defeitos conhecidos dos arquivos mensais da CAT, por periodo. O teste
+      cat_arquivo_defeito_conhecido falha se surgir marca de defeito fora desta lista.

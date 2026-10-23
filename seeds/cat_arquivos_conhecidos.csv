@@ -1,0 +1,12 @@
+periodo,defeito,nota
+202201,trimestral,"Arquivo trimestral de jan a mar com emissao de mar a jun; fevereiro sem emissao publicada"
+202204,trimestral,"Arquivo trimestral com emissao apenas em junho; abril e maio sem emissao publicada"
+202306,emissao_copia_acidente,"Sem coluna de emissao: tres colunas Data Acidente; emissao anulada"
+202307,emissao_copia_acidente,"Sem coluna de emissao: tres colunas Data Acidente; emissao anulada"
+202308,emissao_copia_acidente,"Sem coluna de emissao: tres colunas Data Acidente; emissao anulada"
+202309,emissao_copia_acidente,"Sem coluna de emissao: tres colunas Data Acidente; emissao anulada"
+202310,emissao_copia_acidente,"Sem coluna de emissao: tres colunas Data Acidente; emissao anulada"
+202507,cid_corrompido,"CID de largura fixa com sufixo NULL truncado (S610NU, S61NUL); sufixo removido"
+202511,emissao_dia_unico,"205 linhas, todas emitidas no dia 01; emissao anulada"
+202512,emissao_dia_unico,"126 linhas, todas emitidas no dia 01; emissao anulada"
+202608,cid_ausente,"CID vazio em todas as linhas"

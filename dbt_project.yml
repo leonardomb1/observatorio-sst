@@ -9,9 +9,15 @@ seed-paths: ["seeds"]
 target-path: "target"
 clean-targets: ["target", "dbt_packages"]
 
+# Propriedades das tabelas espelham as do bronze: no cluster de dados
+# compartilhados o padrao de tres replicas nao se aplica.
 models:
   observatorio:
     +materialized: view
+    +properties:
+      replication_num: "1"
+      storage_volume: "s3_default"
+      compression: "LZ4"
     silver:
       +schema: silver
     gold:
@@ -20,3 +26,21 @@ models:
       +schema: dm_sst
     ops:
       +schema: ops
+
+seeds:
+  observatorio:
+    +schema: silver
+    +properties:
+      replication_num: "1"
+      storage_volume: "s3_default"
+      compression: "LZ4"
+    cat_rotulo_familia:
+      +column_types: {campo: "varchar(30)", prefixo: "varchar(40)", familia: "varchar(200)", rotulo_completo: "varchar(200)"}
+    cid_covid:
+      +column_types: {cid: "varchar(8)", descricao: "varchar(200)"}
+    eventos_catastroficos:
+      +column_types: {evento_id: "varchar(40)", descricao: "varchar(200)", data_acidente: "date", uf_empregador: "varchar(40)", agente_padrao: "varchar(40)"}
+    cobertura_excecoes:
+      +column_types: {ano: "int", mes: "int", motivo: "varchar(200)"}
+    cat_arquivos_conhecidos:
+      +column_types: {periodo: "varchar(10)", defeito: "varchar(40)", nota: "varchar(300)"}
