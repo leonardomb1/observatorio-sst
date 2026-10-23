@@ -35,7 +35,7 @@ seeds:
       storage_volume: "s3_default"
       compression: "LZ4"
     cat_rotulo_familia:
-      +column_types: {campo: "varchar(30)", prefixo: "varchar(40)", familia: "varchar(200)", rotulo_completo: "varchar(200)"}
+      +column_types: {campo: "varchar(30)", prefixo: "varchar(40)", familia: "varchar(200)", rotulo_completo: "varchar(1024)"}
     cid_covid:
       +column_types: {cid: "varchar(8)", inicio: "date", descricao: "varchar(200)"}
     eventos_catastroficos:
