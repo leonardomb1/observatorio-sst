@@ -1,346 +1,346 @@
 campo,prefixo,familia,rotulo_completo
-agente_causador,Absorcao de Substanc,Absorcao de Substancia Caustica,Absorcao de Substancia Caustica
-agente_causador,Acido,Acido,Acido
+agente_causador,Absorcao de Substanc,"Absorção (por contato) de substância cáustica, tóxica ou nociva","Absorção (por contato) de substância cáustica, tóxica ou nociva"
+agente_causador,Acido,Ácido,Ácido
 agente_causador,Aerodispersoides,Aerodispersoides,Aerodispersoides
 agente_causador,Aeronave,Aeronave,Aeronave
-agente_causador,Agente Infeccioso ou,Agente Infeccioso ou Parasitario - Inclui Bac,Agente Infeccioso ou Parasitario - Inclui Bac
-agente_causador,Agente do Acidente I,Agente do Acidente Inexistente,Agente do Acidente Inexistente
-agente_causador,"Agente do Acidente,","Agente do Acidente, Nic","Agente do Acidente, Nic"
-agente_causador,Agua - Usar Quando O,Agua - Usar Quando O Estado Iiquido Contribui,Agua - Usar Quando O Estado Iiquido Contribui
-agente_causador,"Alavanca, Pe-De-Cabr","Alavanca, Pe-De-Cabra- Ferramenta Manual Sem","Alavanca, Pe-De-Cabra- Ferramenta Manual Sem"
-agente_causador,Alcali,Alcali,Alcali
-agente_causador,Alcool,Alcool,Alcool
-agente_causador,"Alicate, Torques, Te","Alicate, Torques, Tenaz- Ferramenta Manual Se","Alicate, Torques, Tenaz- Ferramenta Manual Se"
-agente_causador,"Andaime, Plataforma","Andaime, Plataforma - Edificio ou Estrutura","Andaime, Plataforma - Edificio ou Estrutura"
-agente_causador,Animal Vivo,Animal Vivo,Animal Vivo
-agente_causador,"Aprision. Em, Sob ou","Aprision. Em, Sob ou Entre, Nic","Aprision. Em, Sob ou Entre, Nic"
-agente_causador,"Aprision. Em, Sobre","Aprision. Em, Sobre ou Entre",
-agente_causador,Arco Eletrico,Arco Eletrico,Arco Eletrico
-agente_causador,Arco Eletrico - Equi,Arco Eletrico - Equip. Emissor de Radiac,Arco Eletrico - Equip. Emissor de Radiac
-agente_causador,Area ou Ambiente de,Area ou Ambiente de Trabalho - O Agente do Ac,Area ou Ambiente de Trabalho - O Agente do Ac
-agente_causador,"Arquibancada, Estadi","Arquibancada, Estadio - Edificio ou Estrutura","Arquibancada, Estadio - Edificio ou Estrutura"
-agente_causador,"Arquivo, Fichario, E","Arquivo, Fichario, Estante - Mobiliario e Ace","Arquivo, Fichario, Estante - Mobiliario e Ace"
-agente_causador,"Asfalto, Alcatrao, P","Asfalto, Alcatrao, Piche","Asfalto, Alcatrao, Piche"
-agente_causador,Ataque de Ser Vivo c,Ataque de Ser Vivo com Peconha ou Transmissao de Doenca,
-agente_causador,Ataque de Ser Vivo p,"Ataque de Ser Vivo por Mordedura, Picada, Chi","Ataque de Ser Vivo por Mordedura, Picada, Chi"
-agente_causador,"Ataque de Ser Vivo,","Ataque de Ser Vivo, Nic","Ataque de Ser Vivo, Nic"
-agente_causador,Atrito ou Abrasao po,Atrito ou Abrasao por Causa Especificada,
-agente_causador,"Atrito ou Abrasao, N","Atrito ou Abrasao, Nic","Atrito ou Abrasao, Nic"
-agente_causador,"Balcao, Bancada - Mo","Balcao, Bancada - Mobiliario e Acessorios","Balcao, Bancada - Mobiliario e Acessorios"
-agente_causador,"Barril, Barrica, Bar","Barril, Barrica, Barrilete, Tambor - Embalage","Barril, Barrica, Barrilete, Tambor - Embalage"
+agente_causador,Agente Infeccioso ou,Agente infeccioso ou parasitário,"Agente infeccioso ou parasitário (inclui bactéria, fungo, organismo parasitário, vírus, etc.; não inclui produto químico, preparado farmacêutico ou alimento)"
+agente_causador,Agente do Acidente I,Agente do acidente inexistente,Agente do acidente inexistente
+agente_causador,"Agente do Acidente,","Agente do acidente, outros casos","Agente do acidente, NIC"
+agente_causador,Agua - Usar Quando O,Água,Água (usar quando o estado líquido contribuir preponderantemente para a ocorrência)
+agente_causador,"Alavanca, Pe-De-Cabr","Alavanca, pé-de-cabra","Alavanca, pé-de-cabra - ferramenta manual sem força motriz"
+agente_causador,Alcali,Álcali,Álcali
+agente_causador,Alcool,Álcool,Álcool
+agente_causador,"Alicate, Torques, Te","Alicate, torques, tenaz","Alicate, torques, tenaz - ferramenta manual sem força motriz"
+agente_causador,"Andaime, Plataforma","Andaime, plataforma","Andaime, plataforma - edifício ou estrutura"
+agente_causador,Animal Vivo,Animal vivo,Animal vivo
+agente_causador,"Aprision. Em, Sob ou","Aprisionamento em, sob ou entre, outros casos","Aprisionamento em, sob ou entre, NIC"
+agente_causador,"Aprision. Em, Sobre","Aprisionamento em, sob ou entre objetos",
+agente_causador,Arco Eletrico,Arco elétrico,Arco elétrico
+agente_causador,Arco Eletrico - Equi,Arco elétrico (equipamento emissor de radiação não ionizante),Arco elétrico - equipamento emissor de radiação não ionizante
+agente_causador,Area ou Ambiente de,Área ou ambiente de trabalho,"Área ou ambiente de trabalho (o agente do acidente ocorrido em consequência de fenômeno atmosférico, meteoro, etc., assim como da ação da radiação solar, deverá ser incluído neste item)"
+agente_causador,"Arquibancada, Estadi","Arquibancada, estádio","Arquibancada, estádio - edifício ou estrutura"
+agente_causador,"Arquivo, Fichario, E","Arquivo, fichário, estante","Arquivo, fichário, estante - mobiliário e acessórios"
+agente_causador,"Asfalto, Alcatrao, P","Asfalto, alcatrão, piche","Asfalto, alcatrão, piche"
+agente_causador,Ataque de Ser Vivo c,Ataque de ser vivo com peçonha ou transmissão de doença,
+agente_causador,Ataque de Ser Vivo p,"Ataque de ser vivo por mordedura, picada, chifrada, coice, etc","Ataque de ser vivo por mordedura, picada, chifrada, coice, etc"
+agente_causador,"Ataque de Ser Vivo,","Ataque de ser vivo, outros casos","Ataque de ser vivo (inclusive do homem), NIC"
+agente_causador,Atrito ou Abrasao po,Atrito ou abrasão por causa especificada,
+agente_causador,"Atrito ou Abrasao, N","Atrito ou abrasão, outros casos","Atrito ou abrasão, NIC"
+agente_causador,"Balcao, Bancada - Mo","Balcão, bancada","Balcão, bancada - mobiliário e acessórios"
+agente_causador,"Barril, Barrica, Bar","Barril, barrica, barrilete, tambor","Barril, barrica, barrilete, tambor - embalagem, recipiente (vazio ou cheio)"
 agente_causador,Bicicleta,Bicicleta,Bicicleta
 agente_causador,Bomba,Bomba,Bomba
-agente_causador,"Britador, Moinho - M","Britador, Moinho - Maquina","Britador, Moinho - Maquina"
-agente_causador,Cadeira Banco - Mobi,Cadeira Banco - Mobiliario e Acessorios,Cadeira Banco - Mobiliario e Acessorios
-agente_causador,"Cais, Doca - Edifici","Cais, Doca - Edificio ou Estrutura","Cais, Doca - Edificio ou Estrutura"
-agente_causador,"Caixa, Engradado, Ca","Caixa, Engradado, Caixote - Embalagem, Recipi","Caixa, Engradado, Caixote - Embalagem, Recipi"
-agente_causador,Caixao Pneumatico -,Caixao Pneumatico - Equip. para Trabalho,Caixao Pneumatico - Equip. para Trabalho
-agente_causador,Calcada ou Caminho p,Calcada ou Caminho para Pedestre - Superficie,Calcada ou Caminho para Pedestre - Superficie
+agente_causador,"Britador, Moinho - M","Britador, moinho","Britador, moinho - máquina"
+agente_causador,Cadeira Banco - Mobi,"Cadeira, banco","Cadeira, banco - mobiliário e acessórios"
+agente_causador,"Cais, Doca - Edifici","Cais, doca","Cais, doca - edifício ou estrutura"
+agente_causador,"Caixa, Engradado, Ca","Caixa, engradado, caixote","Caixa, engradado, caixote - embalagem, recipiente (vazio ou cheio)"
+agente_causador,Caixao Pneumatico -,Caixão pneumático,Caixão pneumático - equipamento para trabalho em ambiente de pressão anormal
+agente_causador,Calcada ou Caminho p,Calçada ou caminho para pedestre,Calçada ou caminho para pedestre - superfície utilizada para sustentar pessoas
 agente_causador,Caldeira,Caldeira,Caldeira
-agente_causador,"Caldeira, Vaso Sob P","Caldeira, Vaso Sob Pressao, Nic","Caldeira, Vaso Sob Pressao, Nic"
-agente_causador,"Canal, Fosso","Canal, Fosso","Canal, Fosso"
-agente_causador,Carne e Derivados -,Carne e Derivados - Inclusive de Origem Anima,Carne e Derivados - Inclusive de Origem Anima
-agente_causador,Carro de Mao,Carro de Mao,Carro de Mao
-agente_causador,Carvao,Carvao,Carvao
-agente_causador,Ceramica,Ceramica,Ceramica
-agente_causador,"Ceramica, Nic","Ceramica, Nic","Ceramica, Nic"
-agente_causador,Cereal e Derivados,Cereal e Derivados,Cereal e Derivados
-agente_causador,Chao - Superficie Ut,Chao - Superficie Utilizada para Sustentar Pe,Chao - Superficie Utilizada para Sustentar Pe
-agente_causador,Chave de Parafuso- F,Chave de Parafuso- Ferramenta Manual sem Forc,Chave de Parafuso- Ferramenta Manual sem Forc
-agente_causador,Chave de Porca ou de,"Chave de Porca ou de Abertura Regulavel, Chav","Chave de Porca ou de Abertura Regulavel, Chav"
-agente_causador,Cianeto ou Composto,Cianeto ou Composto de Cianogenio,Cianeto ou Composto de Cianogenio
-agente_causador,Composto Aromatico (,"Composto Aromatico (Benzol, Toluol, Xilol, An","Composto Aromatico (Benzol, Toluol, Xilol, An"
-agente_causador,Composto Metalico (D,"Composto Metalico (De Chumbo, Mercurio, Zinco","Composto Metalico (De Chumbo, Mercurio, Zinco"
-agente_causador,Composto Organico Ha,"Composto Organico Halogenado (Tricloretileno,","Composto Organico Halogenado (Tricloretileno,"
-agente_causador,Composto de Arsenio,Composto de Arsenio,Composto de Arsenio
-agente_causador,Composto de Fosforo,Composto de Fosforo,Composto de Fosforo
-agente_causador,Condutor - Equip. El,Condutor - Equip. Eletrico,Condutor - Equip. Eletrico
+agente_causador,"Caldeira, Vaso Sob P","Caldeira, vaso sob pressão, outros casos","Caldeira, vaso sob pressão, NIC"
+agente_causador,"Canal, Fosso","Canal, fosso","Canal, fosso"
+agente_causador,Carne e Derivados -,Carne e derivados,Carne e derivados
+agente_causador,Carro de Mao,Carro de mão,Carro de mão
+agente_causador,Carvao,Carvão,Carvão
+agente_causador,Ceramica,Cerâmica,Cerâmica
+agente_causador,"Ceramica, Nic","Cerâmica, outros casos","Cerâmica, NIC"
+agente_causador,Cereal e Derivados,Cereal e derivados,Cereal e derivados
+agente_causador,Chao - Superficie Ut,Chão,Chão - superfície utilizada para sustentar pessoas
+agente_causador,Chave de Parafuso- F,Chave de parafuso,Chave de parafuso - ferramenta manual sem força motriz
+agente_causador,Chave de Porca ou de,"Chave de porca ou de abertura regulável, chave de boca","Chave de porca ou de abertura regulável, chave de boca - ferramenta manual sem força motriz"
+agente_causador,Cianeto ou Composto,Cianeto ou composto de cianogênio,Cianeto ou composto de cianogênio
+agente_causador,Composto Aromatico (,Composto aromático,"Composto aromático (benzol, toluol, xilol, anilina, etc.)"
+agente_causador,Composto Metalico (D,Composto metálico,"Composto metálico (de chumbo, mercúrio, zinco, cadmio, cromo, etc.)"
+agente_causador,Composto Organico Ha,Composto orgânico halogenado,"Composto orgânico halogenado (tricloretileno, percloretileno, cloreto de metilo, substâncias refrigerantes)"
+agente_causador,Composto de Arsenio,Composto de arsênio,Composto de arsênio
+agente_causador,Composto de Fosforo,Composto de fósforo,Composto de fósforo
+agente_causador,Condutor - Equip. El,Condutor,Condutor - equipamento elétrico
 agente_causador,Coque,Coque,Coque
-agente_causador,"Corda, Cabo, Corrent","Corda, Cabo, Corrente- Ferramenta Manual Sem","Corda, Cabo, Corrente- Ferramenta Manual Sem"
-agente_causador,Correia - Dispositiv,Correia - Dispositivo de Transmissao de Energ,Correia - Dispositivo de Transmissao de Energ
-agente_causador,"Corrente, Corda, Cab","Corrente, Corda, Cabo - Dispositivo de Transm","Corrente, Corda, Cabo - Dispositivo de Transm"
-agente_causador,"Cortadeira, Guilhoti","Cortadeira, Guilhotina- Ferramenta Portatil C","Cortadeira, Guilhotina- Ferramenta Portatil C"
-agente_causador,Couro Cru ou Curtido,Couro Cru ou Curtido - Produto Animal,Couro Cru ou Curtido - Produto Animal
-agente_causador,Deposito Fixo (Tanqu,"Deposito Fixo (Tanque, Silo, Paiol, Etc.) - E","Deposito Fixo (Tanque, Silo, Paiol, Etc.) - E"
-agente_causador,"Dique, Barragem - Ed","Dique, Barragem - Edificio ou Estrutura","Dique, Barragem - Edificio ou Estrutura"
-agente_causador,Dispositivo de Trans,Dispositivo de Transmissao de Energia Mecanic,Dispositivo de Transmissao de Energia Mecanic
-agente_causador,Dissulfeto de Carbon,Dissulfeto de Carbon,Dissulfeto de Carbon
-agente_causador,Edificio - Edificio,Edificio - Edificio ou Estrutura,Edificio - Edificio ou Estrutura
-agente_causador,Edificio ou Estrutur,"Edificio ou Estrutura (Exceto Piso, Superfici","Edificio ou Estrutura (Exceto Piso, Superfici"
-agente_causador,"Eletrica, Exposicao","Eletrica, Exposicao a Energia","Eletrica, Exposicao a Energia"
-agente_causador,Elevador - Equip. de,Elevador - Equip. de Guindar,Elevador - Equip. de Guindar
-agente_causador,Elevador de Cacamba,Elevador de Cacamba para Mineracao - Equipame,Elevador de Cacamba para Mineracao - Equipame
-agente_causador,Embalagem e Recipien,"Embalagem e Recipiente, Vazio ou Cheio, Nic","Embalagem e Recipiente, Vazio ou Cheio, Nic"
-agente_causador,Embreagem de Friccao,Embreagem de Friccao - Dispositivo de Transmi,Embreagem de Friccao - Dispositivo de Transmi
+agente_causador,"Corda, Cabo, Corrent","Corda, cabo, corrente","Corda, cabo, corrente - ferramenta manual sem força motriz"
+agente_causador,Correia - Dispositiv,Correia,Correia - dispositivo de transmissão de energia mecânica
+agente_causador,"Corrente, Corda, Cab","Corrente, corda, cabo","Corrente, corda, cabo - dispositivo de transmissão de energia mecânica"
+agente_causador,"Cortadeira, Guilhoti","Cortadeira, guilhotina","Cortadeira, guilhotina - ferramenta portátil com força motriz ou aquecimento"
+agente_causador,Couro Cru ou Curtido,Couro cru ou curtido,Couro cru ou curtido - produto animal
+agente_causador,Deposito Fixo (Tanqu,Depósito fixo,"Depósito fixo (tanque, silo, paiol, etc.) - edifício ou estrutura"
+agente_causador,"Dique, Barragem - Ed","Dique, barragem","Dique, barragem - edifício ou estrutura"
+agente_causador,Dispositivo de Trans,"Dispositivo de transmissão de energia mecânica, outros casos","Dispositivo de transmissão de energia mecânica, NIC"
+agente_causador,Dissulfeto de Carbon,Dissulfeto de carbono,Dissulfeto de carbono
+agente_causador,Edificio - Edificio,Edifício,Edifício - edifício ou estrutura
+agente_causador,Edificio ou Estrutur,"Edifício ou estrutura, outros casos","Edifício ou estrutura (exceto piso, superfície de sustentação ou área de circulação), NIC"
+agente_causador,"Eletrica, Exposicao",Exposição à energia elétrica,Exposição à energia elétrica
+agente_causador,Elevador - Equip. de,Elevador,Elevador - equipamento de guindar
+agente_causador,Elevador de Cacamba,Elevador de caçamba para mineração,Elevador de caçamba para mineração - equipamento de guindar
+agente_causador,Embalagem e Recipien,"Embalagem, recipiente, outros casos","Embalagem, recipiente (vazio ou cheio), NIC"
+agente_causador,Embreagem de Friccao,Embreagem de fricção,Embreagem de fricção - dispositivo de transmissão de energia mecânica
 agente_causador,Empilhadeira,Empilhadeira,Empilhadeira
 agente_causador,Energia,Energia,Energia
-agente_causador,Engrenagem - Disposi,Engrenagem - Dispositivo de Transmissao de En,Engrenagem - Dispositivo de Transmissao de En
-agente_causador,"Enxada, Enxadao, Sac","Enxada, Enxadao, Sacho- Ferramenta Manual Sem","Enxada, Enxadao, Sacho- Ferramenta Manual Sem"
-agente_causador,"Equip. Eletrico, Nic","Equip. Eletrico, Nic","Equip. Eletrico, Nic"
-agente_causador,Equip. Eletrolitico,Equip. Eletrolitico - Equip. Eletri,Equip. Eletrolitico - Equip. Eletri
-agente_causador,Equip. Emissor de Ra,Equip. Emissor de Radiacao nao Ionizante,Equip. Emissor de Radiacao nao Ionizante
-agente_causador,Equip. Magnetico - E,Equip. Magnetico - Equip. Eletrico,Equip. Magnetico - Equip. Eletrico
-agente_causador,Equip. de Aqueciment,Equip. de Aquecimento Eletrico - Equipam,Equip. de Aquecimento Eletrico - Equipam
-agente_causador,"Equip. de Guindar, N","Equip. de Guindar, Nic","Equip. de Guindar, Nic"
-agente_causador,Equip. de Iluminacao,Equip. de Iluminacao,Equip. de Iluminacao
-agente_causador,Equip. de Mergulho -,Equip. de Mergulho - Equip. para Tr,Equip. de Mergulho - Equip. para Tr
-agente_causador,Equip. de Raios X -,Equip. de Raios X - Equip. ou Subst,Equip. de Raios X - Equip. ou Subst
-agente_causador,Equip. ou Substancia,Equip. ou Substancia Emissores de Radiac,Equip. ou Substancia Emissores de Radiac
-agente_causador,Equip. para Trabalho,Equip. para Trabalho em Ambiente de Pres,Equip. para Trabalho em Ambiente de Pres
-agente_causador,Escada Movel ou Fixa,"Escada Movel ou Fixada, Nic","Escada Movel ou Fixada, Nic"
-agente_causador,Escada Permanente Cu,Escada Permanente Cujos Degraus Permitem Apoi,Escada Permanente Cujos Degraus Permitem Apoi
-agente_causador,Escafandro - Equip.,Escafandro - Equip. para Trabalho em Amb,Escafandro - Equip. para Trabalho em Amb
-agente_causador,Escavacao (Para Edif,"Escavacao (Para Edificio, Estrada, Etc.)","Escavacao (Para Edificio, Estrada, Etc.)"
-agente_causador,"Escavacao, Fosso, Tu","Escavacao, Fosso, Tunel, Nic","Escavacao, Fosso, Tunel, Nic"
-agente_causador,Esforco Excessivo ao,"Esforco Excessivo ao Erguer, Empurrar ou Manejar Objeto",
-agente_causador,"Esforco Excessivo, N","Esforco Excessivo, Nic","Esforco Excessivo, Nic"
-agente_causador,Esmeril- Ferramenta,Esmeril- Ferramenta Portatil com Forca Motriz,Esmeril- Ferramenta Portatil com Forca Motriz
-agente_causador,Exposicao a Pressao,Exposicao a Pressao Ambiente Anormal,
-agente_causador,"Faca, Facao- Ferrame","Faca, Facao- Ferramenta Manual sem Forca Motr","Faca, Facao- Ferramenta Manual sem Forca Motr"
-agente_causador,Ferramenta Acionada,Ferramenta Acionada por Explosivo- Ferramenta,Ferramenta Acionada por Explosivo- Ferramenta
-agente_causador,Ferramenta Manual se,"Ferramenta Manual sem Forca Motriz, Nic","Ferramenta Manual sem Forca Motriz, Nic"
-agente_causador,Ferramenta Portatil,Ferramenta Portatil com Forca Motriz ou Aquec,Ferramenta Portatil com Forca Motriz ou Aquec
-agente_causador,Ferramenta de Soldag,Ferramenta de Soldagem- Ferramenta Portatil C,Ferramenta de Soldagem- Ferramenta Portatil C
-agente_causador,"Ferramenta, Maquina,","Ferramenta, Maquina, Equip., Veiculo, Ni","Ferramenta, Maquina, Equip., Veiculo, Ni"
-agente_causador,Ferro de Passar- Fer,Ferro de Passar- Ferramenta Portatil com Forc,Ferro de Passar- Ferramenta Portatil com Forc
-agente_causador,"Fogo-Chama,Material","Fogo-Chama,Material Incandescente ou Quente,F","Fogo-Chama,Material Incandescente ou Quente,F"
-agente_causador,Fonte de Radioisotop,Fonte de Radioisotopo - Equip. ou Substa,Fonte de Radioisotopo - Equip. ou Substa
-agente_causador,"Formao, Cinzel- Ferr","Formao, Cinzel- Ferramenta Manual sem Forca M","Formao, Cinzel- Ferramenta Manual sem Forca M"
-agente_causador,"Forno, Estufa, Retor","Forno, Estufa, Retorta, Aquecedor de Ambiente","Forno, Estufa, Retorta, Aquecedor de Ambiente"
-agente_causador,"Frasco, Garrafa - Em","Frasco, Garrafa - Embalagem, Recipiente, Vazi","Frasco, Garrafa - Embalagem, Recipiente, Vazi"
-agente_causador,Fruta e Derivados,Fruta e Derivados,Fruta e Derivados
-agente_causador,"Furadeira, Broqueade","Furadeira, Broqueadeira, Torno, Freza - Maqui","Furadeira, Broqueadeira, Torno, Freza - Maqui"
-agente_causador,"Garfo, Ancinho, Forc","Garfo, Ancinho, Forcado- Ferramenta Manual Se","Garfo, Ancinho, Forcado- Ferramenta Manual Se"
-agente_causador,Gas Carbonico (Dioxi,"Gas Carbonico (Dioxido de Carbono, Co2)","Gas Carbonico (Dioxido de Carbono, Co2)"
-agente_causador,Gas Encanado de Carv,Gas Encanado de Carvao,Gas Encanado de Carvao
-agente_causador,Gas e Vapor,Gas e Vapor,Gas e Vapor
-agente_causador,"Gasoleo, Oleo Diesel","Gasoleo, Oleo Diesel","Gasoleo, Oleo Diesel"
-agente_causador,Gasolina (Exceto Qua,Gasolina (Exceto Quando a Ocorrencia For Caus,Gasolina (Exceto Quando a Ocorrencia For Caus
-agente_causador,Gerador - Equip. Ele,Gerador - Equip. Eletrico,Gerador - Equip. Eletrico
-agente_causador,Guincho Eletrico - E,Guincho Eletrico - Equip. de Guindar,Guincho Eletrico - Equip. de Guindar
-agente_causador,Guincho Pneumatico -,Guincho Pneumatico - Equip. de Guindar,Guincho Pneumatico - Equip. de Guindar
-agente_causador,Guindaste - Equip. d,Guindaste - Equip. de Guindar,Guindaste - Equip. de Guindar
-agente_causador,Hidrocarboneto Gasos,"Hidrocarboneto Gasoso (Inclui Gas Liquefeito,","Hidrocarboneto Gasoso (Inclui Gas Liquefeito,"
-agente_causador,Imersao,Imersao,Imersao
-agente_causador,Impacto Sofrido por,Impacto Sofrido por Pes.,
-agente_causador,Impacto de Pes. Cont,Impacto de Pes. Contra Objeto,
-agente_causador,Inalacao de Substanc,"Inalacao de Substancia Caustica, Toxica ou No","Inalacao de Substancia Caustica, Toxica ou No"
-agente_causador,"Inalacao, Ingestao o","Inalacao, Ingestao ou Absorcao, Nic","Inalacao, Ingestao ou Absorcao, Nic"
-agente_causador,Ingestao de Substanc,Ingestao de Substancia Caustica...,Ingestao de Substancia Caustica...
-agente_causador,Jato de Areia- Ferra,Jato de Areia- Ferramenta Portatil com Forca,Jato de Areia- Ferramenta Portatil com Forca
-agente_causador,"Laminadora, Calandra","Laminadora, Calandra - Maquina","Laminadora, Calandra - Maquina"
-agente_causador,"Legume, Verdura e De","Legume, Verdura e Derivados","Legume, Verdura e Derivados"
-agente_causador,Leite e Derivados -,Leite e Derivados - Inclusive de Origem Anima,Leite e Derivados - Inclusive de Origem Anima
-agente_causador,"Lima, Grosa- Ferrame","Lima, Grosa- Ferramenta Manual sem Forca Motr","Lima, Grosa- Ferramenta Manual sem Forca Motr"
-agente_causador,"Liquido, Nic","Liquido, Nic","Liquido, Nic"
-agente_causador,Louca Sanitaria (Pia,"Louca Sanitaria (Pia, Vaso Sanitario, Etc.) -","Louca Sanitaria (Pia, Vaso Sanitario, Etc.) -"
-agente_causador,Louca de Mesa e Outr,Louca de Mesa e Outros Utensilios (De Porcela,Louca de Mesa e Outros Utensilios (De Porcela
-agente_causador,"Luminaria, Globo, Ia","Luminaria, Globo, Iampada - Mobiliario e Aces","Luminaria, Globo, Iampada - Mobiliario e Aces"
-agente_causador,"Macaco (Mecanico, Hi","Macaco (Mecanico, Hidraulico, Pneumatico) - E","Macaco (Mecanico, Hidraulico, Pneumatico) - E"
-agente_causador,"Machadinha, Enxo- Fe","Machadinha, Enxo- Ferramenta Manual sem Forca","Machadinha, Enxo- Ferramenta Manual sem Forca"
-agente_causador,Machado- Ferramenta,Machado- Ferramenta Manual sem Forca Motriz,Machado- Ferramenta Manual sem Forca Motriz
-agente_causador,"Madeira (Toro, Madei","Madeira (Toro, Madeira Serrada, Pranchao, Pos","Madeira (Toro, Madeira Serrada, Pranchao, Pos"
-agente_causador,Maquina Agricola,Maquina Agricola,Maquina Agricola
-agente_causador,Maquina Textil,Maquina Textil,Maquina Textil
-agente_causador,Maquina de Aparafusa,Maquina de Aparafusar - Ferramenta Portatil C,Maquina de Aparafusar - Ferramenta Portatil C
-agente_causador,Maquina de Costurar,Maquina de Costurar e de Pespontar,Maquina de Costurar e de Pespontar
-agente_causador,Maquina de Embalar o,Maquina de Embalar ou Empacotar,Maquina de Embalar ou Empacotar
-agente_causador,Maquina de Escritori,Maquina de Escritorio,Maquina de Escritorio
-agente_causador,"Maquina de Fundir, d","Maquina de Fundir, de Forjar, de Soldar","Maquina de Fundir, de Forjar, de Soldar"
-agente_causador,Maquina de Imprimir,Maquina de Imprimir,Maquina de Imprimir
-agente_causador,Maquina de Mineracao,"Maquina de Mineracao e Perfuracao (De Tunel,","Maquina de Mineracao e Perfuracao (De Tunel,"
-agente_causador,Maquina de Terraplen,Maquina de Terraplenagem e Construcao de Estr,Maquina de Terraplenagem e Construcao de Estr
-agente_causador,"Maquina, Nic","Maquina, Nic","Maquina, Nic"
-agente_causador,"Martelete, Socador-","Martelete, Socador- Ferramenta Portatil com F","Martelete, Socador- Ferramenta Portatil com F"
-agente_causador,"Martelo, Malho, Marr","Martelo, Malho, Marreta- Ferramenta Manual Se","Martelo, Malho, Marreta- Ferramenta Manual Se"
-agente_causador,Masarico - Ferrament,Masarico - Ferramenta Portatil com Forca Motr,Masarico - Ferramenta Portatil com Forca Motr
-agente_causador,Medicamento em Geral,Medicamento em Geral (Exceto Produto Biologic,Medicamento em Geral (Exceto Produto Biologic
-agente_causador,Mesa Elastica Desmon,Mesa Elastica Desmontavel - Mobiliario e Aces,Mesa Elastica Desmontavel - Mobiliario e Aces
-agente_causador,"Mesa, Carteira, Exce","Mesa, Carteira, Exceto Mesa Elastica Desmonta","Mesa, Carteira, Exceto Mesa Elastica Desmonta"
-agente_causador,Metal - Inclui Liga,"Metal - Inclui Liga Ferrosa e nao Ferrosa, Tu","Metal - Inclui Liga Ferrosa e nao Ferrosa, Tu"
-agente_causador,"Misturador, Batedeir","Misturador, Batedeira, Agitador - Maquina","Misturador, Batedeira, Agitador - Maquina"
-agente_causador,Mobiliario e Acessor,"Mobiliario e Acessorios, Nic","Mobiliario e Acessorios, Nic"
-agente_causador,Monoxido de Carbono,Monoxido de Carbono (Co),Monoxido de Carbono (Co)
-agente_causador,"Motocicleta, Motonet","Motocicleta, Motoneta","Motocicleta, Motoneta"
-agente_causador,Motor (Combustao Int,"Motor (Combustao Interna, Vapor)","Motor (Combustao Interna, Vapor)"
-agente_causador,Motor Eletrico - Equ,Motor Eletrico - Equip. Eletrico,Motor Eletrico - Equip. Eletrico
-agente_causador,"Motor, Bomba, Turbin","Motor, Bomba, Turbina, Nic","Motor, Bomba, Turbina, Nic"
-agente_causador,Nafta e Solvente de,"Nafta e Solvente de Nafta (Eter de Petroleo,","Nafta e Solvente de Nafta (Eter de Petroleo,"
+agente_causador,Engrenagem - Disposi,Engrenagem,Engrenagem - dispositivo de transmissão de energia mecânica
+agente_causador,"Enxada, Enxadao, Sac","Enxada, enxadão, sacho","Enxada, enxadão, sacho - ferramenta manual sem força motriz"
+agente_causador,"Equip. Eletrico, Nic","Equipamento elétrico, outros casos","Equipamento elétrico, NIC"
+agente_causador,Equip. Eletrolitico,Equipamento eletrolítico,Equipamento eletrolítico - equipamento elétrico
+agente_causador,Equip. Emissor de Ra,Equipamento emissor de radiação não ionizante,Equipamento emissor de radiação não ionizante
+agente_causador,Equip. Magnetico - E,Equipamento magnético,Equipamento magnético - equipamento elétrico
+agente_causador,Equip. de Aqueciment,Equipamento de aquecimento elétrico,Equipamento de aquecimento elétrico - equipamento elétrico
+agente_causador,"Equip. de Guindar, N","Equipamento de guindar, outros casos","Equipamento de guindar, NIC"
+agente_causador,Equip. de Iluminacao,Equipamento de iluminação,Equipamento de iluminação
+agente_causador,Equip. de Mergulho -,Equipamento de mergulho,Equipamento de mergulho - equipamento para trabalho em ambiente de pressão anormal
+agente_causador,Equip. de Raios X -,Equipamento de raios X,Equipamento de raios X - equipamento ou substância emissor de radiação ionizante
+agente_causador,Equip. ou Substancia,"Fonte de radiação ionizante, outros casos","Equipamento ou substância emissor de radiação ionizante, NIC"
+agente_causador,Equip. para Trabalho,"Equipamento para trabalho em ambiente de pressão anormal, outros casos","Equipamento para trabalho em ambiente de pressão anormal, NIC"
+agente_causador,Escada Movel ou Fixa,"Escada móvel ou fixada, outros casos","Escada móvel ou fixada, NIC"
+agente_causador,Escada Permanente Cu,Escada permanente,"Escada permanente cujos degraus permitem apoio integral do pé, degrau - superfície utilizada para sustentar pessoas"
+agente_causador,Escafandro - Equip.,Escafandro,Escafandro - equipamento para trabalho em ambiente de pressão anormal
+agente_causador,Escavacao (Para Edif,Escavação,"Escavação (para edifício, estrada, etc.)"
+agente_causador,"Escavacao, Fosso, Tu","Escavação, fosso, túnel, outros casos","Escavação, fosso, túnel, NIC"
+agente_causador,Esforco Excessivo ao,"Esforço excessivo ao erguer, empurrar ou manejar objeto",
+agente_causador,"Esforco Excessivo, N","Esforço excessivo, outros casos","Esforço excessivo, NIC"
+agente_causador,Esmeril- Ferramenta,Esmeril,Esmeril - ferramenta portátil com força motriz ou aquecimento
+agente_causador,Exposicao a Pressao,Exposição à pressão ambiente anormal,
+agente_causador,"Faca, Facao- Ferrame","Faca, facão","Faca, facão - ferramenta manual sem força motriz"
+agente_causador,Ferramenta Acionada,Ferramenta acionada por explosivo,Ferramenta acionada por explosivo - ferramenta portátil com força motriz ou aquecimento
+agente_causador,Ferramenta Manual se,"Ferramenta manual sem força motriz, outros casos","Ferramenta manual sem força motriz, NIC"
+agente_causador,Ferramenta Portatil,"Ferramenta portátil com força motriz ou aquecimento, outros casos","Ferramenta portátil com força motriz ou aquecimento, NIC"
+agente_causador,Ferramenta de Soldag,Ferramenta de soldagem,Ferramenta de soldagem - ferramenta portátil com força motriz ou aquecimento
+agente_causador,"Ferramenta, Maquina,","Ferramenta, máquina, equipamento, veículo, outros casos","Ferramenta, máquina, equipamento, veículo, NIC"
+agente_causador,Ferro de Passar- Fer,Ferro de passar,Ferro de passar - ferramenta portátil com força motriz ou aquecimento
+agente_causador,"Fogo-Chama,Material","Fogo, chama, material incandescente ou quente, fumaça","Fogo, chama, material incandescente ou quente, fumaça"
+agente_causador,Fonte de Radioisotop,Fonte de radioisótopo,Fonte de radioisótopo - equipamento ou substância emissor de radiação ionizante
+agente_causador,"Formao, Cinzel- Ferr","Formão, cinzel","Formão, cinzel - ferramenta manual sem força motriz"
+agente_causador,"Forno, Estufa, Retor","Forno, estufa, retorta, aquecedor de ambiente, fogão, etc","Forno, estufa, retorta, aquecedor de ambiente, fogão, etc. (exceto quando a lesão principal for choque elétrico ou eletroplessão) - equipamento de aquecimento"
+agente_causador,"Frasco, Garrafa - Em","Frasco, garrafa","Frasco, garrafa - embalagem, recipiente (vazio ou cheio)"
+agente_causador,Fruta e Derivados,Fruta e derivados,Fruta e derivados
+agente_causador,"Furadeira, Broqueade","Furadeira, broqueadeira, torno, fresa","Furadeira, broqueadeira, torno, fresa - máquina"
+agente_causador,"Garfo, Ancinho, Forc","Garfo, ancinho, forcado","Garfo, ancinho, forcado - ferramenta manual sem força motriz"
+agente_causador,Gas Carbonico (Dioxi,Gás carbônico,"Gás carbônico (dióxido de carbono, CO2)"
+agente_causador,Gas Encanado de Carv,Gás encanado de carvão,Gás encanado de carvão
+agente_causador,Gas e Vapor,Gás e vapor,Gás e vapor
+agente_causador,"Gasoleo, Oleo Diesel","Gasóleo, óleo diesel","Gasóleo, óleo diesel"
+agente_causador,Gasolina (Exceto Qua,Gasolina,Gasolina (exceto quando a ocorrência for causada preponderantemente por composto de chumbo)
+agente_causador,Gerador - Equip. Ele,Gerador,Gerador - equipamento elétrico
+agente_causador,Guincho Eletrico - E,Guincho elétrico,Guincho elétrico - equipamento de guindar
+agente_causador,Guincho Pneumatico -,Guincho pneumático,Guincho pneumático - equipamento de guindar
+agente_causador,Guindaste - Equip. d,Guindaste,Guindaste - equipamento de guindar
+agente_causador,Hidrocarboneto Gasos,Hidrocarboneto gasoso,"Hidrocarboneto gasoso (inclui gás liquefeito, gás encanado de nafta, gás natural)"
+agente_causador,Imersao,Imersão,Imersão
+agente_causador,Impacto Sofrido por,Impacto sofrido por pessoa,
+agente_causador,Impacto de Pes. Cont,Impacto de pessoa contra objeto,
+agente_causador,Inalacao de Substanc,"Inalação de substância cáustica, tóxica ou nociva","Inalação de substância cáustica, tóxica ou nociva"
+agente_causador,"Inalacao, Ingestao o","Inalação, ingestão e absorção, outros casos","Inalação, ingestão e absorção, NIC"
+agente_causador,Ingestao de Substanc,"Ingestão de substância cáustica, tóxica ou nociva","Ingestão de substância cáustica, tóxica ou nociva"
+agente_causador,Jato de Areia- Ferra,Jato de areia,Jato de areia - ferramenta portátil com força motriz ou aquecimento
+agente_causador,"Laminadora, Calandra","Laminadora, calandra","Laminadora, calandra - máquina"
+agente_causador,"Legume, Verdura e De","Legume, verdura e derivados","Legume, verdura e derivados"
+agente_causador,Leite e Derivados -,Leite e derivados,Leite e derivados
+agente_causador,"Lima, Grosa- Ferrame","Lima, grosa","Lima, grosa - ferramenta manual sem força motriz"
+agente_causador,"Liquido, Nic","Líquido, outros casos","Líquido, NIC"
+agente_causador,Louca Sanitaria (Pia,Louca sanitária,"Louca sanitária (pia, vaso sanitário, etc.) - cerâmica"
+agente_causador,Louca de Mesa e Outr,Louça de mesa e outros utensílios,"Louça de mesa e outros utensílios (de porcelana, barro, etc.) - cerâmica"
+agente_causador,"Luminaria, Globo, Ia","Luminária, globo, lâmpada","Luminária, globo, lâmpada - mobiliário e acessórios"
+agente_causador,"Macaco (Mecanico, Hi",Macaco,"Macaco (mecânico, hidráulico, pneumático) - equipamento de guindar"
+agente_causador,"Machadinha, Enxo- Fe","Machadinha, enxó","Machadinha, enxó - ferramenta manual sem força motriz"
+agente_causador,Machado- Ferramenta,Machado,Machado - ferramenta manual sem força motriz
+agente_causador,"Madeira (Toro, Madei",Madeira,"Madeira (toro, madeira serrada, pranchão, poste, barrote, ripa e produto de madeira)"
+agente_causador,Maquina Agricola,Máquina agrícola,Máquina agrícola
+agente_causador,Maquina Textil,Máquina têxtil,Máquina têxtil
+agente_causador,Maquina de Aparafusa,Máquina de aparafusar,Máquina de aparafusar - ferramenta portátil com força motriz ou aquecimento
+agente_causador,Maquina de Costurar,Máquina de costurar e de pespontar,Máquina de costurar e de pespontar
+agente_causador,Maquina de Embalar o,Máquina de embalar ou empacotar,Máquina de embalar ou empacotar
+agente_causador,Maquina de Escritori,Máquina de escritório,Máquina de escritório
+agente_causador,"Maquina de Fundir, d","Máquina de fundir, de forjar, de soldar","Máquina de fundir, de forjar, de soldar"
+agente_causador,Maquina de Imprimir,Máquina de imprimir,Máquina de imprimir
+agente_causador,Maquina de Mineracao,"Máquina de mineração e perfuração (de túnel, poço, etc.)","Máquina de mineração e perfuração (de túnel, poço, etc.)"
+agente_causador,Maquina de Terraplen,Máquina de terraplenagem e construção de estrada,Máquina de terraplenagem e construção de estrada
+agente_causador,"Maquina, Nic","Máquina, outros casos","Máquina, NIC"
+agente_causador,"Martelete, Socador-","Martelete, socador","Martelete, socador - ferramenta portátil com força motriz ou aquecimento"
+agente_causador,"Martelo, Malho, Marr","Martelo, malho, marreta","Martelo, malho, marreta - ferramenta manual sem força motriz"
+agente_causador,Masarico - Ferrament,Maçarico,Maçarico - ferramenta portátil com força motriz ou aquecimento
+agente_causador,Medicamento em Geral,Medicamento em geral,Medicamento em geral (exceto produto biológico)
+agente_causador,Mesa Elastica Desmon,Mesa elástica desmontável,Mesa elástica desmontável - mobiliário e acessórios
+agente_causador,"Mesa, Carteira, Exce","Mesa, carteira, exceto mesa elástica desmontável","Mesa, carteira, exceto mesa elástica desmontável - mobiliário e acessórios"
+agente_causador,Metal - Inclui Liga,Metal,"Metal (inclui liga ferrosa e não ferrosa, tubo, placa, perfil, trilho, vergalhão, arame, porca, rebite, prego, etc., metal fundido, lingote e sucata de fundição, exceto minério)"
+agente_causador,"Misturador, Batedeir","Misturador, batedeira, agitador","Misturador, batedeira, agitador - máquina"
+agente_causador,Mobiliario e Acessor,"Mobiliário e acessórios, outros casos","Mobiliário e acessórios, NIC"
+agente_causador,Monoxido de Carbono,Monóxido de carbono (CO),Monóxido de carbono (CO)
+agente_causador,"Motocicleta, Motonet","Motocicleta, motoneta","Motocicleta, motoneta"
+agente_causador,Motor (Combustao Int,Motor,"Motor (combustão interna, vapor)"
+agente_causador,Motor Eletrico - Equ,Motor elétrico,Motor elétrico - equipamento elétrico
+agente_causador,"Motor, Bomba, Turbin","Motor, bomba, turbina, outros casos","Motor, bomba, turbina, NIC"
+agente_causador,Nafta e Solvente de,Nafta e solvente de nafta,"Nafta e solvente de nafta (éter de petróleo, álcool mineral, solvente aromático, etc.)"
 agente_causador,Neblina,Neblina,Neblina
-agente_causador,Oleo Combustivel,Oleo Combustivel,Oleo Combustivel
-agente_causador,Osso - Produto Anima,Osso - Produto Animal,Osso - Produto Animal
-agente_causador,Oxidos de Nitrogenio,Oxidos de Nitrogenio (Vapores Nitrosos),Oxidos de Nitrogenio (Vapores Nitrosos)
-agente_causador,"Pa Mecanica, Draga -","Pa Mecanica, Draga - Equip. de Guindar","Pa Mecanica, Draga - Equip. de Guindar"
-agente_causador,"Pa, Cavadeira- Ferra","Pa, Cavadeira- Ferramenta Manual sem Forca Mo","Pa, Cavadeira- Ferramenta Manual sem Forca Mo"
-agente_causador,"Painel de Controle,","Painel de Controle, Barramento, Chave, Interr","Painel de Controle, Barramento, Chave, Interr"
-agente_causador,Papel e Pasta para P,Papel e Pasta para Papel,Papel e Pasta para Papel
-agente_causador,"Parafina, Oleo Lubri","Parafina, Oleo Lubrificante e de Corte, Graxa","Parafina, Oleo Lubrificante e de Corte, Graxa"
-agente_causador,Particulas - nao Ide,Particulas - nao Identificadas,Particulas - nao Identificadas
-agente_causador,Passarela ou Platafo,Passarela ou Plataforma Permanentes - Superfi,Passarela ou Plataforma Permanentes - Superfi
-agente_causador,Pau de Carga - Equip,Pau de Carga - Equip. de Guindar,Pau de Carga - Equip. de Guindar
-agente_causador,"Pele, Crina, Pelo, L","Pele, Crina, Pelo, La (Em Bruto) - Produto An","Pele, Crina, Pelo, La (Em Bruto) - Produto An"
-agente_causador,Pena - Produto Anima,Pena - Produto Animal,Pena - Produto Animal
-agente_causador,"Peneira Mecanica, Ma","Peneira Mecanica, Maquina Separadora - Maquin","Peneira Mecanica, Maquina Separadora - Maquin"
-agente_causador,Perfuratriz- Ferrame,Perfuratriz- Ferramenta Portatil com Forca Mo,Perfuratriz- Ferramenta Portatil com Forca Mo
-agente_causador,"Petroleo Bruto, Brut","Petroleo Bruto, Bruto Reduzido","Petroleo Bruto, Bruto Reduzido"
-agente_causador,Picareta- Ferramenta,Picareta- Ferramenta Manual sem Forca Motriz,Picareta- Ferramenta Manual sem Forca Motriz
-agente_causador,Piso de Andaime e Pl,Piso de Andaime e Plataforma Desmontavel - Su,Piso de Andaime e Plataforma Desmontavel - Su
-agente_causador,Piso de Edificio - S,Piso de Edificio - Superficie Utilizada Para,Piso de Edificio - Superficie Utilizada Para
-agente_causador,Piso de Mina - Super,Piso de Mina - Superficie Utilizada para Sust,Piso de Mina - Superficie Utilizada para Sust
-agente_causador,Piso de Veiculo - Su,Piso de Veiculo - Superficie Utilizada para S,Piso de Veiculo - Superficie Utilizada para S
-agente_causador,"Plaina, Tupia - Maqu","Plaina, Tupia - Maquina","Plaina, Tupia - Maquina"
-agente_causador,Plaina- Ferramenta M,Plaina- Ferramenta Manual sem Forca Motriz,Plaina- Ferramenta Manual sem Forca Motriz
-agente_causador,Plastico - Inclui Po,"Plastico - Inclui Po, Folha, Trefilado, Barra","Plastico - Inclui Po, Folha, Trefilado, Barra"
-agente_causador,"Poco, Entrada, Galer","Poco, Entrada, Galeria, Etc., de Mina","Poco, Entrada, Galeria, Etc., de Mina"
-agente_causador,"Politriz, Enceradeir","Politriz, Enceradeira- Ferramenta Portatil Co","Politriz, Enceradeira- Ferramenta Portatil Co"
-agente_causador,"Politriz, Lixadora,","Politriz, Lixadora, Esmeril - Maquina","Politriz, Lixadora, Esmeril - Maquina"
-agente_causador,"Poluicao da Agua, Ac","Poluicao da Agua, Acao Da","Poluicao da Agua, Acao Da"
-agente_causador,"Poluicao do Ar, Acao","Poluicao do Ar, Acao Da","Poluicao do Ar, Acao Da"
-agente_causador,"Poluicao do Solo, Ac","Poluicao do Solo, Acao Da","Poluicao do Solo, Acao Da"
-agente_causador,"Poluicao, Nic, Expos","Poluicao, Nic, Exposicao A","Poluicao, Nic, Exposicao A"
-agente_causador,Ponte Rolante - Equi,Ponte Rolante - Equip. de Guindar,Ponte Rolante - Equip. de Guindar
-agente_causador,"Ponte, Viaduto - Edi","Ponte, Viaduto - Edificio ou Estrutura","Ponte, Viaduto - Edificio ou Estrutura"
-agente_causador,Prensa - Maquina,Prensa - Maquina,Prensa - Maquina
-agente_causador,Pressao Ambiente Alt,Pressao Ambiente Alta-Trabalho em Caixao Pneu,Pressao Ambiente Alta-Trabalho em Caixao Pneu
-agente_causador,Pressao Ambiente Bai,Pressao Ambiente Baixa-Ar Rarefeito,Pressao Ambiente Baixa-Ar Rarefeito
-agente_causador,"Pressao Ambiente, Ex","Pressao Ambiente, Exposicao A","Pressao Ambiente, Exposicao A"
-agente_causador,Produto Alimenticio,Produto Alimenticio - Inclusive de Origem Ani,Produto Alimenticio - Inclusive de Origem Ani
-agente_causador,"Produto Animal, Nic","Produto Animal, Nic","Produto Animal, Nic"
-agente_causador,Produto Biologico (S,"Produto Biologico (Soro, Toxina, Antitoxina,","Produto Biologico (Soro, Toxina, Antitoxina,"
-agente_causador,Produto Mineral Meta,Produto Mineral Metalico - Produto de Minerac,Produto Mineral Metalico - Produto de Minerac
-agente_causador,Produto Mineral nao,Produto Mineral nao Metalico - Produto de Min,Produto Mineral nao Metalico - Produto de Min
-agente_causador,"Produto de Limpeza,","Produto de Limpeza, Sabao, Detergente","Produto de Limpeza, Sabao, Detergente"
-agente_causador,Produto de Petroleo,"Produto de Petroleo e de Carvao, Nic","Produto de Petroleo e de Carvao, Nic"
-agente_causador,Produtos Alimenticio,"Produtos Alimenticios-Inclui Carne,Leite e De","Produtos Alimenticios-Inclui Carne,Leite e De"
-agente_causador,"Pua, Trado, Verruma,","Pua, Trado, Verruma, Maquina de Furar Manual-","Pua, Trado, Verruma, Maquina de Furar Manual-"
-agente_causador,"Puncao, Ponteiro, Va","Puncao, Ponteiro, Vazador- Ferramenta",
-agente_causador,Queda de Pes. com Di,Queda de Pes. com Dif. de Nivel,
-agente_causador,Queda de Pes. em Mes,Queda de Pes. em Mesmo Nivel,
+agente_causador,Oleo Combustivel,Óleo combustível,Óleo combustível
+agente_causador,Osso - Produto Anima,Osso,Osso - produto animal
+agente_causador,Oxidos de Nitrogenio,Óxidos de nitrogênio (vapores nitrosos),Óxidos de nitrogênio (vapores nitrosos)
+agente_causador,"Pa Mecanica, Draga -","Pá mecânica, draga","Pá mecânica, draga - equipamento de guindar"
+agente_causador,"Pa, Cavadeira- Ferra","Pá, cavadeira","Pá, cavadeira - ferramenta manual sem força motriz"
+agente_causador,"Painel de Controle,","Painel de controle, chave, disjuntor","Painel de controle, barramento, chave, interruptor, disjuntor, fusível - equipamento elétrico"
+agente_causador,Papel e Pasta para P,Papel e pasta para papel,Papel e pasta para papel
+agente_causador,"Parafina, Oleo Lubri","Parafina, óleo lubrificante e de corte, graxas","Parafina, óleo lubrificante e de corte, graxas"
+agente_causador,Particulas - nao Ide,Partículas não identificadas,Partículas não identificadas
+agente_causador,Passarela ou Platafo,Passarela ou plataforma permanentes,Passarela ou plataforma permanentes - superfície utilizada para sustentar pessoas
+agente_causador,Pau de Carga - Equip,Pau de carga,Pau de carga - equipamento de guindar
+agente_causador,"Pele, Crina, Pelo, L","Pele, crina, pelo, lã (em bruto)","Pele, crina, pelo, lã (em bruto) - produto animal"
+agente_causador,Pena - Produto Anima,Pena,Pena - produto animal
+agente_causador,"Peneira Mecanica, Ma","Peneira mecânica, máquina separadora","Peneira mecânica, máquina separadora - máquina"
+agente_causador,Perfuratriz- Ferrame,Perfuratriz,Perfuratriz - ferramenta portátil com força motriz ou aquecimento
+agente_causador,"Petroleo Bruto, Brut","Petróleo bruto, bruto reduzido","Petróleo bruto, bruto reduzido"
+agente_causador,Picareta- Ferramenta,Picareta,Picareta - ferramenta manual sem força motriz
+agente_causador,Piso de Andaime e Pl,Piso de andaime e plataforma desmontável,Piso de andaime e plataforma desmontável - superfície utilizada para sustentar pessoas
+agente_causador,Piso de Edificio - S,Piso de edifício,Piso de edifício - superfície utilizada para sustentar pessoas
+agente_causador,Piso de Mina - Super,Piso de mina,Piso de mina - superfície utilizada para sustentar pessoas
+agente_causador,Piso de Veiculo - Su,Piso de veiculo,Piso de veiculo - superfície utilizada para sustentar pessoas
+agente_causador,"Plaina, Tupia - Maqu","Plaina, tupia","Plaina, tupia - máquina"
+agente_causador,Plaina- Ferramenta M,Plaina,Plaina - ferramenta manual sem força motriz
+agente_causador,Plastico - Inclui Po,Plástico,"Plástico (inclui pó, folha, trefilado, barra, perfil, etc.; não inclui produto a ser usado na fabricação de plástico)"
+agente_causador,"Poco, Entrada, Galer","Poço, entrada, galeria, etc. de mina","Poço, entrada, galeria, etc. de mina"
+agente_causador,"Politriz, Enceradeir","Politriz, enceradeira","Politriz, enceradeira - ferramenta portátil com força motriz ou aquecimento"
+agente_causador,"Politriz, Lixadora,","Politriz, lixadora, esmeril","Politriz, lixadora, esmeril - máquina"
+agente_causador,"Poluicao da Agua, Ac",Exposição à poluição da água,Exposição à poluição da água
+agente_causador,"Poluicao do Ar, Acao",Exposição à poluição do ar,Exposição à poluição do ar
+agente_causador,"Poluicao do Solo, Ac",Exposição à poluição do solo,Exposição à poluição do solo
+agente_causador,"Poluicao, Nic, Expos","Exposição à poluição, outros casos","Exposição à poluição, NIC"
+agente_causador,Ponte Rolante - Equi,Ponte rolante,Ponte rolante - equipamento de guindar
+agente_causador,"Ponte, Viaduto - Edi","Ponte, viaduto","Ponte, viaduto - edifício ou estrutura"
+agente_causador,Prensa - Maquina,Prensa,Prensa - máquina
+agente_causador,Pressao Ambiente Alt,Pressão ambiente alta,"Pressão ambiente alta (trabalho em caixão pneumático, mergulho)"
+agente_causador,Pressao Ambiente Bai,Pressão ambiente baixa (ar rarefeito),Pressão ambiente baixa (ar rarefeito)
+agente_causador,"Pressao Ambiente, Ex",Exposição à pressão ambiente,Exposição à pressão ambiente
+agente_causador,Produto Alimenticio,"Produto alimentício, outros casos","Produto alimentício (inclusive de origem animal), NIC"
+agente_causador,"Produto Animal, Nic","Produto animal, outros casos","Produto animal, NIC"
+agente_causador,Produto Biologico (S,Produto biológico,"Produto biológico (soro, toxina, antitoxina, vacina, plasma) - medicamento"
+agente_causador,Produto Mineral Meta,Produto mineral metálico,"Produto mineral metálico - produto de mineração em bruto ou beneficiado, como minério e concentrado de minério"
+agente_causador,Produto Mineral nao,Produto mineral não metálico,"Produto mineral não metálico - produto de mineração, escavação, desbarrancamento, etc., como detrito, argila, areia, cascalho, pedra, etc."
+agente_causador,"Produto de Limpeza,","Produto de limpeza, sabão, detergente","Produto de limpeza, sabão, detergente"
+agente_causador,Produto de Petroleo,"Produto de petróleo e de carvão, outros casos","Produto de petróleo e de carvão, NIC"
+agente_causador,Produtos Alimenticio,Produto alimentício,"Produto alimentício (inclui carne, leite e derivados, legumes, frutas, cereais e derivados)"
+agente_causador,"Pua, Trado, Verruma,","Pua, trado, verruma, máquina de furar manual","Pua, trado, verruma, máquina de furar manual - ferramenta manual sem força motriz"
+agente_causador,"Puncao, Ponteiro, Va","Punção, ponteiro, vazador",
+agente_causador,Queda de Pes. com Di,Queda de pessoa com diferença de nível,
+agente_causador,Queda de Pes. em Mes,Queda de pessoa em mesmo nível,
 agente_causador,Querosene,Querosene,Querosene
-agente_causador,"Radiacao Ionizante,","Radiacao Ionizante, Exposicao A","Radiacao Ionizante, Exposicao A"
-agente_causador,Radiacao nao Ionizan,"Radiacao nao Ionizante, Exposicao A","Radiacao nao Ionizante, Exposicao A"
-agente_causador,Rampa - Superficie U,Rampa - Superficie Utilizada para Sustentar P,Rampa - Superficie Utilizada para Sustentar P
-agente_causador,Reacao do Corpo a Mo,Reacao do Corpo a Movimento,
-agente_causador,Reator (Inclui Combu,Reator (Inclui Combustivel e Residuo) - Equip,Reator (Inclui Combustivel e Residuo) - Equip
-agente_causador,Rebitadeira- Ferrame,Rebitadeira- Ferramenta Portatil com Forca Mo,Rebitadeira- Ferramenta Portatil com Forca Mo
-agente_causador,"Rebocador Mecanico,","Rebocador Mecanico, Mula Mecanica","Rebocador Mecanico, Mula Mecanica"
-agente_causador,"Reostato, Dispositiv","Reostato, Dispositivo de Partida e Aparelho D","Reostato, Dispositivo de Partida e Aparelho D"
-agente_causador,Revestimento Ceramic,"Revestimento Ceramico (Azulejo, Mosaico, Etc.","Revestimento Ceramico (Azulejo, Mosaico, Etc."
-agente_causador,Rua e Estrada - Supe,Rua e Estrada - Superficie Utilizada para Sus,Rua e Estrada - Superficie Utilizada para Sus
-agente_causador,Ruido,Ruido,Ruido
-agente_causador,"Ruido, Exposicao A","Ruido, Exposicao A","Ruido, Exposicao A"
-agente_causador,"Ser Vivo, Nic","Ser Vivo, Nic","Ser Vivo, Nic"
-agente_causador,Serra - Maquina,Serra - Maquina,Serra - Maquina
-agente_causador,"Serra, Serrote- Ferr","Serra, Serrote- Ferramenta Manual sem Forca M","Serra, Serrote- Ferramenta Manual sem Forca M"
-agente_causador,Serra- Ferramenta Po,Serra- Ferramenta Portatil com Forca Motriz O,Serra- Ferramenta Portatil com Forca Motriz O
-agente_causador,"Substancia Quimica,","Substancia Quimica, Nic","Substancia Quimica, Nic"
-agente_causador,"Sucata, Entulho, Res","Sucata, Entulho, Residuo","Sucata, Entulho, Residuo"
-agente_causador,Superficie de Susten,"Superficie de Sustentacao, Nic - Superficie U","Superficie de Sustentacao, Nic - Superficie U"
-agente_causador,Superficie e Estrutu,"Superficie e Estrutura, Nic","Superficie e Estrutura, Nic"
-agente_causador,Talha - Equip. de Gu,Talha - Equip. de Guindar,Talha - Equip. de Guindar
-agente_causador,Talhadeira- Ferramen,Talhadeira- Ferramenta Portatil com Forca Mot,Talhadeira- Ferramenta Portatil com Forca Mot
-agente_causador,"Tambor, Polia, Rolda","Tambor, Polia, Roldana - Dispositivo de Trans","Tambor, Polia, Roldana - Dispositivo de Trans"
-agente_causador,"Tanque, Cilindro (Tr","Tanque, Cilindro (Transportaveis e nao Sob Pr","Tanque, Cilindro (Transportaveis e nao Sob Pr"
-agente_causador,"Tapete, Forracao de","Tapete, Forracao de Piso, Capacho - Mobiliari","Tapete, Forracao de Piso, Capacho - Mobiliari"
+agente_causador,"Radiacao Ionizante,",Exposição à radiação ionizante,Exposição à radiação ionizante
+agente_causador,Radiacao nao Ionizan,Exposição à radiação não ionizante,Exposição à radiação não ionizante
+agente_causador,Rampa - Superficie U,Rampa,Rampa - superfície utilizada para sustentar pessoas
+agente_causador,Reacao do Corpo a Mo,Reação do corpo a seus movimentos,
+agente_causador,Reator (Inclui Combu,Reator,Reator (inclui combustível e resíduo) - equipamento ou substância emissor de radiação ionizante
+agente_causador,Rebitadeira- Ferrame,Rebitadeira,Rebitadeira - ferramenta portátil com força motriz ou aquecimento
+agente_causador,"Rebocador Mecanico,","Rebocador mecânico, mula mecânica","Rebocador mecânico, mula mecânica"
+agente_causador,"Reostato, Dispositiv","Reostato, dispositivo de partida e de controle","Reostato, dispositivo de partida e aparelho de controle, capacitor, retificador, bateria de acumuladores - equipamento elétrico"
+agente_causador,Revestimento Ceramic,Revestimento cerâmico,"Revestimento cerâmico (azulejo, mosaico, etc.) - cerâmica"
+agente_causador,Rua e Estrada - Supe,Rua e estrada,Rua e estrada - superfície utilizada para sustentar pessoas
+agente_causador,Ruido,Ruído,Ruído
+agente_causador,"Ruido, Exposicao A",Exposição ao ruído,Exposição ao ruído
+agente_causador,"Ser Vivo, Nic","Ser vivo, outros casos","Ser vivo, NIC"
+agente_causador,Serra - Maquina,Serra (máquina),Serra - máquina
+agente_causador,"Serra, Serrote- Ferr","Serra, serrote","Serra, serrote - ferramenta manual sem força motriz"
+agente_causador,Serra- Ferramenta Po,Serra (ferramenta portátil com força motriz ou aquecimento),Serra - ferramenta portátil com força motriz ou aquecimento
+agente_causador,"Substancia Quimica,","Substância química, outros casos","Substância química, NIC"
+agente_causador,"Sucata, Entulho, Res","Sucata, entulho, resíduo","Sucata, entulho, resíduo"
+agente_causador,Superficie de Susten,"Superfície de sustentação, outros casos","Superfície de sustentação, NIC - superfície utilizada para sustentar pessoas"
+agente_causador,Superficie e Estrutu,"Superfície e estrutura, outros casos","Superfície e estrutura, NIC"
+agente_causador,Talha - Equip. de Gu,Talha,Talha - equipamento de guindar
+agente_causador,Talhadeira- Ferramen,Talhadeira,Talhadeira - ferramenta portátil com força motriz ou aquecimento
+agente_causador,"Tambor, Polia, Rolda","Tambor, polia, roldana","Tambor, polia, roldana - dispositivo de transmissão de energia mecânica"
+agente_causador,"Tanque, Cilindro (Tr","Tanque, cilindro","Tanque, cilindro (transportáveis e não sob pressão) - embalagem, recipiente (vazio ou cheio)"
+agente_causador,"Tapete, Forracao de","Tapete, forração de piso, capacho","Tapete, forração de piso, capacho - mobiliário e acessórios"
 agente_causador,Telhado,Telhado,Telhado
-agente_causador,Temperatura Ambiente,"Temperatura Ambiente, Exposicao A",
-agente_causador,Temperatura Muito Al,"Temperatura Muito Alta, Contato com Objeto Ou","Temperatura Muito Alta, Contato com Objeto Ou"
-agente_causador,Temperatura Muito Ba,"Temperatura Muito Baixa, Contato com Objeto O","Temperatura Muito Baixa, Contato com Objeto O"
-agente_causador,"Tesoura, Guilhotina,","Tesoura, Guilhotina, Maquina de Cortar - Maqu","Tesoura, Guilhotina, Maquina de Cortar - Maqu"
-agente_causador,"Tesoura, Tesourao- F","Tesoura, Tesourao- Ferramenta Manual sem Forc","Tesoura, Tesourao- Ferramenta Manual sem Forc"
-agente_causador,Texteis - Inclui Fib,Texteis - Inclui Fibras Animais Apos O Primei,Texteis - Inclui Fibras Animais Apos O Primei
-agente_causador,Tijolo e Telha - Cer,Tijolo e Telha - Ceramica,Tijolo e Telha - Ceramica
-agente_causador,"Torre, Poste - Edifi","Torre, Poste - Edificio ou Estrutura","Torre, Poste - Edificio ou Estrutura"
-agente_causador,"Transformador, Conve","Transformador, Conversor - Equip. Eletri","Transformador, Conversor - Equip. Eletri"
-agente_causador,Transportador com Fo,Transportador com Forca Motriz,Transportador com Forca Motriz
-agente_causador,Transportador por Gr,Transportador por Gravidade,Transportador por Gravidade
-agente_causador,"Transportador, Nic","Transportador, Nic","Transportador, Nic"
+agente_causador,Temperatura Ambiente,Exposição à temperatura ambiente,
+agente_causador,Temperatura Muito Al,Contato com objeto ou substância a temperatura muito alta,Contato com objeto ou substância a temperatura muito alta
+agente_causador,Temperatura Muito Ba,Contato com objeto ou substância a temperatura muito baixa,Contato com objeto ou substância a temperatura muito baixa
+agente_causador,"Tesoura, Guilhotina,","Tesoura, guilhotina, máquina de cortar","Tesoura, guilhotina, máquina de cortar - máquina"
+agente_causador,"Tesoura, Tesourao- F","Tesoura, tesourão","Tesoura, tesourão - ferramenta manual sem força motriz"
+agente_causador,Texteis - Inclui Fib,Têxteis,"Têxteis (inclui fibras animais após o primeiro desengorduramento e limpeza, fibras vegetais e sintéticas (exceto vidro), fio, linha, tecido, passamanaria, feltro e produtos têxteis em geral)"
+agente_causador,Tijolo e Telha - Cer,Tijolo e telha,Tijolo e telha - cerâmica
+agente_causador,"Torre, Poste - Edifi","Torre, poste","Torre, poste - edifício ou estrutura"
+agente_causador,"Transformador, Conve","Transformador, conversor","Transformador, conversor - equipamento elétrico"
+agente_causador,Transportador com Fo,Transportador com força motriz,Transportador com força motriz
+agente_causador,Transportador por Gr,Transportador por gravidade,Transportador por gravidade
+agente_causador,"Transportador, Nic","Transportador, outros casos","Transportador, NIC"
 agente_causador,Trator,Trator,Trator
 agente_causador,Triciclo,Triciclo,Triciclo
-agente_causador,Tubo Sob Pressao (Ma,Tubo Sob Pressao (Mangueira ou Tubo para Iiqu,Tubo Sob Pressao (Mangueira ou Tubo para Iiqu
-agente_causador,"Tubo, Manilha - Cera","Tubo, Manilha - Ceramica","Tubo, Manilha - Ceramica"
-agente_causador,Tunel,Tunel,Tunel
+agente_causador,Tubo Sob Pressao (Ma,Tubo sob pressão,"Tubo sob pressão (mangueira ou tubo para líquido, gás ou vapor)"
+agente_causador,"Tubo, Manilha - Cera","Tubo, manilha","Tubo, manilha - cerâmica"
+agente_causador,Tunel,Túnel,Túnel
 agente_causador,Turbina,Turbina,Turbina
-agente_causador,Vaso Sob Pressao (Pa,"Vaso Sob Pressao (Para Iiquido, Gas ou Vapor)","Vaso Sob Pressao (Para Iiquido, Gas ou Vapor)"
-agente_causador,"Vegetal - Planta, Ar","Vegetal - Planta, Arvore, em Estado Natural,","Vegetal - Planta, Arvore, em Estado Natural,"
-agente_causador,Veiculo Aquatico,Veiculo Aquatico,Veiculo Aquatico
-agente_causador,Veiculo Deslisante,Veiculo Deslisante,Veiculo Deslisante
-agente_causador,Veiculo Funicular (T,Veiculo Funicular (Tracao por Cabo),Veiculo Funicular (Tracao por Cabo)
-agente_causador,Veiculo Rodoviario M,Veiculo Rodoviario Motorizado,Veiculo Rodoviario Motorizado
-agente_causador,Veiculo Sobre Trilho,Veiculo Sobre Trilho,Veiculo Sobre Trilho
-agente_causador,Veiculo de Terraplen,Veiculo de Terraplenagem,Veiculo de Terraplenagem
-agente_causador,Veiculo de Tracao An,Veiculo de Tracao Animal,Veiculo de Tracao Animal
-agente_causador,"Veiculo, Nic","Veiculo, Nic","Veiculo, Nic"
-agente_causador,"Vestuario, Nic","Vestuario, Nic","Vestuario, Nic"
-agente_causador,"Vibracao, Exposicao","Vibracao, Exposicao A","Vibracao, Exposicao A"
-agente_causador,"Vidraria, Fibra de V","Vidraria, Fibra de Vidro, Lamina, Etc., Excet","Vidraria, Fibra de Vidro, Lamina, Etc., Excet"
-natureza_lesao,Amputacao ou Enuclea,Amputacao ou Enucleacao,Amputacao ou Enucleacao
-natureza_lesao,"Asfixia, Estrangulam","Asfixia, Estrangulamento, Afogamento","Asfixia, Estrangulamento, Afogamento"
-natureza_lesao,Choque Eletrico e El,Choque Eletrico e Eletroplessao (Eletrocuss,Choque Eletrico e Eletroplessao (Eletrocuss
-natureza_lesao,Concussao Cerebral,Concussao Cerebral,Concussao Cerebral
-natureza_lesao,"Congelamento, Geladu","Congelamento, Geladura e Outros Efeitos Da","Congelamento, Geladura e Outros Efeitos Da"
-natureza_lesao,"Contusao, Esmagament","Contusao, Esmagamento (Superficie Cutanea I","Contusao, Esmagamento (Superficie Cutanea I"
-natureza_lesao,"Corte, Laceracao, Fe","Corte, Laceracao, Ferida Contusa, Punctura","Corte, Laceracao, Ferida Contusa, Punctura"
-natureza_lesao,"Dermatose (Erupcao,","Dermatose (Erupcao, Inflamacao da Pele, Inc","Dermatose (Erupcao, Inflamacao da Pele, Inc"
-natureza_lesao,"Distensao, Torcao","Distensao, Torcao","Distensao, Torcao"
-natureza_lesao,Doenca Contagiosa ou,Doenca Contagiosa ou Infecciosa (Tuberculos,Doenca Contagiosa ou Infecciosa (Tuberculos
-natureza_lesao,"Doenca, Nic","Doenca, Nic","Doenca, Nic"
-natureza_lesao,Efeito de Radiacao (,Efeito de Radiacao - Queimadura,
-natureza_lesao,Envenenamento Sistem,Envenenamento Sistemico - Condicao Morbida,Envenenamento Sistemico - Condicao Morbida
-natureza_lesao,"Escoriacao, Abrasao","Escoriacao, Abrasao (Ferimento Superficial)","Escoriacao, Abrasao (Ferimento Superficial)"
-natureza_lesao,Esforco Excessivo ao,Esforco Excessivo ao Empurrar ou Puxar Objeto,Esforco Excessivo ao Empurrar ou Puxar Objeto
+agente_causador,Vaso Sob Pressao (Pa,Vaso sob pressão,"Vaso sob pressão (para líquido, gás ou vapor)"
+agente_causador,"Vegetal - Planta, Ar",Vegetal,"Vegetal - planta, árvore, em estado natural, não beneficiada (não inclui grão debulhado, fruto colhido, toro mesmo com galho)"
+agente_causador,Veiculo Aquatico,Veículo aquático,Veículo aquático
+agente_causador,Veiculo Deslisante,Veículo deslizante,Veículo deslizante
+agente_causador,Veiculo Funicular (T,Veículo funicular (tração por cabo),Veículo funicular (tração por cabo)
+agente_causador,Veiculo Rodoviario M,Veículo rodoviário motorizado,Veículo rodoviário motorizado
+agente_causador,Veiculo Sobre Trilho,Veículo sobre trilho,Veículo sobre trilho
+agente_causador,Veiculo de Terraplen,Veículo de terraplenagem,Veículo de terraplenagem
+agente_causador,Veiculo de Tracao An,Veículo de tração animal,Veículo de tração animal
+agente_causador,"Veiculo, Nic","Veículo, outros casos","Veículo, NIC"
+agente_causador,"Vestuario, Nic","Vestuário, outros casos","Vestuário, NIC"
+agente_causador,"Vibracao, Exposicao",Exposição à vibração,Exposição à vibração
+agente_causador,"Vidraria, Fibra de V","Vidraria, fibra de vidro, lâmina, etc., exceto frasco, garrafa","Vidraria, fibra de vidro, lâmina, etc., exceto frasco, garrafa"
+natureza_lesao,Amputacao ou Enuclea,Amputação ou enucleação,Amputação ou enucleação
+natureza_lesao,"Asfixia, Estrangulam","Asfixia, estrangulamento, afogamento","Asfixia, estrangulamento, afogamento"
+natureza_lesao,Choque Eletrico e El,Choque elétrico e eletroplessão (eletrocussão),Choque elétrico e eletroplessão (eletrocussão)
+natureza_lesao,Concussao Cerebral,Concussão cerebral,Concussão cerebral
+natureza_lesao,"Congelamento, Geladu",Congelamento e outros efeitos do frio,"Congelamento, geladura e outros efeitos da exposição à baixa temperatura"
+natureza_lesao,"Contusao, Esmagament","Contusão, esmagamento","Contusão, esmagamento (superfície cutânea intacta)"
+natureza_lesao,"Corte, Laceracao, Fe","Corte, laceração, ferida contusa, punctura (ferida aberta)","Corte, laceração, ferida contusa, punctura (ferida aberta)"
+natureza_lesao,"Dermatose (Erupcao,",Dermatose,"Dermatose (erupção, inflamação da pele, inclusive furúnculo, etc.) - geralmente provocada pelo contato direto com substâncias ou agentes sensibilizantes ou irritantes, tais como medicamentos, óleos, agentes biológicos, plantas, madeiras ou metais (não inclui lesão provocada pela ação corrosiva de produtos químicos, queimadura por contato com substâncias quentes, efeito de exposição à radiação, efeito de exposição a baixas temperaturas ou inflamação ou irritação causada por fricção ou impacto)"
+natureza_lesao,"Distensao, Torcao","Distensão, torção","Distensão, torção"
+natureza_lesao,Doenca Contagiosa ou,Doença contagiosa ou infecciosa,"Doença contagiosa ou infecciosa (tuberculose, brucelose, etc.)"
+natureza_lesao,"Doenca, Nic","Doença, outros casos","Doença, NIC"
+natureza_lesao,Efeito de Radiacao (,Efeito de radiação,
+natureza_lesao,Envenenamento Sistem,Envenenamento sistêmico,"Envenenamento sistêmico - condição mórbida sistêmica provocada por inalação, ingestão ou absorção cutânea de substância tóxica, que afete o metabolismo, o funcionamento do sistema nervoso, do aparelho circulatório, do aparelho digestivo, do aparelho respiratório, dos órgãos de excreção, do sistema musculoesquelético, etc. (inclui ação de produto químico, medicamento, metal ou peçonha; não inclui efeito de radiação, pneumoconiose, efeito corrosivo de produto químico, irritação cutânea, septicemia ou caso de ferida infectada)"
+natureza_lesao,"Escoriacao, Abrasao","Escoriação, abrasão","Escoriação, abrasão (ferimento superficial)"
+natureza_lesao,Esforco Excessivo ao,Esforço excessivo ao empurrar ou puxar objeto,Esforço excessivo ao empurrar ou puxar objeto
 natureza_lesao,Fratura,Fratura,Fratura
-natureza_lesao,Hernia de Qualquer N,"Hernia de Qualquer Natureza, Ruptura","Hernia de Qualquer Natureza, Ruptura"
-natureza_lesao,Inflamacao de Articu,"Inflamacao de Articulacao, Tendao ou Muscul","Inflamacao de Articulacao, Tendao ou Muscul"
-natureza_lesao,"Intermacao, Insolaca","Intermacao, Insolacao, Caibra, Exaustao e O","Intermacao, Insolacao, Caibra, Exaustao e O"
-natureza_lesao,Lesao Imediata,Lesao Imediata,Lesao Imediata
-natureza_lesao,"Lesao Imediata, Nic","Lesao Imediata, Nic","Lesao Imediata, Nic"
-natureza_lesao,Lesoes Multiplas,Lesoes Multiplas,Lesoes Multiplas
-natureza_lesao,Luxacao,Luxacao,Luxacao
-natureza_lesao,"Outras Lesoes, Nic","Outras Lesoes, Nic","Outras Lesoes, Nic"
-natureza_lesao,Perda ou Diminuicao,Perda ou Diminuicao de Sentido,
-natureza_lesao,Pneumoconiose (Silic,"Pneumoconiose (Silicose, Asbestose, Etc.)","Pneumoconiose (Silicose, Asbestose, Etc.)"
-natureza_lesao,Queimadura Quimica (,Queimadura Quimica (Lesao de Tecido Provoca,Queimadura Quimica (Lesao de Tecido Provoca
-natureza_lesao,Queimadura ou Escald,Queimadura ou Escaldadura - Efeito de Tempe,Queimadura ou Escaldadura - Efeito de Tempe
-parte_corpo,Abdome (Inclusive Or,Abdome (Inclusive Orgaos Internos),Abdome (Inclusive Orgaos Internos)
-parte_corpo,Antebraco (Entre O P,Antebraco (Entre O Punho e O Cotovelo),Antebraco (Entre O Punho e O Cotovelo)
-parte_corpo,Aparelho Circulatori,Aparelho Circulatorio,Aparelho Circulatorio
-parte_corpo,Aparelho Digestivo,Aparelho Digestivo,Aparelho Digestivo
-parte_corpo,Aparelho Genito-Urin,Aparelho Genito-Urinario,Aparelho Genito-Urinario
-parte_corpo,Aparelho Respiratori,Aparelho Respiratorio,Aparelho Respiratorio
+natureza_lesao,Hernia de Qualquer N,"Hérnia de qualquer natureza, ruptura","Hérnia de qualquer natureza, ruptura"
+natureza_lesao,Inflamacao de Articu,"Inflamação de articulação, tendão ou músculo","Inflamação de articulação, tendão ou músculo (inclui sinovite, tenossinovite, etc.; não inclui distensão, torção ou suas consequências)"
+natureza_lesao,"Intermacao, Insolaca","Intermação, insolação e outros efeitos do calor","Intermação, insolação, cãibra, exaustão e outros efeitos da temperatura ambiente elevada (não inclui queimadura de sol ou outros efeitos de radiação)"
+natureza_lesao,Lesao Imediata,Lesão imediata,Lesão imediata
+natureza_lesao,"Lesao Imediata, Nic","Lesão imediata, outros casos","Lesão imediata, NIC"
+natureza_lesao,Lesoes Multiplas,Lesões múltiplas,Lesões múltiplas
+natureza_lesao,Luxacao,Luxação,Luxação
+natureza_lesao,"Outras Lesoes, Nic",Outras lesões,"Outras lesões, NIC"
+natureza_lesao,Perda ou Diminuicao,Perda ou diminuição de sentido,
+natureza_lesao,Pneumoconiose (Silic,Pneumoconiose,"Pneumoconiose (silicose, asbestose, etc.)"
+natureza_lesao,Queimadura Quimica (,Queimadura química,"Queimadura química (lesão de tecido provocada pela ação corrosiva de produto químico, suas emanações, etc.)"
+natureza_lesao,Queimadura ou Escald,Queimadura ou escaldadura,"Queimadura ou escaldadura - efeito de temperatura elevada ou efeito do contato com substância quente (inclui queimadura por eletricidade, mas não inclui choque elétrico; não inclui queimadura por substância química, efeito de radiação, queimadura de sol, incapacidade sistêmica como intermação, queimadura por atrito, etc.)"
+parte_corpo,Abdome (Inclusive Or,Abdome,Abdome (inclusive órgãos internos)
+parte_corpo,Antebraco (Entre O P,Antebraço,Antebraço (entre o punho e o cotovelo)
+parte_corpo,Aparelho Circulatori,Aparelho circulatório,Aparelho circulatório
+parte_corpo,Aparelho Digestivo,Aparelho digestivo,Aparelho digestivo
+parte_corpo,Aparelho Genito-Urin,Aparelho gênito-urinário,Aparelho gênito-urinário
+parte_corpo,Aparelho Respiratori,Aparelho respiratório,Aparelho respiratório
 parte_corpo,Artelho,Artelho,Artelho
-parte_corpo,Articulacao do Torno,Articulacao do Tornozelo,Articulacao do Tornozelo
-parte_corpo,Boca (Inclusive Labi,"Boca (Inclusive Labios, Dentes, Lingua, Garga","Boca (Inclusive Labios, Dentes, Lingua, Garga"
-parte_corpo,Braco (Acima do Coto,Braco (Acima do Cotovelo),Braco (Acima do Cotovelo)
-parte_corpo,Braco (Entre O Punho,Braco (Entre O Punho a O Ombro),Braco (Entre O Punho a O Ombro)
-parte_corpo,"Cabeca, Nic","Cabeca, Nic","Cabeca, Nic"
-parte_corpo,"Cabeca, Partes Multi","Cabeca, Partes Multiplas (Qualquer Combinacao","Cabeca, Partes Multiplas (Qualquer Combinacao"
+parte_corpo,Articulacao do Torno,Articulação do tornozelo,Articulação do tornozelo
+parte_corpo,Boca (Inclusive Labi,Boca,"Boca (inclusive lábios, dentes, língua, garganta e paladar)"
+parte_corpo,Braco (Acima do Coto,Braço (acima do cotovelo),Braço (acima do cotovelo)
+parte_corpo,Braco (Entre O Punho,Braço (entre o punho e o ombro),Braço (entre o punho e o ombro)
+parte_corpo,"Cabeca, Nic","Cabeça, outros casos","Cabeça, NIC"
+parte_corpo,"Cabeca, Partes Multi","Cabeça, partes múltiplas","Cabeça, partes múltiplas (qualquer combinação das partes acima)"
 parte_corpo,Cotovelo,Cotovelo,Cotovelo
 parte_corpo,Coxa,Coxa,Coxa
-parte_corpo,Cranio (Inclusive En,Cranio (Inclusive Encefalo),Cranio (Inclusive Encefalo)
+parte_corpo,Cranio (Inclusive En,Crânio (inclusive encéfalo),Crânio (inclusive encéfalo)
 parte_corpo,Dedo,Dedo,Dedo
-parte_corpo,Dorso (Inclusive Mus,"Dorso (Inclusive Musculos Dorsais, Coluna e M","Dorso (Inclusive Musculos Dorsais, Coluna e M"
-parte_corpo,"Face, Partes Multipl","Face, Partes Multiplas (Qualquer Combinacao D","Face, Partes Multiplas (Qualquer Combinacao D"
+parte_corpo,Dorso (Inclusive Mus,Dorso,"Dorso (inclusive músculos dorsais, coluna e medula espinhal)"
+parte_corpo,"Face, Partes Multipl","Face, partes múltiplas","Face, partes múltiplas (qualquer combinação das partes acima)"
 parte_corpo,Joelho,Joelho,Joelho
-parte_corpo,Localizacao da Lesao,"Localizacao da Lesao, Nic","Localizacao da Lesao, Nic"
-parte_corpo,Mandibula (Inclusive,Mandibula (Inclusive Queixo),Mandibula (Inclusive Queixo)
-parte_corpo,Mao (Exceto Punho ou,Mao (Exceto Punho ou Dedos),Mao (Exceto Punho ou Dedos)
-parte_corpo,"Membros Inferiores,","Membros Inferiores, Nic ou Partes Multiplas",
-parte_corpo,"Membros Superiores,","Membros Superiores, Nic ou Partes Multiplas",
-parte_corpo,Nariz (Inclusive Fos,"Nariz (Inclusive Fossas Nasais, Seios da Face","Nariz (Inclusive Fossas Nasais, Seios da Face"
-parte_corpo,Olho (Inclusive Nerv,Olho (Inclusive Nervo Otico e Visao),Olho (Inclusive Nervo Otico e Visao)
+parte_corpo,Localizacao da Lesao,"Localização da lesão, outros casos","Localização da lesão, NIC"
+parte_corpo,Mandibula (Inclusive,Mandíbula (inclusive queixo),Mandíbula (inclusive queixo)
+parte_corpo,Mao (Exceto Punho ou,Mão,Mão (exceto punho ou dedos)
+parte_corpo,"Membros Inferiores,","Membros inferiores, outras partes ou partes múltiplas",
+parte_corpo,"Membros Superiores,","Membros superiores, outras partes ou partes múltiplas",
+parte_corpo,Nariz (Inclusive Fos,Nariz,"Nariz (inclusive fossas nasais, seios da face e olfato)"
+parte_corpo,Olho (Inclusive Nerv,Olho,Olho (inclusive nervo ótico e visão)
 parte_corpo,Ombro,Ombro,Ombro
-parte_corpo,"Ouvido (Externo, Med","Ouvido (Externo, Medio, Interno, Audicao e Eq","Ouvido (Externo, Medio, Interno, Audicao e Eq"
-parte_corpo,Partes Multiplas - A,Partes Multiplas - Aplica-Se Quando Mais de U,Partes Multiplas - Aplica-Se Quando Mais de U
-parte_corpo,Pe (Exceto Artelhos),Pe (Exceto Artelhos),Pe (Exceto Artelhos)
-parte_corpo,"Perna (Do Tornozelo,","Perna (Do Tornozelo, Exclusive, ao Joelho, Ex","Perna (Do Tornozelo, Exclusive, ao Joelho, Ex"
-parte_corpo,Perna (Entre O Torno,Perna (Entre O Tornozelo e a Pelvis),Perna (Entre O Tornozelo e a Pelvis)
-parte_corpo,Pescoco,Pescoco,Pescoco
+parte_corpo,"Ouvido (Externo, Med",Ouvido,"Ouvido (externo, médio, interno, audição e equilíbrio)"
+parte_corpo,Partes Multiplas - A,Partes múltiplas,"Partes múltiplas (aplica-se quando mais de uma parte importante do corpo for afetada, como, por exemplo, um braço e uma perna)"
+parte_corpo,Pe (Exceto Artelhos),Pé (exceto artelhos),Pé (exceto artelhos)
+parte_corpo,"Perna (Do Tornozelo,",Perna (do tornozelo ao joelho),"Perna (do tornozelo, exclusive, ao joelho, exclusive)"
+parte_corpo,Perna (Entre O Torno,Perna (entre o tornozelo e a pélvis),Perna (entre o tornozelo e a pélvis)
+parte_corpo,Pescoco,Pescoço,Pescoço
 parte_corpo,Punho,Punho,Punho
-parte_corpo,Quadris (Inclusive P,"Quadris (Inclusive Pelvis, Orgaos Pelvicos E","Quadris (Inclusive Pelvis, Orgaos Pelvicos E"
-parte_corpo,Sistema Musculo-Esqu,Sistema Musculo-Esqueletico,Sistema Musculo-Esqueletico
-parte_corpo,Sistema Nervoso,Sistema Nervoso,Sistema Nervoso
-parte_corpo,Sistemas e Aparelhos,Sistemas e Aparelhos,
-parte_corpo,Torax (Inclusive Org,Torax (Inclusive Orgaos Internos),Torax (Inclusive Orgaos Internos)
-parte_corpo,"Tronco, Nic","Tronco, Nic","Tronco, Nic"
-parte_corpo,"Tronco, Parte Multip","Tronco, Parte Multiplas (Qualquer Combinacao","Tronco, Parte Multiplas (Qualquer Combinacao"
+parte_corpo,Quadris (Inclusive P,Quadris,"Quadris (inclusive pélvis, órgãos pélvicos e nádegas)"
+parte_corpo,Sistema Musculo-Esqu,Sistema musculoesquelético,Sistema musculoesquelético
+parte_corpo,Sistema Nervoso,Sistema nervoso,Sistema nervoso
+parte_corpo,Sistemas e Aparelhos,Sistemas e aparelhos,
+parte_corpo,Torax (Inclusive Org,Tórax,Tórax (inclusive órgãos internos)
+parte_corpo,"Tronco, Nic","Tronco, outros casos","Tronco, NIC"
+parte_corpo,"Tronco, Parte Multip","Tronco, partes múltiplas","Tronco, partes múltiplas (qualquer combinação das partes acima)"

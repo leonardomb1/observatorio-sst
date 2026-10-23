@@ -87,17 +87,14 @@ registros AS (
         l.tipo_limpo AS tipo_acidente,
         l.obito_limpo AS obito,
         l.sexo_limpo AS sexo,
-        CASE WHEN l.geracao = 'B' THEN l.natureza_texto
-             WHEN rn.prefixo IS NOT NULL THEN rn.rotulo_completo
-             ELSE l.natureza_texto END AS natureza_lesao,
+        CASE WHEN nullif(rn.rotulo_completo, '') IS NOT NULL THEN rn.rotulo_completo
+             WHEN l.geracao = 'B' OR rn.prefixo IS NULL THEN l.natureza_texto END AS natureza_lesao,
         coalesce(rn.familia, l.natureza_texto) AS natureza_lesao_familia,
-        CASE WHEN l.geracao = 'B' THEN l.parte_texto
-             WHEN rp.prefixo IS NOT NULL THEN rp.rotulo_completo
-             ELSE l.parte_texto END AS parte_corpo,
+        CASE WHEN nullif(rp.rotulo_completo, '') IS NOT NULL THEN rp.rotulo_completo
+             WHEN l.geracao = 'B' OR rp.prefixo IS NULL THEN l.parte_texto END AS parte_corpo,
         coalesce(rp.familia, l.parte_texto) AS parte_corpo_familia,
-        CASE WHEN l.geracao = 'B' THEN l.agente_texto
-             WHEN ra.prefixo IS NOT NULL THEN ra.rotulo_completo
-             ELSE l.agente_texto END AS agente_causador,
+        CASE WHEN nullif(ra.rotulo_completo, '') IS NOT NULL THEN ra.rotulo_completo
+             WHEN l.geracao = 'B' OR ra.prefixo IS NULL THEN l.agente_texto END AS agente_causador,
         coalesce(ra.familia, l.agente_texto) AS agente_causador_familia,
         trim(l.origem_cadastramento) AS origem_cadastramento,
         trim(l.emitente_cat) AS emitente_cat,
