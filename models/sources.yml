@@ -21,6 +21,8 @@ sources:
         description: "AEAT: acidentes por raca/cor e nivel de instrucao, por UF, com e sem CAT"
       - name: pnad_trabalho
         description: "PNAD Continua trimestral (SIDRA): ocupacao e informalidade por UF e sexo"
+      - name: eurostat_esaw
+        description: "Eurostat ESAW: acidentes fatais e nao fatais por atividade NACE, paises europeus"
       - name: ilo_sst_taxas
         description: "Indicador ODS 8.8.1 da OIT, por pais e ano"
       - name: osha_ita

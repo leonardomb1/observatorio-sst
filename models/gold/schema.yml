@@ -217,6 +217,27 @@ models:
               config:
                 where: "ocupados_mil is not null"
 
+  - name: gold__esaw_setor
+    description: >
+      Acidentes de trabalho por secao e divisao da NACE Rev. 2 nos paises
+      europeus e agregados da UE (Eurostat ESAW), em numero e em taxa
+      padronizada por 100 mil ocupados.
+    columns:
+      - name: ano
+        tests: [not_null]
+      - name: gravidade
+        tests:
+          - accepted_values:
+              values: ['fatal', 'nao_fatal']
+
+  - name: gold__comparacao_setorial_europa
+    description: >
+      Taxa de obitos por divisao de atividade, Brasil (CAT sobre vinculos RAIS)
+      frente a UE-27 (ESAW), nos anos brasileiros consolidados.
+    columns:
+      - name: razao_brasil_ue27
+        description: "Quantas vezes a taxa brasileira, um piso, supera a europeia"
+
   - name: gold__aeat_indicadores_cnae
     description: >
       Indicadores oficiais do anuario por classe CNAE. A incidencia oficial vem
