@@ -191,6 +191,29 @@ models:
       - name: pct_entre_informados
         description: "Participacao do grupo excluida a categoria Ignorada; nula na propria Ignorada"
 
+  - name: gold__pnad_informalidade
+    description: >
+      Pessoas ocupadas e em situacao de informalidade pela PNAD Continua, por
+      trimestre, UF e sexo, com os coeficientes de variacao do IBGE. Mede o
+      trabalho que os denominadores formais nao alcancam.
+    columns:
+      - name: trimestre
+        tests: [not_null]
+      - name: ocupados_mil
+        description: "Pessoas de 14 anos ou mais ocupadas, em milhares"
+      - name: precisao_baixa
+        description: "Coeficiente de variacao acima de 15% em alguma das estimativas"
+
+  - name: gold__cobertura_denominador_uf
+    description: >
+      Vinculos ativos da RAIS por 100 pessoas ocupadas na PNAD do quarto
+      trimestre, por UF e ano: aproximacao do alcance das taxas calculadas
+      sobre o emprego formal.
+    columns:
+      - name: vinculos_por_100_ocupados
+        description: "Razao entre vinculos e pessoas, nao proporcao; pode passar de 100"
+        tests: [not_null]
+
   - name: gold__aeat_indicadores_cnae
     description: >
       Indicadores oficiais do anuario por classe CNAE. A incidencia oficial vem
