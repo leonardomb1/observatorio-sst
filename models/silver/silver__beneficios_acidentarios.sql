@@ -5,10 +5,14 @@
 -- valem so para os arquivos antigos, que nao trazem codigo. A ordem importa:
 -- no layout de out/2026 o B91 se chama "Auxilio por Incapacidade Temporaria
 -- Acidentaria", que o padrao generico de auxilio-acidente capturaria como 94.
+-- Codigos fora do conjunto atual, como o 5 (aposentadoria por invalidez
+-- acidentaria do trabalhador rural, especie antiga), seguem pelo rotulo e
+-- caem na especie equivalente.
 SELECT
   periodo,
   CASE
-    WHEN nullif(trim(especie_codigo),'') IS NOT NULL
+    WHEN CAST(CAST(nullif(trim(especie_codigo),'') AS INT) AS VARCHAR)
+         IN ('36', '91', '92', '93', '94', '95')
       THEN CAST(CAST(trim(especie_codigo) AS INT) AS VARCHAR)
     WHEN lower(especie) LIKE '%previdenci%' THEN '36'
     WHEN lower(especie) LIKE '%doenc%acidente do trabalho%' THEN '91'

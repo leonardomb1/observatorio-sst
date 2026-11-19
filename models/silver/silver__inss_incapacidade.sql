@@ -27,7 +27,8 @@ WITH classificado AS (
     SELECT
         periodo,
         CASE
-            WHEN nullif(trim(especie_codigo), '') IS NOT NULL
+            WHEN CAST(CAST(nullif(trim(especie_codigo), '') AS INT) AS VARCHAR)
+                 IN ('31', '32', '36', '91', '92', '93', '94', '95')
                 THEN CAST(CAST(trim(especie_codigo) AS INT) AS VARCHAR)
             WHEN lower(especie) LIKE '%doen%previdenci%' THEN '31'
             WHEN lower(especie) LIKE '%invalidez%previdenci%' THEN '32'
@@ -55,7 +56,7 @@ SELECT
     especie_codigo,
     especie,
     CASE WHEN especie_codigo IN ('91', '92', '93', '94', '95') THEN 'acidentaria'
-         ELSE 'previdenciaria' END AS natureza,
+         WHEN especie_codigo IN ('31', '32', '36') THEN 'previdenciaria' END AS natureza,
     CASE WHEN especie_codigo IN ('31', '91') THEN 'temporaria'
          WHEN especie_codigo IN ('32', '92') THEN 'permanente'
          WHEN especie_codigo IN ('36', '94') THEN 'auxilio_acidente'

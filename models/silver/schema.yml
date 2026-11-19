@@ -56,7 +56,7 @@ models:
       mes, especie, CID, UF, sexo e CNAE.
     columns:
       - name: especie_codigo
-        tests: [not_null]
+        description: "Nulo nas especies raras que nenhuma regra reconhece (dezenas por ano), fora dos grupos"
       - name: natureza
         tests:
           - accepted_values:
