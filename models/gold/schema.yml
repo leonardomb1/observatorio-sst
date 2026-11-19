@@ -248,6 +248,50 @@ models:
         description: "Menor entre admissoes e desligamentos do ano por 100 vinculos; pode passar de 100"
         tests: [not_null]
 
+  - name: gold__sim_obitos_trabalho_uf
+    description: >
+      Obitos por acidente de trabalho no SIM frente aos obitos com CAT, por UF
+      e ano, com o preenchimento do campo acidtrab nas causas externas.
+    columns:
+      - name: pct_campo_preenchido
+        description: "Causas externas com acidtrab sim ou nao, em pontos percentuais"
+      - name: razao_sim_cat
+        description: "Obitos de trabalho no SIM por obito com CAT; so comparavel em anos consolidados dos dois lados"
+
+  - name: gold__sim_obitos_trabalho_perfil
+    description: >
+      Obitos por acidente de trabalho no SIM por causa, sexo, faixa etaria,
+      raca/cor e familia ocupacional.
+
+  - name: gold__incapacidade_grupo_uf
+    description: >
+      Concessoes por incapacidade temporaria e permanente por grupo de
+      diagnostico, UF e ano, com a parcela acidentaria.
+    columns:
+      - name: pct_acidentaria
+        description: "Concessoes com nexo com o trabalho reconhecido, em pontos percentuais"
+
+  - name: gold__incapacidade_cid
+    description: >
+      Afastamentos temporarios por categoria CID-10 no pais, B31 frente a B91.
+
+  - name: gold__prf_condutores_categoria
+    description: >
+      Condutores envolvidos em acidentes nas rodovias federais por categoria de
+      veiculo, UF e ano, com obitos, feridos graves e letalidade.
+
+  - name: gold__prf_caminhoneiros_horario
+    description: >
+      Condutores de caminhao envolvidos em acidentes por hora e dia da semana.
+
+  - name: gold__trabalho_escravo_cadastro
+    description: >
+      Empregadores e trabalhadores do Cadastro de Empregadores, edicao mais
+      recente, por UF, ano da acao fiscal e atividade.
+
+  - name: gold__trabalho_escravo_edicoes
+    description: "Totais de cada edicao do Cadastro de Empregadores carregada."
+
   - name: gold__aeat_indicadores_cnae
     description: >
       Indicadores oficiais do anuario por classe CNAE. A incidencia oficial vem

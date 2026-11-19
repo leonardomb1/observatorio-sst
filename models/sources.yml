@@ -23,6 +23,14 @@ sources:
         description: "PNAD Continua trimestral (SIDRA): ocupacao e informalidade por UF e sexo"
       - name: eurostat_esaw
         description: "Eurostat ESAW: acidentes fatais e nao fatais por atividade NACE, paises europeus"
+      - name: sim_causas_externas
+        description: "SIM/SUS: obitos por causas externas, com o campo de acidente de trabalho"
+      - name: inss_incapacidade
+        description: "INSS: concessoes por incapacidade, previdenciarias e acidentarias, agregadas"
+      - name: prf_envolvidos
+        description: "PRF: pessoas envolvidas em acidentes nas rodovias federais"
+      - name: mte_cadastro_empregadores
+        description: "MTE: cadastro de empregadores (trabalho analogo a escravidao), sem identificadores"
       - name: ilo_sst_taxas
         description: "Indicador ODS 8.8.1 da OIT, por pais e ano"
       - name: osha_ita

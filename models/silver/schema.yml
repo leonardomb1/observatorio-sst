@@ -37,3 +37,35 @@ models:
 
   - name: silver__beneficios_acidentarios
     description: "Concessoes do INSS; usar sempre o filtro acidente_trabalho"
+
+  - name: silver__sim_causas_externas
+    description: >
+      Obitos por causas externas do SIM com codigos decodificados; o registro
+      de obitos da saude, independente da Previdencia.
+    columns:
+      - name: situacao_acidtrab
+        tests:
+          - accepted_values:
+              values: ['sim', 'nao', 'ignorado', 'nao_preenchido']
+      - name: acidente_trabalho
+        description: "Verdadeiro so quando acidtrab = 1; o nao preenchido nao e negativo"
+
+  - name: silver__inss_incapacidade
+    description: >
+      Concessoes por incapacidade, previdenciarias e acidentarias, agregadas por
+      mes, especie, CID, UF, sexo e CNAE.
+    columns:
+      - name: especie_codigo
+        tests: [not_null]
+      - name: natureza
+        tests:
+          - accepted_values:
+              values: ['acidentaria', 'previdenciaria']
+
+  - name: silver__prf_envolvidos
+    description: >
+      Pessoas envolvidas em acidentes nas rodovias federais, sem os veiculos
+      desocupados, com categoria de veiculo e marcadores de obito e lesao grave.
+    columns:
+      - name: categoria_veiculo
+        tests: [not_null]
