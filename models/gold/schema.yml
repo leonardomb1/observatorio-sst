@@ -238,6 +238,16 @@ models:
       - name: razao_brasil_ue27
         description: "Quantas vezes a taxa brasileira, um piso, supera a europeia"
 
+  - name: gold__rotatividade_cnae
+    description: >
+      Rotatividade anual do emprego formal por classe CNAE (CAGED sobre
+      vinculos RAIS), ao lado das taxas de acidentes e de obitos da mesma
+      classe, nos anos com doze meses de CAGED.
+    columns:
+      - name: rotatividade_pct
+        description: "Menor entre admissoes e desligamentos do ano por 100 vinculos; pode passar de 100"
+        tests: [not_null]
+
   - name: gold__aeat_indicadores_cnae
     description: >
       Indicadores oficiais do anuario por classe CNAE. A incidencia oficial vem
