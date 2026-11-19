@@ -7,7 +7,7 @@
 -- outros. As linhas sem papel definido (tipo_envolvido NA) sao veiculos sem
 -- ocupante, todos com o mesmo identificador de pessoa, e saem do modelo.
 SELECT
-    ano,
+    CAST(ano AS INT) AS ano,
     acidente_id,
     pessoa_id,
     str_to_date(data_inversa, '%Y-%m-%d') AS data_acidente,
