@@ -292,6 +292,20 @@ models:
   - name: gold__trabalho_escravo_edicoes
     description: "Totais de cada edicao do Cadastro de Empregadores carregada."
 
+  - name: gold__sinan_agravo_uf
+    description: >
+      Notificacoes de agravos de saude do trabalhador por agravo, UF e ano, com
+      a parcela informal e a parcela com CAT.
+    columns:
+      - name: pct_informal
+        description: "Sem carteira, autonomo, temporario ou avulso, entre as notificacoes com situacao informada"
+      - name: pct_com_cat
+        description: "Notificacoes com CAT emitida, entre as que preencheram o campo"
+
+  - name: gold__sinan_situacao_trabalho
+    description: >
+      Notificacoes por situacao no mercado de trabalho, no pais, por agravo e ano.
+
   - name: gold__aeat_indicadores_cnae
     description: >
       Indicadores oficiais do anuario por classe CNAE. A incidencia oficial vem

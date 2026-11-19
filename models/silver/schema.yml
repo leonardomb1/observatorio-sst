@@ -69,3 +69,15 @@ models:
     columns:
       - name: categoria_veiculo
         tests: [not_null]
+
+  - name: silver__sinan_trabalho
+    description: >
+      Notificacoes dos agravos de saude do trabalhador no SINAN, com situacao
+      no mercado de trabalho, CAT emitida e codigos decodificados.
+    columns:
+      - name: agravo
+        tests:
+          - accepted_values:
+              values: ['ACGR', 'ACBI', 'LERD', 'MENT', 'PAIR', 'PNEU', 'DERM', 'CANC', 'IEXO']
+      - name: vinculo
+        description: "formal, informal ou outra; nulo quando a situacao de trabalho e ignorada"

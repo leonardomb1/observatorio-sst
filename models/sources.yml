@@ -31,6 +31,8 @@ sources:
         description: "PRF: pessoas envolvidas em acidentes nas rodovias federais"
       - name: mte_cadastro_empregadores
         description: "MTE: cadastro de empregadores (trabalho analogo a escravidao), sem identificadores"
+      - name: sinan_trabalho
+        description: "SINAN: notificacoes dos agravos de saude do trabalhador, registro inteiro em JSON"
       - name: ilo_sst_taxas
         description: "Indicador ODS 8.8.1 da OIT, por pais e ano"
       - name: osha_ita
