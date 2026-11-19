@@ -211,8 +211,11 @@ models:
       sobre o emprego formal.
     columns:
       - name: vinculos_por_100_ocupados
-        description: "Razao entre vinculos e pessoas, nao proporcao; pode passar de 100"
-        tests: [not_null]
+        description: "Razao entre vinculos e pessoas, nao proporcao; pode passar de 100; nula em 2020 e 2021"
+        tests:
+          - not_null:
+              config:
+                where: "ocupados_mil is not null"
 
   - name: gold__aeat_indicadores_cnae
     description: >

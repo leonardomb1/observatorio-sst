@@ -8,6 +8,10 @@
 -- inclui estatutarios, mas e a melhor aproximacao publica do alcance das
 -- taxas, e e nas UFs em que ela e baixa que a taxa sobre vinculos formais diz
 -- menos sobre o risco de quem trabalha.
+--
+-- Do segundo trimestre de 2020 ao primeiro de 2022 o IBGE nao publicou
+-- estimativas por UF, so a nacional; em 2020 e 2021 a razao fica nula, e nao
+-- e substituida por outro trimestre, que mediria outro momento do emprego.
 WITH pnad AS (
     SELECT ano, territorio AS uf, ocupados_mil, informais_mil,
            taxa_informalidade_pct, precisao_baixa
