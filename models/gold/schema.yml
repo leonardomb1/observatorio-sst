@@ -174,6 +174,23 @@ models:
       - name: pct_sem_cat
         description: "Proporcao de acidentes reconhecidos sem CAT, em pontos percentuais"
 
+  - name: gold__aeat_perfil
+    description: >
+      Acidentes por raca/cor e por nivel de instrucao, pelo anuario oficial, por
+      pais, regiao e UF, com e sem CAT registrada. Unica fonte dessas dimensoes:
+      os microdados publicos da CAT nao as trazem.
+    columns:
+      - name: ano
+        tests: [not_null]
+      - name: dimensao
+        tests:
+          - accepted_values:
+              values: ['raca_cor', 'instrucao']
+      - name: pct_sem_cat
+        description: "Parcela dos acidentes do grupo reconhecidos sem CAT, em pontos percentuais"
+      - name: pct_entre_informados
+        description: "Participacao do grupo excluida a categoria Ignorada; nula na propria Ignorada"
+
   - name: gold__aeat_indicadores_cnae
     description: >
       Indicadores oficiais do anuario por classe CNAE. A incidencia oficial vem
