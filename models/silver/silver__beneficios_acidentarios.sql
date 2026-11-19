@@ -1,13 +1,21 @@
+-- Concessoes acidentarias do INSS, uma linha por concessao.
+--
+-- O codigo da especie e a fonte de verdade quando existe (jun/2023 em
+-- diante, com zero a esquerda no layout de out/2026); as regras por rotulo
+-- valem so para os arquivos antigos, que nao trazem codigo. A ordem importa:
+-- no layout de out/2026 o B91 se chama "Auxilio por Incapacidade Temporaria
+-- Acidentaria", que o padrao generico de auxilio-acidente capturaria como 94.
 SELECT
   periodo,
   CASE
+    WHEN nullif(trim(especie_codigo),'') IS NOT NULL
+      THEN CAST(CAST(trim(especie_codigo) AS INT) AS VARCHAR)
     WHEN lower(especie) LIKE '%previdenci%' THEN '36'
     WHEN lower(especie) LIKE '%doenc%acidente do trabalho%' THEN '91'
     WHEN lower(especie) LIKE '%invalidez%acident%' THEN '92'
     WHEN lower(especie) LIKE '%pens%morte%acident%' THEN '93'
     WHEN lower(especie) LIKE '%suplementar%acident%' THEN '95'
     WHEN lower(especie) LIKE '%aux%acident%' THEN '94'
-    ELSE nullif(trim(especie_codigo),'')
   END AS especie_codigo,
   (lower(especie) NOT LIKE '%previdenci%') AS acidente_trabalho,
   trim(especie) AS especie,
