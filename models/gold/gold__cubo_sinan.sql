@@ -1,4 +1,4 @@
-{{ config(materialized='table', table_type='DUPLICATE', keys=['agravo', 'ano'], distributed_by=['agravo']) }}
+{{ config(materialized='table', table_type='DUPLICATE', keys=['agravo', 'agravo_nome', 'ano'], distributed_by=['agravo']) }}
 -- Notificacoes de agravos de saude do trabalhador no grao dos filtros do site.
 --
 -- O SINAN traz UF, sexo, idade, raca/cor, ocupacao e a situacao no mercado de

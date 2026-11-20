@@ -30,4 +30,5 @@ FROM {{ source('bronze', 'mte_cadastro_empregadores') }} c
 JOIN ultima u ON u.atualizado_em = c.atualizado_em
 LEFT JOIN cnae d ON d.codigo = left(replace(c.cnae, '-', ''), 4)
 GROUP BY c.atualizado_em, c.ano_acao_fiscal, c.uf, left(replace(c.cnae, '-', ''), 4),
+         {{ cnae_secao_da_divisao("left(replace(c.cnae, '-', ''), 2)") }},
          d.divisao, d.secao, c.tipo_documento, c.inclusao_judicial
