@@ -3,7 +3,8 @@
 -- com as dimensoes que o site recorta e a duracao prevista.
 --
 -- A duracao e a distancia entre o inicio (DIB) e a cessacao prevista (DCB),
--- que o INSS fixa na concessao do auxilio por incapacidade temporaria; so
+-- que o INSS fixa na concessao do auxilio por incapacidade temporaria (B91);
+-- nas demais especies a DCB nao e uma alta prevista e a duracao fica nula. So
 -- existe nos arquivos de jun/2023 em diante e fica nula nos demais e quando
 -- e negativa ou passa de dez anos. A despesa prevista multiplica a renda
 -- mensal inicial, em salarios minimos, pelos meses previstos: e uma
@@ -28,7 +29,7 @@ base AS (
         b.cid10_codigo,
         left(lpad(b.cnae_codigo, 5, '0'), 2) AS cnae_divisao,
         CASE
-            WHEN b.data_inicio IS NOT NULL AND b.data_cessacao IS NOT NULL
+            WHEN b.especie_codigo = '91' AND b.data_inicio IS NOT NULL AND b.data_cessacao IS NOT NULL
                  AND datediff(b.data_cessacao, b.data_inicio) BETWEEN 0 AND 3650
                 THEN datediff(b.data_cessacao, b.data_inicio)
         END AS dias_previstos,
