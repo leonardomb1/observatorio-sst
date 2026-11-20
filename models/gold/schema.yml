@@ -371,6 +371,17 @@ models:
           - accepted_values:
               values: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U']
 
+  - name: gold__beneficios_fato
+    description: >
+      Beneficios acidentarios do INSS, um registro por concessao, com UF, sexo,
+      faixa etaria, atividade, diagnostico, duracao prevista e despesa prevista
+      em salarios minimos (estas duas a partir de jun/2023).
+    columns:
+      - name: especie_codigo
+        tests:
+          - accepted_values:
+              values: ['91', '92', '93', '94', '95']
+
   - name: gold__cubo_emprego
     description: >
       Vinculos da RAIS e fluxos do CAGED por ano, UF e secao de atividade:

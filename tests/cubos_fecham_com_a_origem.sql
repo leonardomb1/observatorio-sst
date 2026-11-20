@@ -11,6 +11,11 @@ with checks as (
            (select count(*) from {{ ref('gold__cat_fato') }}),
            (select count(*) from {{ ref('silver__acidentes') }} where ano is not null)
     union all
+    select 'beneficios_fato sem uf',
+           (select count(*) from {{ ref('gold__beneficios_fato') }} where uf_sigla is null),
+           (select count(*) from {{ ref('silver__beneficios_acidentarios') }}
+            where acidente_trabalho and especie_codigo is not null and uf is null)
+    union all
     select 'incapacidade',
            (select sum(concessoes) from {{ ref('gold__cubo_incapacidade') }}),
            (select sum(concessoes) from {{ ref('silver__inss_incapacidade') }} where natureza is not null)

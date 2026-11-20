@@ -7,7 +7,8 @@
 -- Acidentaria", que o padrao generico de auxilio-acidente capturaria como 94.
 -- Codigos fora do conjunto atual, como o 5 (aposentadoria por invalidez
 -- acidentaria do trabalhador rural, especie antiga), seguem pelo rotulo e
--- caem na especie equivalente.
+-- caem na especie equivalente. As datas de inicio (DIB), de cessacao (DCB)
+-- e de nascimento so vem nos arquivos de jun/2023 em diante.
 SELECT
   periodo,
   CASE
@@ -31,5 +32,8 @@ SELECT
   cast(replace(nullif(trim(qt_sm_rmi),''),',','.') AS DOUBLE) AS rmi_salarios_minimos,
   nullif(trim(ramo_atividade),'') AS ramo_atividade,
   nullif(trim(cnae_codigo),'0') AS cnae_codigo,
+  CAST(nullif(trim(dt_dib),'') AS DATE) AS data_inicio,
+  CAST(nullif(trim(dt_dcb),'') AS DATE) AS data_cessacao,
+  CAST(nullif(trim(dt_nascimento),'') AS DATE) AS data_nascimento,
   arquivo_origem
 FROM {{ source('bronze', 'inss_beneficios') }}
