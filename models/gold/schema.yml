@@ -352,6 +352,12 @@ models:
           - accepted_values:
               values: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U']
 
+  - name: gold__dim_municipio
+    description: Municipios pelo codigo IBGE de seis digitos, com nome e UF.
+    columns:
+      - name: municipio_codigo
+        tests: [not_null, unique]
+
   - name: gold__cat_fato
     description: >
       Acidentes com CAT, um registro por comunicacao, com as dimensoes de recorte
