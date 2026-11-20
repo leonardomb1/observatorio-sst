@@ -22,8 +22,13 @@
 -- ("Em Branco", "Zerados", "000000", "{n class}"). Fica so o codigo valido;
 -- o resto vira nulo. Em 2022 a fonte omitiu o CID da maior parte dos
 -- beneficios previdenciarios, e por isso a cobertura de CID de cada ano e
--- exposta no ouro.
-WITH classificado AS (
+-- exposta no ouro. O mesmo layout grava a UF em maiusculas e sem acento, e
+-- o nome volta a grafia do IBGE para casar com as demais fontes.
+WITH nomes_uf AS (
+    SELECT DISTINCT uf_nome FROM {{ source('bronze', 'ibge_municipios') }}
+    WHERE uf_nome IS NOT NULL
+),
+classificado AS (
     SELECT
         periodo,
         CASE
@@ -42,7 +47,10 @@ WITH classificado AS (
         trim(especie) AS especie,
         nullif(regexp_extract(upper(replace(trim(cid_codigo), '.', '')),
                               '^[A-Z][0-9]{2}[0-9]?', 0), '') AS cid10_codigo,
-        nullif(trim(sexo), '') AS sexo,
+        CASE upper(trim(sexo))
+            WHEN 'MASCULINO' THEN 'Masculino'
+            WHEN 'FEMININO' THEN 'Feminino'
+        END AS sexo,
         nullif(trim(uf), '') AS uf,
         nullif(nullif(trim(cnae_codigo), ''), '0') AS cnae_codigo,
         concessoes,
@@ -71,8 +79,9 @@ SELECT
         ELSE 'Demais diagnósticos'
     END AS grupo_cid,
     sexo,
-    uf,
+    coalesce(n.uf_nome, c.uf) AS uf,
     left(lpad(cnae_codigo, 5, '0'), 4) AS cnae_classe,
     concessoes,
     soma_qt_sm_rmi
-FROM classificado
+FROM classificado c
+LEFT JOIN nomes_uf n ON {{ sem_acento('n.uf_nome') }} = {{ sem_acento('c.uf') }}

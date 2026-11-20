@@ -26,6 +26,11 @@ with checks as (
     select 'acidentes sem uf',
            (select coalesce(sum(acidentes), 0) from {{ ref('gold__cubo_acidentes') }} where uf_sigla is null),
            (select count(*) from {{ ref('silver__acidentes') }} where ano is not null and uf_empregador is null)
+    union all
+    select 'incapacidade sem uf',
+           (select coalesce(sum(concessoes), 0) from {{ ref('gold__cubo_incapacidade') }} where uf_sigla is null),
+           (select coalesce(sum(concessoes), 0) from {{ ref('silver__inss_incapacidade') }}
+            where natureza is not null and uf is null)
 )
 select cubo, no_cubo, na_origem
 from checks

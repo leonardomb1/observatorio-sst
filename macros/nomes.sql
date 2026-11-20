@@ -44,3 +44,18 @@
     {%- endfor -%}
     {{ ns.expr }}
 {%- endmacro %}
+
+{#
+  Chave de comparacao para nomes que chegam com e sem acento e em qualquer
+  caixa, como as UFs do INSS a partir do layout de out/2026 ("SAO PAULO").
+#}
+{% macro sem_acento(coluna) -%}
+    {%- set pares = [('á','a'), ('à','a'), ('â','a'), ('ã','a'), ('é','e'),
+                     ('ê','e'), ('í','i'), ('ó','o'), ('ô','o'), ('õ','o'),
+                     ('ú','u'), ('ü','u'), ('ç','c')] -%}
+    {%- set ns = namespace(expr = minusculas('trim(' ~ coluna ~ ')')) -%}
+    {%- for de, para in pares -%}
+        {%- set ns.expr = "replace(" ~ ns.expr ~ ", '" ~ de ~ "', '" ~ para ~ "')" -%}
+    {%- endfor -%}
+    upper({{ ns.expr }})
+{%- endmacro %}
