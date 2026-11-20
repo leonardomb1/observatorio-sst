@@ -352,6 +352,19 @@ models:
           - accepted_values:
               values: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U']
 
+  - name: gold__cat_fato
+    description: >
+      Acidentes com CAT, um registro por comunicacao, com as dimensoes de recorte
+      do site (UF e municipio do empregador, perfil, atividade, ocupacao, agente,
+      lesao, parte do corpo, CID, mes e dia da semana), sem CNPJ nem data de nascimento.
+    columns:
+      - name: ano
+        tests: [not_null]
+      - name: cnae_secao
+        tests:
+          - accepted_values:
+              values: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U']
+
   - name: gold__cubo_emprego
     description: >
       Vinculos da RAIS e fluxos do CAGED por ano, UF e secao de atividade:

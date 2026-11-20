@@ -7,6 +7,10 @@ with checks as (
            (select sum(acidentes) from {{ ref('gold__cubo_acidentes') }}) as no_cubo,
            (select count(*) from {{ ref('silver__acidentes') }} where ano is not null) as na_origem
     union all
+    select 'cat_fato',
+           (select count(*) from {{ ref('gold__cat_fato') }}),
+           (select count(*) from {{ ref('silver__acidentes') }} where ano is not null)
+    union all
     select 'incapacidade',
            (select sum(concessoes) from {{ ref('gold__cubo_incapacidade') }}),
            (select sum(concessoes) from {{ ref('silver__inss_incapacidade') }} where natureza is not null)
