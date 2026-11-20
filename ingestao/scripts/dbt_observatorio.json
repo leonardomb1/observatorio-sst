@@ -1,0 +1,1 @@
+{"engine": "dbt-core-1x", "profile": {"profiles_yml": "profiles/profiles.yml", "target": "prod"}, "env": {"SR_HOST": "starrocks-fe", "SR_PORT": "9030", "SR_USER": "svc-dbt", "SR_PASSWORD": "$var:f/infra/dbt_starrocks_password"}}

@@ -1,0 +1,123 @@
+[
+  {
+    "path": "f/sst/aeat_mensal",
+    "schedule": "0 0 5 17 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_aeat_anuario",
+    "is_flow": false,
+    "summary": "Recarrega a edição mais recente do anuário oficial",
+    "args": {}
+  },
+  {
+    "path": "f/sst/caged_monthly",
+    "schedule": "0 0 6 13 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/caged_refresh",
+    "is_flow": true,
+    "summary": "Monthly Novo CAGED aggregate refresh from PDET FTP",
+    "args": {}
+  },
+  {
+    "path": "f/sst/mte_noticias_weekly",
+    "schedule": "0 0 7 * * 1",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/scrape_mte_noticias",
+    "is_flow": false,
+    "summary": "Weekly MTE inspection/SST news scrape",
+    "args": {
+      "paginas": 3
+    }
+  },
+  {
+    "path": "f/sst/cadastro_empregadores_mensal",
+    "schedule": "0 0 7 15 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_cadastro_empregadores",
+    "is_flow": false,
+    "summary": "Monthly check of the MTE employer register (semiannual source, one row set per edition)",
+    "args": {}
+  },
+  {
+    "path": "f/sst/dbt_mensal",
+    "schedule": "0 0 8 16 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/dbt_observatorio",
+    "is_flow": false,
+    "summary": "Reconstrução mensal dos modelos e testes do dbt, após as cargas",
+    "args": {}
+  },
+  {
+    "path": "f/sst/beneficios_monthly",
+    "schedule": "0 10 6 14 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/beneficios_refresh",
+    "is_flow": true,
+    "summary": "Monthly INSS accident-benefit refresh from INSS open data",
+    "args": {}
+  },
+  {
+    "path": "f/sst/pnad_mensal",
+    "schedule": "0 10 6 15 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_pnad_trabalho",
+    "is_flow": false,
+    "summary": "Monthly PNAD Continua occupation and informality refresh (quarterly source)",
+    "args": {}
+  },
+  {
+    "path": "f/sst/sinan_mensal",
+    "schedule": "0 15 7 15 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_sinan_trabalho",
+    "is_flow": false,
+    "summary": "Monthly reload of the five most recent SINAN worker-health years (preliminary data and PRELIM-to-FINAIS moves)",
+    "args": {
+      "ultimos_anos": 5
+    }
+  },
+  {
+    "path": "f/sst/eurostat_mensal",
+    "schedule": "0 20 6 15 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_eurostat_esaw",
+    "is_flow": false,
+    "summary": "Monthly Eurostat ESAW accidents-at-work snapshot refresh",
+    "args": {}
+  },
+  {
+    "path": "f/sst/sim_mensal",
+    "schedule": "0 30 6 15 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_sim_causas_externas",
+    "is_flow": false,
+    "summary": "Monthly reload of the two latest SIM years (preliminary data is revised)",
+    "args": {}
+  },
+  {
+    "path": "f/sst/cat_monthly",
+    "schedule": "0 40 5 12 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/cat_refresh",
+    "is_flow": true,
+    "summary": "Monthly CAT microdata refresh from INSS open data",
+    "args": {}
+  },
+  {
+    "path": "f/sst/prf_mensal",
+    "schedule": "0 45 6 15 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_prf_envolvidos",
+    "is_flow": false,
+    "summary": "Monthly reload of the two latest PRF accident years",
+    "args": {}
+  },
+  {
+    "path": "f/sst/ilo_monthly",
+    "schedule": "0 50 5 15 * *",
+    "timezone": "America/Sao_Paulo",
+    "script_path": "f/sst/load_ilo_rates",
+    "is_flow": false,
+    "summary": "Monthly ILOSTAT SDG 8.8.1 injury-rate snapshot refresh",
+    "args": {}
+  }
+]

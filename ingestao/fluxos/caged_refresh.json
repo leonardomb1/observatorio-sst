@@ -1,0 +1,50 @@
+{
+  "modules": [
+    {
+      "id": "a",
+      "value": {
+        "path": "f/sst/list_caged_months",
+        "type": "script",
+        "input_transforms": {
+          "only_missing": {
+            "type": "static",
+            "value": true
+          }
+        }
+      },
+      "summary": "Discover missing CAGED months"
+    },
+    {
+      "id": "b",
+      "value": {
+        "type": "forloopflow",
+        "modules": [
+          {
+            "id": "c",
+            "value": {
+              "path": "f/sst/load_caged_month",
+              "type": "script",
+              "input_transforms": {
+                "url": {
+                  "expr": "flow_input.iter.value.url",
+                  "type": "javascript"
+                },
+                "competencia": {
+                  "expr": "flow_input.iter.value.competencia",
+                  "type": "javascript"
+                }
+              }
+            }
+          }
+        ],
+        "iterator": {
+          "expr": "results.a",
+          "type": "javascript"
+        },
+        "parallel": false,
+        "skip_failures": false
+      },
+      "summary": "Load each month"
+    }
+  ]
+}

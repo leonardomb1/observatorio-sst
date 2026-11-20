@@ -1,0 +1,50 @@
+{
+  "modules": [
+    {
+      "id": "a",
+      "value": {
+        "path": "f/sst/list_cat_files",
+        "type": "script",
+        "input_transforms": {
+          "only_missing": {
+            "type": "static",
+            "value": true
+          }
+        }
+      },
+      "summary": "Discover missing CAT periods"
+    },
+    {
+      "id": "b",
+      "value": {
+        "type": "forloopflow",
+        "modules": [
+          {
+            "id": "c",
+            "value": {
+              "path": "f/sst/load_cat_file",
+              "type": "script",
+              "input_transforms": {
+                "url": {
+                  "expr": "flow_input.iter.value.url",
+                  "type": "javascript"
+                },
+                "periodo": {
+                  "expr": "flow_input.iter.value.periodo",
+                  "type": "javascript"
+                }
+              }
+            }
+          }
+        ],
+        "iterator": {
+          "expr": "results.a",
+          "type": "javascript"
+        },
+        "parallel": false,
+        "skip_failures": false
+      },
+      "summary": "Load each period"
+    }
+  ]
+}

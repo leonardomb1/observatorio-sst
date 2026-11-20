@@ -22,7 +22,7 @@ Quatro camadas, cada uma com uma promessa distinta. Se não for possível enunci
 
 Duas regras sustentam a divisão. Reuso desce, não anda de lado: se dois datamarts precisarem da mesma coisa, ela desce para o gold, nunca é copiada entre marts. E datamart é por tópico, nunca por público: exposição é política de acesso, não modelagem.
 
-A camada `bronze` é materializada por pipelines de ingestão em Python, orquestrados no Windmill, e entra aqui como *source*. Este repositório governa `silver`, `gold`, `dm_sst` e `ops`.
+A camada `bronze` é materializada por pipelines de ingestão em Python, orquestrados no Windmill, cujo código está em [`ingestao/`](ingestao/), e entra aqui como *source*. Este repositório governa `silver`, `gold`, `dm_sst` e `ops`. O site público que consome o datamart está em [observatorio-tg-sst](https://github.com/leonardomb1/observatorio-tg-sst).
 
 ## Fontes integradas
 
@@ -37,6 +37,12 @@ A camada `bronze` é materializada por pipelines de ingestão em Python, orquest
 | OSHA, Estados Unidos | Form 300A por estabelecimento | 2016 a 2025 |
 | DATASUS, IBGE, CBO | Dicionários CID-10, municípios, CNAE, ocupações | vigentes |
 | Portal CTPP | Texto integral das 38 Normas Regulamentadoras | vigente |
+| Ministério da Saúde | SINAN, agravos de saúde do trabalhador | 2018 em diante |
+| Ministério da Saúde | SIM, óbitos por causas externas | 2018 em diante |
+| IBGE, PNAD Contínua | Ocupação e informalidade por UF | 2012 em diante |
+| Polícia Rodoviária Federal | Envolvidos em acidentes nas rodovias federais | 2018 em diante |
+| Eurostat | ESAW, acidentes de trabalho por atividade na UE | 2008 a 2024 |
+| Ministério do Trabalho | Cadastro de Empregadores (trabalho análogo à escravidão), sem identificação | edição vigente |
 
 ## Por que os testes existem
 
