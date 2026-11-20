@@ -5,6 +5,7 @@ SELECT
     nivel,
     territorio_codigo,
     territorio,
+    uf_sigla,
     sexo,
     ocupados_mil,
     informais_mil,

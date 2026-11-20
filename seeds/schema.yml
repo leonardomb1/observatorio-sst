@@ -26,3 +26,12 @@ seeds:
     description: >
       Defeitos conhecidos dos arquivos mensais da CAT, por periodo. O teste
       cat_arquivo_defeito_conhecido falha se surgir marca de defeito fora desta lista.
+  - name: cnae_secao
+    description: >
+      Secoes da CNAE 2.0 (letra e nome), a dimensao de atividade comum a todos
+      os cubos de filtro do site; a letra e derivada da divisao pela macro
+      cnae_secao_da_divisao.
+  - name: cbo_grande_grupo
+    description: >
+      Grandes grupos da CBO 2002 (primeiro digito do codigo), a dimensao de
+      ocupacao comum aos cubos de filtro do site.

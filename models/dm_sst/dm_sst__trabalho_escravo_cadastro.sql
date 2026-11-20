@@ -1,10 +1,11 @@
 SELECT
     atualizado_em,
     ano_acao_fiscal,
-    uf,
+    uf_sigla,
     cnae_classe,
     cnae_divisao,
     cnae_secao,
+    cnae_secao_nome,
     tipo_documento,
     inclusao_judicial,
     empregadores,

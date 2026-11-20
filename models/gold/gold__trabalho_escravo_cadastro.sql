@@ -17,10 +17,11 @@ cnae AS (
 SELECT
     c.atualizado_em,
     c.ano_acao_fiscal,
-    c.uf,
+    c.uf AS uf_sigla,
     left(replace(c.cnae, '-', ''), 4) AS cnae_classe,
     concat(upper(left(d.divisao, 1)), {{ minusculas('substr(d.divisao, 2)') }}) AS cnae_divisao,
-    concat(upper(left(d.secao, 1)), {{ minusculas('substr(d.secao, 2)') }}) AS cnae_secao,
+    {{ cnae_secao_da_divisao("left(replace(c.cnae, '-', ''), 2)") }} AS cnae_secao,
+    concat(upper(left(d.secao, 1)), {{ minusculas('substr(d.secao, 2)') }}) AS cnae_secao_nome,
     c.tipo_documento,
     c.inclusao_judicial,
     COUNT(*) AS empregadores,

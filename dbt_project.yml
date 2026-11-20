@@ -44,6 +44,10 @@ seeds:
       +column_types: {ano: "int", mes: "int", motivo: "varchar(200)"}
     cat_arquivos_conhecidos:
       +column_types: {periodo: "varchar(10)", defeito: "varchar(40)", nota: "varchar(300)"}
+    cnae_secao:
+      +column_types: {secao: "varchar(1)", nome: "varchar(120)"}
+    cbo_grande_grupo:
+      +column_types: {grande_grupo: "varchar(1)", nome: "varchar(120)"}
 
 vars:
   # razao entre CAT do mes e o esperado: abaixo de cobertura_lacuna o mes e

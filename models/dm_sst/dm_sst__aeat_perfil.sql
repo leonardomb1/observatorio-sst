@@ -2,6 +2,7 @@ SELECT
     ano,
     escopo,
     escopo_tipo,
+    uf_sigla,
     dimensao,
     categoria,
     ordem,

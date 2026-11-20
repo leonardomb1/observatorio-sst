@@ -334,3 +334,45 @@ models:
           Quanto do total oficial de CAT a serie do observatorio reproduz. Cai
           nos anos recentes porque a comunicacao do acidente continua chegando
           depois, e serve para nao atribuir a subnotificacao o que e defasagem.
+
+  - name: gold__dim_uf
+    description: "UFs com codigo IBGE de dois digitos, sigla, nome e regiao; a ponte de todo cubo ate a sigla do filtro."
+    columns:
+      - name: uf_sigla
+        tests: [not_null, unique]
+
+  - name: gold__cubo_acidentes
+    description: >
+      Acidentes com CAT por ano, UF do empregador, sexo, faixa etaria, secao de
+      atividade, grande grupo de ocupacao e tipo; a base dos filtros do grupo
+      Acidentes do site.
+    columns:
+      - name: cnae_secao
+        tests:
+          - accepted_values:
+              values: ['A','B','C','D','E','F','G','H','I','J','K','L','M','N','O','P','Q','R','S','T','U']
+
+  - name: gold__cubo_emprego
+    description: >
+      Vinculos da RAIS e fluxos do CAGED por ano, UF e secao de atividade:
+      denominador das taxas filtradas e base da rotatividade.
+
+  - name: gold__cubo_incapacidade
+    description: >
+      Concessoes por incapacidade por ano, UF, sexo, especie, natureza,
+      diagnostico e secao de atividade.
+
+  - name: gold__cubo_sinan
+    description: >
+      Notificacoes do SINAN por agravo, ano, UF, sexo, faixa etaria, raca/cor,
+      ocupacao e situacao no mercado de trabalho; sem atividade (CNAE 1.0 na fonte).
+
+  - name: gold__cubo_sim
+    description: >
+      Obitos por causas externas do SIM por ano, UF, sexo, faixa etaria,
+      raca/cor, ocupacao, causa e situacao do campo acidtrab.
+
+  - name: gold__cubo_prf
+    description: >
+      Envolvidos em acidentes nas rodovias federais por ano, UF, sexo, faixa
+      etaria, veiculo, papel e hora.

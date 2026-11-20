@@ -39,6 +39,7 @@ SELECT
     CAST(ano AS INT) AS ano,
     escopo,
     escopo_tipo,
+    u.uf_sigla,
     dimensao,
     categoria,
     CASE dimensao
@@ -62,4 +63,5 @@ SELECT
          THEN ROUND(acidentes * 100.0 / nullif(total_informado, 0), 1)
     END AS pct_entre_informados
 FROM com_total
+LEFT JOIN {{ ref('gold__dim_uf') }} u ON com_total.escopo_tipo = 'uf' AND u.uf_nome = com_total.escopo
 WHERE categoria <> 'Total'
