@@ -1,3 +1,6 @@
+-- Contagens desta visao sao alocadas: so entram as CAT cujo municipio do empregador casa com o estoque
+-- da RAIS, numerador das taxas. O total de CAT do ano esta em status_ano e nas visoes acidentes_*;
+-- por isso as colunas se chamam *_alocados, para nao serem lidas como total.
 SELECT
     ano,
     ano_status,
@@ -9,8 +12,8 @@ SELECT
     vinculos_sem_adm_publica,
     vinculos_sem_divisoes_84_88,
     estabelecimentos,
-    acidentes,
-    obitos,
+    acidentes AS acidentes_alocados,
+    obitos AS obitos_alocados,
     acidentes_sem_adm_publica,
     obitos_sem_adm_publica,
     acidentes_sem_divisoes_84_88,
