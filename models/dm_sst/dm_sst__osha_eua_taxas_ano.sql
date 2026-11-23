@@ -4,5 +4,7 @@ SELECT
     casos_registraveis,
     horas_trabalhadas,
     trir,
-    dart
+    dart,
+    estabelecimentos,
+    estabelecimentos_excluidos
 FROM {{ ref('gold__osha_eua_taxas_ano') }}
